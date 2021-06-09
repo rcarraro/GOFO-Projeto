@@ -25,7 +25,7 @@ public class Administrator {
      * Default administrator
      */
     public Administrator() {
-        email = "MohamedHamdy@gmail.com";
+        email = "admin@gmail.com";
         password = "123";
         Approved = new ArrayList<Playground>();
         Requested = new ArrayList<Playground>();
@@ -69,6 +69,94 @@ public class Administrator {
                 Requested.remove(Requested.get(i));
                 i--;
             }
+        }
+    }
+    /**
+     * display All Playgrounds informations
+     */
+    public void displayAllPlaygrounds(){
+        for (int i = 0; i < Approved.size(); i++) {
+            System.out.println("PlayGround Number :" + (i+1));
+            System.out.println("PlayGround Status :" + Approved.get(i).getStatus());
+            System.out.println("PlayGround Name :" + Approved.get(i).getName());
+            System.out.println("PlayGround Price:" + Approved.get(i).getPrice());
+            System.out.println("Playground Slots Are: From " + Approved.get(i).getSlotsBegin() + " To: " + Approved.get(i).getSlotsEnd());
+            System.out.println("Allowed cancellation time till " + Approved.get(i).getCancellationPeriod() + " Before the booked time");
+            System.out.println("\n");    
+        }
+    }
+    /**
+     * search for playground By Name
+     * @param Name Playground Name
+     */
+    public void searchByName(String Name){
+        System.out.println("Dispaly All PlayGrounds Names.\n");
+        for (int i = 0; i < Approved.size(); i++) {
+            System.out.println("Playground Number "+(i+1) + " Name : " + Approved.get(i).getName() + " ");
+        }
+        boolean x = false;
+        for (int i = 0; i < Approved.size(); i++) {
+            if(Approved.get(i).getName().equals(Name)){
+                System.out.println("PlayGround Number :" + (i+1));
+                System.out.println("PlayGround Status :" + Approved.get(i).getStatus());
+                System.out.println("PlayGround Name :" + Approved.get(i).getName());
+                System.out.println("PlayGround Price:" + Approved.get(i).getPrice());
+                System.out.println("Playground Slots Are: From " + Approved.get(i).getSlotsBegin() + " To: " + Approved.get(i).getSlotsEnd());
+                System.out.println("Allowed cancellation time till " + Approved.get(i).getCancellationPeriod() + " Before the booked time");
+                System.out.println("\n");    
+                x = true;
+            }
+        }
+        if(x == false){
+            System.out.println("No Playground Have the same Name Please Try agian.\n");
+        }
+    }
+    
+    /**
+     * search for playground By Location
+     * @param Location Playground Location
+     */
+    public void searchByLocation(String Location){
+        System.out.println("Dispaly All PlayGrounds Location.\n");
+        for (int i = 0; i < Approved.size(); i++) {
+            System.out.println("Playground Number "+( i+1) + " Location : " + Approved.get(i).getLocation()+ " ");
+        }
+        boolean x = false;
+        for (int i = 0; i < Approved.size(); i++) {
+            if(Approved.get(i).getLocation().equals(Location)){
+                System.out.println("PlayGround Number :" + (i+1));
+                System.out.println("PlayGround Status :" + Approved.get(i).getStatus());
+                System.out.println("PlayGround Name :" + Approved.get(i).getName());
+                System.out.println("PlayGround Price:" + Approved.get(i).getPrice());
+                System.out.println("Playground Slots Are: From " + Approved.get(i).getSlotsBegin() + " To: " + Approved.get(i).getSlotsEnd());
+                System.out.println("Allowed cancellation time till " + Approved.get(i).getCancellationPeriod() + " Before the booked time");
+                System.out.println("\n");    
+                x = true;
+            }
+        }
+        if(x == false){
+            System.out.println("No Playground Have the same Location Please Try agian.\n");
+        }
+    }
+    /**
+     * display All Playgrounds Locations it used in when player want to book Playground 
+     */
+    public void displayAllavailablePlaygroundsLocations(){
+        System.out.println("Dispaly All PlayGrounds Location.");
+        for (int i = 0; i < Approved.size(); i++) {
+            if(Approved.get(i).statusPlayground.equalsIgnoreCase("available"))
+                System.out.println("Playground Number:"+( i+1) + "Location :" + Approved.get(i).getLocation());
+        }
+    }
+    /**
+     * display All Playgrounds Names it used in when player want to book Playground 
+     */
+    
+    public void displayAllavailablePlaygroundsNames(){
+        System.out.println("Dispaly All PlayGrounds Names.");
+        for (int i = 0; i < Approved.size(); i++){
+            if(Approved.get(i).statusPlayground.equalsIgnoreCase("available"))
+                System.out.println("Playground Number:"+( i+1) + "Name :" + Approved.get(i).getName()+ " ");
         }
     }
     

@@ -122,6 +122,13 @@ public class Playground {
         }
     }
     /**
+     * get playground Status
+     * @return statusPlayground 
+     */
+    public String getStatus() {
+        return statusPlayground;
+    }
+    /**
      * get playground location
      * @return locationGround
      */

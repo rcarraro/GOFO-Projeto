@@ -36,8 +36,15 @@ import java.util.Scanner;
  * @author Mohamed_El_Laithy
  */
 public class PlayerUI {
-    //Menu for the players
-
+    
+    /**
+     * Menu for the players
+     * @param input
+     * @param userIndex
+     * @param thePlayers
+     * @param currentUser
+     * @param userBalance 
+     */
     public static void playerMenu(Scanner input ,int userIndex, ArrayList<Player> thePlayers,String currentUser,int userBalance) {
         int balance = 0, teamNum = 0;
         String choice, temp;
@@ -49,8 +56,11 @@ public class PlayerUI {
         System.out.println("5- cancel Booking");
         System.out.println("6- Edit your information");
         System.out.println("7- add complaints");
-        System.out.println("8- view inbox");
-        System.out.println("9- Logout");
+        System.out.println("8- view your mails");
+        System.out.println("9- display all playgrounds");
+        System.out.println("10- Search For Plauground By Name");
+        System.out.println("11- Search For Plauground By Location");
+        System.out.println("12- Logout");
         choice = input.nextLine();
         if (choice.equals("1")) {
             System.out.println("Enter the amount to deposit");
@@ -85,7 +95,19 @@ public class PlayerUI {
             complaintForm();
         } else if (choice.equals("8")) {
             thePlayers.get(userIndex).viewInbox();
-        } else if (choice.equals("9")) {
+        }else if (choice.equals("9")) {
+            admin.displayAllPlaygrounds();
+        }else if (choice.equals("10")) {
+            admin.displayAllavailablePlaygroundsNames();
+            System.out.println("\nEnter the Playground Name :");
+            String PName = input.nextLine();
+            admin.searchByName(PName);
+        }else if (choice.equals("11")) {
+            System.out.println("\nEnter the Playground Location :");
+            admin.displayAllavailablePlaygroundsLocations();
+            String PLoc = input.nextLine();
+            admin.searchByLocation(PLoc);
+        }else if (choice.equals("12")) {
             accountMenu();
         } else {
             System.out.println("invalid input please choose number from 1 to  10 ");
@@ -102,11 +124,13 @@ public class PlayerUI {
         System.out.println("2-Playground name");
         String getChoice = input.nextLine();
         if (getChoice.equals("1")) {
+            admin.displayAllavailablePlaygroundsLocations();
             System.out.println("Enter the location");
             String getLoc = input.nextLine();
             int cost = admin.bookByLocation(getLoc, currentUser, userBalance);
             thePlayers.get(userIndex).setBalance(userBalance - cost);
         } else if (getChoice.equals("2")) {
+            admin.displayAllavailablePlaygroundsNames();
             System.out.println("Enter the playground name:");
             String getName = input.nextLine();
             getName = isString(getName);
