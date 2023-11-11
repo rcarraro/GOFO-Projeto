@@ -27,11 +27,11 @@ public class AdminUITeste {
     //     System.setOut(new PrintStream(saida));
     // }
 
-    // @After
-    // public void restoreSystemInAndOut() {
-    //     System.setIn(originalSystemIn);
-    //     System.setOut(originalSystemOut);
-    // }
+    @After
+    public void restoreSystemInAndOut() {
+        System.setIn(originalSystemIn);
+        System.setOut(originalSystemOut);
+    }
 
     @Test 
     public void testAdminMenuShowApproveRequests() {
