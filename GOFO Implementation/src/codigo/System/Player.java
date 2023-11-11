@@ -1,6 +1,6 @@
 package codigo.System;
 
-import System.eWallet;
+import codigo.System.eWallet;
 import static System.Administrator.Approved;
 
 import codigo.UI.SystemUI;

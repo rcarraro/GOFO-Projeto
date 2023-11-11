@@ -1,8 +1,8 @@
 package codigo.System;
 
-import System.Playground;
-import System.userProfile;
-import System.eWallet;
+import codigo.System.Playground;
+import codigo.System.userProfile;
+import codigo.System.eWallet;
 import codigo.UI.SystemUI;
 import java.util.Scanner;
 import java.util.Vector;
