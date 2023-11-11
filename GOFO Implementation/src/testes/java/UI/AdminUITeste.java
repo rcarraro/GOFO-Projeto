@@ -53,8 +53,6 @@ public class AdminUITeste {
 
         restoreSystemInAndOut();
 
-        // Add assertions based on the expected behavior of the suspendPlayground method
-        // Example: assertEquals(expectedOutput, output.toString());
     }
 
     @Test
@@ -68,8 +66,6 @@ public class AdminUITeste {
 
         restoreSystemInAndOut();
 
-        // Add assertions based on the expected behavior when an invalid choice is entered
-        // Example: assertTrue(output.toString().contains("Wrong input"));
     }
 
     private void provideInput(String data) {
