@@ -18,7 +18,7 @@
 
     <build>
         <sourceDirectory>GOFO Implementation/src/codigo</sourceDirectory>
-        <testSourceDirectory>GOFO Implementation/src/testes</testSourceDirectory>
+        <testSourceDirectory>GOFO Implementation/src/testes/java/UI</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
