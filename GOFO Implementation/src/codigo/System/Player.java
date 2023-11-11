@@ -1,7 +1,7 @@
 package codigo.System;
 
 import codigo.System.eWallet;
-import static System.Administrator.Approved;
+import static codigo.System.Administrator.Approved;
 
 import codigo.UI.SystemUI;
 import java.util.ArrayList;
