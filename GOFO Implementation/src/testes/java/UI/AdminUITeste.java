@@ -32,7 +32,7 @@ public class AdminUITeste {
 
         restoreSystemInAndOut();
 
-        String expectedOutput = "Welcome to admin menu, please choose from the following\n" +
+        String expectedOutput = "Welcome to admin menu, please choose fasdrom the following\n" +
                 "1- show approve requests for playground\n" +
                 "2- suspend Playground\n" +
                 "3- unSuspend playground\n" +
