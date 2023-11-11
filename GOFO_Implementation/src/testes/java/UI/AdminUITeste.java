@@ -1,4 +1,4 @@
-import codigo.UI.AdminUI;
+import UI.AdminUI;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,6 +14,7 @@ public class AdminUITeste {
 
     private final InputStream originalSystemIn = System.in;
     private final PrintStream originalSystemOut = System.out;
+    private final String menu1 = "1\n";
 
     @After
     public void restoreSystemInAndOut() {
@@ -21,25 +22,25 @@ public class AdminUITeste {
         System.setOut(originalSystemOut);
     }
 
-    @Test
+    @Test 
     public void testAdminMenuShowApproveRequests() {
-        provideInput("1\n");
+        provideInput(menu1);
 
-        ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
+        ByteArrayOutputStream saida = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(saida));
 
-        AdminUI.adminMenu();
+        codigo.UI.AdminUI.adminMenu();  // Fully qualified class name
 
         restoreSystemInAndOut();
 
-        String expectedOutput = "Welcome to admin menu, please choose fasdrom the following\n" +
+        String expectedOutput = "Welcome to admin menu, please choose from the following\n" +
                 "1- show approve requests for playground\n" +
                 "2- suspend Playground\n" +
                 "3- unSuspend playground\n" +
                 "4- delete Playground\n" +
                 "5- show complaints\n" +
-                "6- Logout\n";
-        assertEquals(expectedOutput, output.toString());
+                "6- Logoutasd\n";
+        assertEquals(expectedOutput, saida.toString());
     }
 
     @Test
