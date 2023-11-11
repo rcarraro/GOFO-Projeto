@@ -1,3 +1,5 @@
+package teste.java.UI;
+
 import codigo.UI.AdminUI;
 import codigo.UI.SystemUI;
 import org.junit.After;
