@@ -6,10 +6,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Pattern;
-import System.Administrator;
-import System.eWallet;
-import System.Player;
-import System.PlaygroundOwner;
+import codigo.System.Administrator;
+import codigo.System.eWallet;
+import codigo.System.Player;
+import codigo.System.PlaygroundOwner;
 
 /**
  * This class is the class that controls all the UI classes in the system, and

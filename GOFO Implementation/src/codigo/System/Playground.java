@@ -2,7 +2,7 @@ package codigo.System;
 
 import System.PlayGroundSchedule;
 import java.util.Scanner;
-import UI.SystemUI;
+import codigo.UI.SystemUI;
 /**
  * Playground class it used to sets and gets Playground data
  * @author Mohamed_El_Laithy

@@ -3,7 +3,7 @@ package codigo.System;
 import System.eWallet;
 import static System.Administrator.Approved;
 
-import UI.SystemUI;
+import codigo.UI.SystemUI;
 import java.util.ArrayList;
 import java.util.Scanner;
 

@@ -1,9 +1,9 @@
 package codigo.UI;
 
-import static UI.SystemUI.accountMenu;
-import static UI.SystemUI.admin;
-import static UI.SystemUI.input;
-import static UI.SystemUI.isString;
+import static codigo.UI.SystemUI.accountMenu;
+import static codigo.UI.SystemUI.admin;
+import static codigo.UI.SystemUI.input;
+import static codigo.UI.SystemUI.isString;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

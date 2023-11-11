@@ -2,7 +2,7 @@ package codigo.System;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import UI.SystemUI;
+import codigo.UI.SystemUI;
 
 /**
  * Administrator class used to allow admin to mange system

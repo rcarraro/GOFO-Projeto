@@ -1,6 +1,6 @@
 package codigo.System;
 
-import System.eWallet;
+import codigo.System.eWallet;
 import java.util.Scanner;
 /**
  * userProfile class that contain all data for user 
