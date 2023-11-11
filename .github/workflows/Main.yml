@@ -20,11 +20,11 @@ jobs:
         java-version: 8
         java-distribution: temurin
         maven-version: 3.8.7
-    - name: Build with Maven
+    - name: Compilando...
       run: mvn compile
 
     # Add the test step here
-    - name: Test with Maven
+    - name: Testando...
       run: mvn test
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
