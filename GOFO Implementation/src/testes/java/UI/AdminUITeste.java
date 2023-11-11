@@ -21,17 +21,17 @@ public class AdminUITeste {
     private final ByteArrayOutputStream saida = new ByteArrayOutputStream();
     private final String menu1 = "1\n";
 
-    @Before
-    public void setUp() {
-        SystemUI.admin = new Administrator();
-        System.setOut(new PrintStream(saida));
-    }
+    // @Before
+    // public void setUp() {
+    //     SystemUI.admin = new Administrator();
+    //     System.setOut(new PrintStream(saida));
+    // }
 
-    @After
-    public void restoreSystemInAndOut() {
-        System.setIn(originalSystemIn);
-        System.setOut(originalSystemOut);
-    }
+    // @After
+    // public void restoreSystemInAndOut() {
+    //     System.setIn(originalSystemIn);
+    //     System.setOut(originalSystemOut);
+    // }
 
     @Test 
     public void testAdminMenuShowApproveRequests() {
