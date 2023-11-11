@@ -1,6 +1,6 @@
 package codigo.System;
 
-import System.PlayGroundSchedule;
+import codigo.System.PlayGroundSchedule;
 import java.util.Scanner;
 import codigo.UI.SystemUI;
 /**
