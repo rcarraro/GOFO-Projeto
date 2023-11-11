@@ -1,16 +1,16 @@
-package codigo.UI;
+package main.UI;
 
 
-import codigo.System.Playground;
-import codigo.System.PlaygroundOwner;
-import static codigo.UI.SystemUI.accountMenu;
-import static codigo.UI.SystemUI.admin;
-import static codigo.UI.SystemUI.complaintForm;
-import static codigo.UI.SystemUI.isDigit;
-import static codigo.UI.SystemUI.isString;
-import static codigo.UI.SystemUI.stringToInt;
-import static codigo.UI.SystemUI.thePlayers;
-import static codigo.UI.PlayerUI.isExistPlayer;
+import main.System.Playground;
+import main.System.PlaygroundOwner;
+import static main.UI.SystemUI.accountMenu;
+import static main.UI.SystemUI.admin;
+import static main.UI.SystemUI.complaintForm;
+import static main.UI.SystemUI.isDigit;
+import static main.UI.SystemUI.isString;
+import static main.UI.SystemUI.stringToInt;
+import static main.UI.SystemUI.thePlayers;
+import static main.UI.PlayerUI.isExistPlayer;
 import java.util.ArrayList;
 import java.util.Scanner;
 

@@ -1,7 +1,7 @@
-package codigo.System;
+package main.System;
 
 import java.util.Scanner;
-import codigo.UI.SystemUI;
+import main.UI.SystemUI;
 
 /**
  * eWallet class for user it allow to user to deposit amount or withdraw amount
