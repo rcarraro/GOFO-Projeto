@@ -33,7 +33,7 @@ public class AdminUITeste {
 
     @Test 
     public void testAdminMenuShowApproveRequests() {
-        provideInput(menu1);
+        provideInput(menu1); 
 
         ByteArrayOutputStream saida = new ByteArrayOutputStream();
         System.setOut(new PrintStream(saida));
