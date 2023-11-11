@@ -1,5 +1,5 @@
 import codigo.UI.AdminUI;
-import codigoUI.SystemUI;
+import codigo.UI.SystemUI;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
