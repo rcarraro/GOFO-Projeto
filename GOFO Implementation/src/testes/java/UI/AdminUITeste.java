@@ -1,7 +1,4 @@
-package teste.java.UI;
-
 import codigo.UI.AdminUI;
-import codigo.UI.SystemUI;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,29 +15,20 @@ public class AdminUITeste {
     private final InputStream originalSystemIn = System.in;
     private final PrintStream originalSystemOut = System.out;
 
-    private final ByteArrayOutputStream saida = new ByteArrayOutputStream();
-    private final String menu1 = "1\n";
-
-    // @Before
-    // public void setUp() {
-    //     SystemUI.admin = new Administrator();
-    //     System.setOut(new PrintStream(saida));
-    // }
-
     @After
     public void restoreSystemInAndOut() {
         System.setIn(originalSystemIn);
         System.setOut(originalSystemOut);
     }
 
-    @Test 
+    @Test
     public void testAdminMenuShowApproveRequests() {
-        provideInput(menu1); 
+        provideInput("1\n");
 
-        ByteArrayOutputStream saida = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(saida));
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
 
-        AdminUI.adminMenu(); 
+        AdminUI.adminMenu();
 
         restoreSystemInAndOut();
 
@@ -51,8 +39,38 @@ public class AdminUITeste {
                 "4- delete Playground\n" +
                 "5- show complaints\n" +
                 "6- Logout\n";
-        assertEquals(expectedOutput, saida.toString());
-    } 
+        assertEquals(expectedOutput, output.toString());
+    }
+
+    @Test
+    public void testAdminMenuSuspendPlayground() {
+        provideInput("2\nPlaygroundName\n");
+
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+
+        AdminUI.adminMenu();
+
+        restoreSystemInAndOut();
+
+        // Add assertions based on the expected behavior of the suspendPlayground method
+        // Example: assertEquals(expectedOutput, output.toString());
+    }
+
+    @Test
+    public void testAdminMenuInvalidChoice() {
+        provideInput("invalid\n6\n");
+
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+
+        AdminUI.adminMenu();
+
+        restoreSystemInAndOut();
+
+        // Add assertions based on the expected behavior when an invalid choice is entered
+        // Example: assertTrue(output.toString().contains("Wrong input"));
+    }
 
     private void provideInput(String data) {
         ByteArrayInputStream inputStream = new ByteArrayInputStream(data.getBytes());
