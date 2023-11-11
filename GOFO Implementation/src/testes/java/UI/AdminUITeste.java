@@ -52,7 +52,7 @@ public class AdminUITeste {
                 "5- show complaints\n" +
                 "6- Logout\n";
         assertEquals(expectedOutput, saida.toString());
-    }
+    } 
 
     private void provideInput(String data) {
         ByteArrayInputStream inputStream = new ByteArrayInputStream(data.getBytes());
