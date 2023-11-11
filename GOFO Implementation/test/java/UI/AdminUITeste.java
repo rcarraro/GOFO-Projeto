@@ -31,7 +31,7 @@ public class AdminUITeste {
         System.setOut(originalSystemOut);
     }
 
-    @Test
+    @Test 
     public void testAdminMenuShowApproveRequests() {
         provideInput(menu1);
 
