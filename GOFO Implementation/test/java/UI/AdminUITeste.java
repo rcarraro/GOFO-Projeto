@@ -38,7 +38,7 @@ public class AdminUITeste {
         ByteArrayOutputStream saida = new ByteArrayOutputStream();
         System.setOut(new PrintStream(saida));
 
-        AdminUI.adminMenu();
+        AdminUI.adminMenu(); 
 
         restoreSystemInAndOut();
 
