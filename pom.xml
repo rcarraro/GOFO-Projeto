@@ -18,7 +18,7 @@
 
     <build>
         <sourceDirectory>src/main</sourceDirectory>
-        <testSourceDirectory>src/teste/java/UI</testSourceDirectory>
+        <testSourceDirectory>src/main/test/java/UI</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
