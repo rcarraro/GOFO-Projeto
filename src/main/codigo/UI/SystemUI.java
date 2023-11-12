@@ -1,4 +1,4 @@
-package codigo.UI;
+package main.UI;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -6,10 +6,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Pattern;
-import codigo.System.Administrator;
-import codigo.System.eWallet;
-import codigo.System.Player;
-import codigo.System.PlaygroundOwner;
+import main.System.Administrator;
+import main.System.eWallet;
+import main.System.Player;
+import main.System.PlaygroundOwner;
 
 /**
  * This class is the class that controls all the UI classes in the system, and
