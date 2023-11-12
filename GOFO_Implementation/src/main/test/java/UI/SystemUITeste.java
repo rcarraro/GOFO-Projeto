@@ -25,9 +25,9 @@ public class SystemUITeste {
 
     private final InputStream originalSystemIn = System.in;
     private final PrintStream originalSystemOut = System.out;
+    private static final Logger LOGGER = LoggerFactory.getLogger(MyTestClass.class);
 
     private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-    private static final Logger LOGGER = LoggerFactory.getLogger(MyTestClass.class)
     @Rule
     public final TextFromStandardInputStream systemInMock = TextFromStandardInputStream.emptyStandardInputStream();
 
