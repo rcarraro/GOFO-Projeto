@@ -19,7 +19,7 @@ import org.mockito.stubbing.Answer;
 
 import static org.junit.Assert.assertEquals;
 
-public class SystemUITest {
+public class SystemUITeste {
 
     private final InputStream originalSystemIn = System.in;
     private final PrintStream originalSystemOut = System.out;
