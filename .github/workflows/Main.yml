@@ -32,7 +32,7 @@ jobs:
       env:
         MAVEN_OPTS: '-Dsurefire.redirectTestOutputToFile=false'
     - name: Access output variable
-      run: echo "Output Content: ${{ steps.<step_id>.outputs.outputContent }}"
+      run: echo "Output Content: ${{ steps.${GITHUB_RUN_ID}.outputs.outputContent }}"
     #   if: always()
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
