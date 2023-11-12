@@ -20,6 +20,9 @@ jobs:
         java-version: 8
         java-distribution: temurin
         maven-version: 3.8.7
+    - name: Instalando dependências...
+      run: mvn clean install
+    
     - name: Compilando...
       run: mvn compile
 
