@@ -39,14 +39,25 @@ public class SystemUITeste {
 
     @Test
     public void testRegisterPlayer() {
-        SystemUI system = new SystemUI();
-        system.register();
-        String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
-        provideInput(simulatedInput);
-
+        systemInMock.provideLines("Rafael", "Martins",123, "teste123","carrarorafa@gmail.com",123456789,"SP","player",123);
         assertEquals("Successfully verified!\n", outputStream.toString());
-    }
+    } 
 
+    // @Test
+    // public void testRegisterPlayer() {
+    //     IntegerAsker asker = mock(IntegerAsker.class);
+    //     when(asker.ask(anyString())).thenReturn("Rafael");
+    //     when(asker.ask(anyString())).thenReturn("Martins");
+    //     when(asker.ask(anyString())).thenReturn(123);
+    //     when(asker.ask(anyString())).thenReturn("teste123");
+    //     when(asker.ask(anyString())).thenReturn("carrarorafa@gmail.com");
+    //     when(asker.ask(anyString())).thenReturn(123456789);
+    //     when(asker.ask(anyString())).thenReturn("SP");
+    //     when(asker.ask(anyString())).thenReturn("player");
+    //     when(asker.ask(anyString())).thenReturn(123);
+
+    //     assertEquals("Successfully verified!\n", outputStream.toString());
+    // }
 
     // @Test
     // public void testLoginPlayer() {
