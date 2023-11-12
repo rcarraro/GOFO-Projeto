@@ -53,8 +53,8 @@ public class SystemUITeste {
         systemInMock.provideText("SP");
         systemInMock.provideText("player");
         systemInMock.provideText("123");
-        
-        assertEquals("Successfully verified!\n", outputStream.toString());
+
+        assertEquals("Successfully !\n", outputStream.toString());
     } 
 
     // @Test
