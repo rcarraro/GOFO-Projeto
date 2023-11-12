@@ -17,7 +17,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
-import static org.junit.contrib.java.lang.system.TextFromStandardInputStream.*;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import static org.junit.Assert.assertEquals;
 
@@ -29,7 +29,7 @@ public class SystemUITeste {
     private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
     @Rule
-    public final TextFromStandardInputStream systemInMock = emptyStandardInputStream();
+    public final TextFromStandardInputStream systemInMock = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Before
     public void setUp() {
