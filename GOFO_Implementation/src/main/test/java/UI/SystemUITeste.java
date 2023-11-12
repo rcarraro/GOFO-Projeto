@@ -45,7 +45,7 @@ public class SystemUITeste {
     @Test
     public void testRegisterPlayer() {
         SystemUI sistema = new SystemUI();
-        
+        System.out.println("This is a log message.");
         sistema.register();
 
         systemInMock.provideText("Rafael");
@@ -58,7 +58,7 @@ public class SystemUITeste {
         systemInMock.provideText("player");
         systemInMock.provideText("123");
         
-        assertEquals("Successfully !\n", outputStream.toString());
+        assertEquals("Successfully verified!\n", outputStream.toString());
     } 
 
     // @Test
