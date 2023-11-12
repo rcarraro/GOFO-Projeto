@@ -44,7 +44,16 @@ public class SystemUITeste {
 
     @Test
     public void testRegisterPlayer() {
-        systemInMock.provideLines("Rafael", "Martins",123, "teste123","carrarorafa@gmail.com",123456789,"SP","player",123);
+        systemInMock.provideText("Rafael");
+        systemInMock.provideText("Martins");
+        systemInMock.provideText("123");
+        systemInMock.provideText("teste123");
+        systemInMock.provideText("carrarorafa@gmail.com");
+        systemInMock.provideText("123456789");
+        systemInMock.provideText("SP");
+        systemInMock.provideText("player");
+        systemInMock.provideText("123");
+        
         assertEquals("Successfully verified!\n", outputStream.toString());
     } 
 
