@@ -29,7 +29,7 @@ public class AdminUITeste {
         ByteArrayOutputStream saida = new ByteArrayOutputStream();
         System.setOut(new PrintStream(saida));
 
-        main.UI.AdminUI.adminMenu();  // Fully qualified class name
+        main.UI.AdminUI.adminMenu();  
 
         restoreSystemInAndOut();
 
