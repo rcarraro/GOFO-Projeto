@@ -1,7 +1,4 @@
-package teste.java.UI;
-
-import codigo.UI.AdminUI;
-import codigo.UI.SystemUI;
+import UI.AdminUI;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,15 +14,7 @@ public class AdminUITeste {
 
     private final InputStream originalSystemIn = System.in;
     private final PrintStream originalSystemOut = System.out;
-
-    private final ByteArrayOutputStream saida = new ByteArrayOutputStream();
     private final String menu1 = "1\n";
-
-    // @Before
-    // public void setUp() {
-    //     SystemUI.admin = new Administrator();
-    //     System.setOut(new PrintStream(saida));
-    // }
 
     @After
     public void restoreSystemInAndOut() {
@@ -35,12 +24,12 @@ public class AdminUITeste {
 
     @Test 
     public void testAdminMenuShowApproveRequests() {
-        provideInput(menu1); 
+        provideInput(menu1);
 
         ByteArrayOutputStream saida = new ByteArrayOutputStream();
         System.setOut(new PrintStream(saida));
 
-        AdminUI.adminMenu(); 
+        main.UI.AdminUI.adminMenu();  // Fully qualified class name
 
         restoreSystemInAndOut();
 
@@ -50,8 +39,34 @@ public class AdminUITeste {
                 "3- unSuspend playground\n" +
                 "4- delete Playground\n" +
                 "5- show complaints\n" +
-                "6- Logout\n";
+                "6- Logoutasd\n";
         assertEquals(expectedOutput, saida.toString());
+    }
+
+    @Test
+    public void testAdminMenuSuspendPlayground() {
+        provideInput("2\nPlaygroundName\n");
+
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+
+        AdminUI.adminMenu();
+
+        restoreSystemInAndOut();
+
+    }
+
+    @Test
+    public void testAdminMenuInvalidChoice() {
+        provideInput("invalid\n6\n");
+
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+
+        AdminUI.adminMenu();
+
+        restoreSystemInAndOut();
+
     }
 
     private void provideInput(String data) {
