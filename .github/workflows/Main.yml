@@ -20,15 +20,15 @@ jobs:
         java-version: 8
         java-distribution: temurin
         maven-version: 3.8.7
-    - name: Build and test project with Maven
-      run: mvn -B package --file pom.xml
+    # - name: Build and test project with Maven
+    #   run: mvn -B package --file pom.xml
 
-    # - name: Compilando...
-    #   run: mvn compile
+    - name: Compilando...
+      run: mvn compile
 
-    # # Add the test step here
-    # - name: Testando...
-    #   run: mvn test 
+    # Add the test step here
+    - name: Testando...
+      run: mvn test 
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     # - name: Update dependency graph
