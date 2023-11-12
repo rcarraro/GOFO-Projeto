@@ -5,6 +5,7 @@ import codigo.UI.SystemUI;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Rule;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -16,7 +17,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
-import static org.junit.contrib.java.lang.system.TextFromStandardInputStream.*;
+import static org.junit.contrib.java.lang.system.*;
 
 import static org.junit.Assert.assertEquals;
 
