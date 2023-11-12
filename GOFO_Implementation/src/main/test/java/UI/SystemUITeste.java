@@ -15,11 +15,11 @@ import java.util.ArrayList;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.junit.Assert.assertEquals;
-import static org.junit.contrib.java.lang.system.*;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
+import static org.junit.contrib.java.lang.system.TextFromStandardInputStream.*;
 
+import static org.junit.Assert.assertEquals;
 
 public class SystemUITeste {
 
