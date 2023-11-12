@@ -33,6 +33,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version> <!-- Use the latest version available -->
+                <configuration>
+                  <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -48,9 +51,12 @@
     </build>
 
     <dependencies>
-        <!-- Existing dependencies... -->
-
-        <!-- New dependency for Apache Commons Lang -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-surefire-provider</artifactId>
+            <version>1.8.2</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
