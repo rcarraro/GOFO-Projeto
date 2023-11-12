@@ -27,7 +27,7 @@ public class SystemUITeste {
     private final PrintStream originalSystemOut = System.out;
 
     private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(MyTestClass.class)
     @Rule
     public final TextFromStandardInputStream systemInMock = TextFromStandardInputStream.emptyStandardInputStream();
 
@@ -45,6 +45,8 @@ public class SystemUITeste {
     @Test
     public void testRegisterPlayer() {
         SystemUI sistema = new SystemUI();
+        
+        LOGGER.info("This is a log message.");
         System.out.println("This is a log message.");
         sistema.register();
 
