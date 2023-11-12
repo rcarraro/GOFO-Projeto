@@ -44,6 +44,10 @@ public class SystemUITeste {
 
     @Test
     public void testRegisterPlayer() {
+        SystemUI sistema = new SystemUI();
+        
+        sistema.register();
+
         systemInMock.provideText("Rafael");
         systemInMock.provideText("Martins");
         systemInMock.provideText("123");
@@ -53,7 +57,7 @@ public class SystemUITeste {
         systemInMock.provideText("SP");
         systemInMock.provideText("player");
         systemInMock.provideText("123");
-
+        
         assertEquals("Successfully !\n", outputStream.toString());
     } 
 
