@@ -28,8 +28,8 @@
     </properties>
 
     <build>
-        <sourceDirectory>GOFO_Implementation\src\main\codigo</sourceDirectory>
-        <testSourceDirectory>GOFO_Implementation\src\main\test\java\UI</testSourceDirectory>
+        <sourceDirectory>GOFO_Implementation\src\codigo</sourceDirectory>
+        <testSourceDirectory>GOFO_Implementation\src\test\java\UI</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
