@@ -9,7 +9,7 @@ import org.junit.Rule;
 
 import static org.junit.Assert.assertEquals;
 
-public class SystemUITeste {
+public class SystemUITest {
 
 
     @Test
