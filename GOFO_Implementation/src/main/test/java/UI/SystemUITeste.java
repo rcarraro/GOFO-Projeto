@@ -62,7 +62,7 @@ public class SystemUITeste {
         // System.out.println(outputStream.toString());
 
         // System.out.println("::set-output name=outputContent::" + outputStream.toString());
-        assertEquals("aklujiwfhawkjfhawfhawikufhwaiufhwaifhaiwufhiu verified!\n", outputStream.toString());
+        assertEquals("Successfully verified!\n", outputStream.toString());
     } 
 
     // @Test

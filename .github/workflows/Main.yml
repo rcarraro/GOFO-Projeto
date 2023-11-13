@@ -20,19 +20,18 @@ jobs:
         java-version: 8
         java-distribution: temurin
         maven-version: 3.8.7
-    # - name: Build and test project with Maven
-    #   run: mvn -B package --file pom.xml
+    - name: Build and test project with Maven
+      run: mvn -B package --file pom.xml
 
-    - name: Compilando...
-      run: mvn compile
+    # - name: Compilando...
+    #   run: mvn compile
 
-    # Add the test step here
-    - name: Testando...
-      run: mvn test
-      env:
-        MAVEN_OPTS: '-Dsurefire.redirectTestOutputToFile=false'
-    
+    # # Add the test step here
+    # - name: Testando...
+    #   run: mvn test
+    #   env:
+    #     MAVEN_OPTS: '-Dsurefire.redirectTestOutputToFile=false'
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    # - name: Update dependency graph
-    #   uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+    - name: Update dependency graph
+      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
