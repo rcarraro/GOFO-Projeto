@@ -19,7 +19,7 @@ public class SystemUITest {
 
     private final InputStream originalSystemIn = System.in;
     private final PrintStream originalSystemOut = System.out;
-
+    SystemUI sistema = new SystemUI();
     private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
     @Before
@@ -37,9 +37,7 @@ public class SystemUITest {
     public void testRegisterPlayer() {
         String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
         provideInput(simulatedInput);
-        SystemUI sistema = new SystemUI();
         sistema.register();
-
         assertEquals("Successfully verified!\n", outputStream.toString());
     }
 
@@ -51,12 +49,12 @@ public class SystemUITest {
         ArrayList<Player> players = new ArrayList<>();
         players.add(player);
 
-        SystemUI.thePlayers = players;
+        sistema.thePlayers = players;
 
         String simulatedInput = "john.doe@example.com\npassword\n";
         provideInput(simulatedInput);
 
-        SystemUI.Login();
+        sistema.Login();
 
         assertEquals("Logged in successfully\n", outputStream.toString());
     }
@@ -64,18 +62,18 @@ public class SystemUITest {
     @Test
     public void testComplaintForm() {
         Administrator admin = new Administrator();
-        SystemUI.admin = admin;
+        sistema.admin = admin;
 
         PlaygroundOwner owner = new PlaygroundOwner();
         owner.setEmail("owner@example.com");
         ArrayList<PlaygroundOwner> owners = new ArrayList<>();
         owners.add(owner);
-        SystemUI.theOwners = owners;
+        sistema.theOwners = owners;
 
         String simulatedInput = "playground owner\nowner@example.com\nComplaint about the owner\n";
         provideInput(simulatedInput);
 
-        SystemUI.complaintForm();
+        sistema.complaintForm();
 
         assertEquals("User found!!\n", outputStream.toString());
     }
