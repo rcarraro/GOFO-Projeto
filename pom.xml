@@ -21,7 +21,7 @@
     </parent>
     
     <groupId>src.codigo</groupId>
-    <artifactId>codigo</artifactId>
+    <artifactId>ProjetoFinal</artifactId>
     <version>1.0-SNAPSHOT</version>
     
     <properties>
@@ -41,6 +41,12 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <!-- Remove the redirectTestOutputToFile configuration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
             </plugin>
         </plugins>
     </build>
