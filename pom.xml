@@ -21,7 +21,7 @@
     </parent>
     
     <groupId>src.codigo</groupId>
-    <artifactId>ProjetoFinal</artifactId>
+    <artifactId>codigo</artifactId>
     <version>1.0-SNAPSHOT</version>
     
     <properties>
