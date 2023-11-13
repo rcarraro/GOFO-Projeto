@@ -36,8 +36,4 @@ public class SystemUITest {
     }
 
    
-    @BeforeEach
-    public void restoreStreams() {
-        System.setOut(originalOut);
-    }
 }
