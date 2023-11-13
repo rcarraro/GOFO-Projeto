@@ -24,7 +24,6 @@ jobs:
     - name: Compilando...
       run: mvn compile
 
-    # Add the test step here
     - name: Testando...
       run: mvn test
 
