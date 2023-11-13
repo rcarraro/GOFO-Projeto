@@ -6,11 +6,23 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.Rule;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
 public class SystemUITest {
+    
+    private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+    private final PrintStream originalOut = System.out;
 
+    @BeforeEach
+    public void setUpStreams() {
+        System.setOut(new PrintStream(outputStream));
+    }
 
     @Test
     public void testRegisterPlayer() {
@@ -26,49 +38,13 @@ public class SystemUITest {
         when(asker.ask(anyString())).thenReturn("SP");
         when(asker.ask(anyString())).thenReturn("player");
         when(asker.ask(anyString())).thenReturn(123);
-
-        assertEquals("Successfully verified!\n", outputStream.toString());
+        String capturedOutput = outputStream.toString();
+        assertEquals("Successfully verified!\n", capturedOutput);
     }
 
-    // @Test
-    // public void testLoginPlayer() {
-    //     Player player = new Player();
-    //     player.setEmail("john.doe@example.com");
-    //     player.setPassword("password");
-    //     ArrayList<Player> players = new ArrayList<>();
-    //     players.add(player);
-
-    //     SystemUI.thePlayers = players;
-
-    //     String simulatedInput = "john.doe@example.com\npassword\n";
-    //     provideInput(simulatedInput);
-
-    //     SystemUI.Login();
-
-    //     assertEquals("Logged in successfully\n", outputStream.toString());
-    // }
-
-    // @Test
-    // public void testComplaintForm() {
-    //     Administrator admin = new Administrator();
-    //     SystemUI.admin = admin;
-
-    //     PlaygroundOwner owner = new PlaygroundOwner();
-    //     owner.setEmail("owner@example.com");
-    //     ArrayList<PlaygroundOwner> owners = new ArrayList<>();
-    //     owners.add(owner);
-    //     SystemUI.theOwners = owners;
-
-    //     String simulatedInput = "playground owner\nowner@example.com\nComplaint about the owner\n";
-    //     provideInput(simulatedInput);
-
-    //     SystemUI.complaintForm();
-
-    //     assertEquals("User found!!\n", outputStream.toString());
-    // }
-
-    // private void provideInput(String data) {
-    //     ByteArrayInputStream inputStream = new ByteArrayInputStream(data.getBytes());
-    //     System.setIn(inputStream);
-    // }
+   
+    @BeforeEach
+    public void restoreStreams() {
+        System.setOut(originalOut);
+    }
 }
