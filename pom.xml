@@ -29,7 +29,7 @@
 
     <build>
         <sourceDirectory>GOFO_Implementation\src\main\codigo</sourceDirectory>
-        <testSourceDirectory>GOFO_Implementation\src\main\test\java</testSourceDirectory>
+        <testSourceDirectory>GOFO_Implementation/src/main/test/java/UI</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
