@@ -58,11 +58,11 @@ public class SystemUITeste {
         systemInMock.provideText("SP");
         systemInMock.provideText("player");
         systemInMock.provideText("123");
-        System.out.println("ByteArrayOutputStream Content:");
-        System.out.println(outputStream.toString());
+        // System.out.println("ByteArrayOutputStream Content:");
+        // System.out.println(outputStream.toString());
 
-        System.out.println("::set-output name=outputContent::" + outputStream.toString());
-        assertEquals("Successfully verified!\n", outputStream.toString());
+        // System.out.println("::set-output name=outputContent::" + outputStream.toString());
+        assertEquals("aklujiwfhawkjfhawfhawikufhwaiufhwaifhaiwufhiu verified!\n", outputStream.toString());
     } 
 
     // @Test
