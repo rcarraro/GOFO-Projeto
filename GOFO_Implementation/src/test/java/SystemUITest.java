@@ -35,8 +35,8 @@ public class SystemUITest {
     public void testRegisterPlayer() {
         String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
         provideInput(simulatedInput);
-
-        SystemUI.register();
+        SystemUI sistema = new SystemUI();
+        sistema.register();
 
         assertEquals("Successfully verified!\n", outputStream.toString());
     }
