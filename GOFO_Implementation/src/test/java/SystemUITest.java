@@ -17,11 +17,6 @@ public class SystemUITest {
     private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
 
-    @BeforeEach
-    public void setUpStreams() {
-        System.setOut(new PrintStream(outputStream));
-    }
-
     @Test
     public void testRegisterPlayer() {
         // IntegerAsker asker = mock(IntegerAsker.class);
