@@ -31,7 +31,7 @@
 
     <build>
         <sourceDirectory>GOFO_Implementation/src/codigo</sourceDirectory>
-        <testSourceDirectory>GOFO_Implementation/src/test</testSourceDirectory>
+        <testSourceDirectory>GOFO_Implementation/src/test/java</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
