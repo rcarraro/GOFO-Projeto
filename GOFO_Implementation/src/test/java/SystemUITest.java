@@ -1,8 +1,8 @@
-import System.Administrator;
-import System.Player;
-import System.PlaygroundOwner;
-import System.PlaygroundOwner;
-import UI.SystemUI;
+import codigo.System.Administrator;
+import codigo.System.Player;
+import codigo.System.PlaygroundOwner;
+import codigo.System.PlaygroundOwner;
+import codigo.UI.SystemUI;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
