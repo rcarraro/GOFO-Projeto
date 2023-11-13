@@ -14,24 +14,21 @@ public class SystemUITest {
 
     @Test
     public void testRegisterPlayer() {
-        assertEquals("","");
-    } 
+        // IntegerAsker asker = mock(IntegerAsker.class);
+        SystemUI sistema = new SystemUI();
+        sistema.register();
+        when(asker.ask(anyString())).thenReturn("Rafael");
+        when(asker.ask(anyString())).thenReturn("Martins");
+        when(asker.ask(anyString())).thenReturn(123);
+        when(asker.ask(anyString())).thenReturn("teste123");
+        when(asker.ask(anyString())).thenReturn("carrarorafa@gmail.com");
+        when(asker.ask(anyString())).thenReturn(123456789);
+        when(asker.ask(anyString())).thenReturn("SP");
+        when(asker.ask(anyString())).thenReturn("player");
+        when(asker.ask(anyString())).thenReturn(123);
 
-    // @Test
-    // public void testRegisterPlayer() {
-    //     IntegerAsker asker = mock(IntegerAsker.class);
-    //     when(asker.ask(anyString())).thenReturn("Rafael");
-    //     when(asker.ask(anyString())).thenReturn("Martins");
-    //     when(asker.ask(anyString())).thenReturn(123);
-    //     when(asker.ask(anyString())).thenReturn("teste123");
-    //     when(asker.ask(anyString())).thenReturn("carrarorafa@gmail.com");
-    //     when(asker.ask(anyString())).thenReturn(123456789);
-    //     when(asker.ask(anyString())).thenReturn("SP");
-    //     when(asker.ask(anyString())).thenReturn("player");
-    //     when(asker.ask(anyString())).thenReturn(123);
-
-    //     assertEquals("Successfully verified!\n", outputStream.toString());
-    // }
+        assertEquals("Successfully verified!\n", outputStream.toString());
+    }
 
     // @Test
     // public void testLoginPlayer() {
