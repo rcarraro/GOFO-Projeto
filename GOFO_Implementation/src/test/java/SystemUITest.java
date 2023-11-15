@@ -35,10 +35,10 @@ public class SystemUITest {
     //     systemIn.provideLines("John","Doe","123","password","john.doe@example.com","456","City","player");
     //     sistema.register(); 
     // }
-
-     public void testaccountMenu(){
+    @Test
+    public void testaccountMenu(){
         sistema.accountMenu();
-     }
+    }
 
     // @Test
     // public void testLoginPlayer() {
