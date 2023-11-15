@@ -21,9 +21,10 @@ public class SystemUITest {
 
     private final InputStream originalSystemIn = System.in;
     private final PrintStream originalSystemOut = System.out;
+    private SystemUI sistema;
     @Before
     public void setUp(){
-        SystemUI sistema = new SystemUI();
+        sistema = new SystemUI();
     }
 
     @Rule
