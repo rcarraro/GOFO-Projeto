@@ -36,8 +36,13 @@ public class SystemUITest {
     //     sistema.register(); 
     // }
     @Test
-    public void testaccountMenu(){
+    public void testaccountMenuSaida(){
         sistema.accountMenu();
+        systemIn.provideLines('3');
+    }
+    public void testaccountMenuLogin(){
+        sistema.accountMenu();
+        systemIn.provideLines('1');
     }
 
     // @Test
