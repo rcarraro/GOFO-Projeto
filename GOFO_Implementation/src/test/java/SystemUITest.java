@@ -36,16 +36,16 @@ public class SystemUITest {
     @Test
     public void testRegisterPlayer() {
         String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
-        sistema.register();
         provideInput(simulatedInput);
-    
+
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         PrintStream originalOut = System.out;
         System.setOut(new PrintStream(outputStream));
-    
-    
+
+        sistema.register();
+
         System.setOut(originalOut);
-    
+
         assertEquals("Successfully verified!\n", outputStream.toString());
     }
 
