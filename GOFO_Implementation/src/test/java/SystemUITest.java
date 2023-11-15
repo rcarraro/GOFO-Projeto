@@ -36,10 +36,6 @@ public class SystemUITest {
     //     sistema.register(); 
     // }
     @Test
-    public void testaccountMenuSaida(){
-        sistema.accountMenu();
-        assertEquals(0,systemIn.provideLines("3"));
-    }
     public void testaccountMenuLogin(){
         sistema.accountMenu();
         systemIn.provideLines("1");
