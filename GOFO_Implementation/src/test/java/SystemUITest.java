@@ -81,10 +81,5 @@ public class SystemUITest {
     private void provideInput(String data) {
         ByteArrayInputStream inputStream = new ByteArrayInputStream(data.getBytes());
         System.setIn(inputStream);
-        try {
-            inputStream.close();
-        } catch (IOException e) {
-            e.printStackTrace(); 
-        }
     }
 }
