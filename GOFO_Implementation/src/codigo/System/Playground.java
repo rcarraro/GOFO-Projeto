@@ -1,8 +1,8 @@
-package main.System;
+package codigo.System;
 
-import main.System.PlayGroundSchedule;
+import codigo.System.PlayGroundSchedule;
 import java.util.Scanner;
-import main.UI.SystemUI;
+import codigo.UI.SystemUI;
 /**
  * Playground class it used to sets and gets Playground data
  * @author Mohamed_El_Laithy

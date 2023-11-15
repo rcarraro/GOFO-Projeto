@@ -1,8 +1,8 @@
-package main.System;
+package codigo.System;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import main.UI.SystemUI;
+import codigo.UI.SystemUI;
 
 /**
  * Administrator class used to allow admin to mange system

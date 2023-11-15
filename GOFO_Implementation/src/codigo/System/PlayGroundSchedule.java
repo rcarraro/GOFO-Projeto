@@ -1,6 +1,6 @@
-package main.System;
+package codigo.System;
 
-import main.UI.SystemUI;
+import codigo.UI.SystemUI;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**

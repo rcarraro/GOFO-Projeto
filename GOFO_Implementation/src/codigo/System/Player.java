@@ -1,9 +1,9 @@
-package main.System;
+package codigo.System;
 
-import main.System.eWallet;
-import static main.System.Administrator.Approved;
+import codigo.System.eWallet;
+import static codigo.System.Administrator.Approved;
 
-import main.UI.SystemUI;
+import codigo.UI.SystemUI;
 import java.util.ArrayList;
 import java.util.Scanner;
 
