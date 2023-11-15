@@ -35,6 +35,7 @@ public class SystemUITest {
 
     @Test
     public void testRegisterPlayer() {
+        System.out.println("teste");
         String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
         provideInput(simulatedInput);
         sistema.register();
