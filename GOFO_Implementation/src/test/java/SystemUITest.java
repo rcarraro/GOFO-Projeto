@@ -38,15 +38,11 @@ public class SystemUITest {
         String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
         provideInput(simulatedInput);
 
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        PrintStream originalOut = System.out;
-        System.setOut(new PrintStream(outputStream));
-
         sistema.register();
 
-        System.setOut(originalOut);
-
-        assertEquals("Successfully verified!\n", outputStream.toString());
+        assertEquals("Enter the info to add new user\nEnter the first name\nEnter the last name\n" +
+                "Enter the ID\nEnter the password\nEnter the email\nEnter the phone\nEnter the location\n" +
+                "Enter the role [player or playground owner]\nSuccessfully verified!\n", outputStream.toString());
     }
 
     // @Test
