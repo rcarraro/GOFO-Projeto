@@ -47,12 +47,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                        <include>**/*Tests.java</include>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <argLine>-Deditable.java.test.console=true</argLine>
-                        <!-- Add any additional patterns for test classes -->
-                    </includes>
                 </configuration>
             </plugin>
         </plugins>
