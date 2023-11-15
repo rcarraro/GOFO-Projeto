@@ -29,8 +29,7 @@ public class SystemUITest {
     @Test
     public void testRegisterPlayer() {
         sistema.register();
-        String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
-        systemIn.provideInput(simulatedInput);
+        systemIn.provideLines("John","Doe","123","password","john.doe@example.com","456","City","player");
 
 
         assertEquals("Enter the info to add new user\nEnter the first name\nEnter the last name\n" +
