@@ -37,7 +37,7 @@ public class SystemUITest {
     // }
     @Test
     public void testaccountMenuLogin(){
-        systemIn.provideLines("1");
+        systemIn.provideLines("1", "rafael@fei.com.br");
         sistema.accountMenu();
     }
 
