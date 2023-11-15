@@ -20,14 +20,15 @@ public class SystemUITest {
     private final InputStream originalSystemIn = System.in;
     private final PrintStream originalSystemOut = System.out;
     SystemUI sistema = new SystemUI();
-    
-    private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+    @Rule
+    public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Test
     public void testRegisterPlayer() {
         sistema.register();
         String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
-        provideInput(simulatedInput);
+        systemIn.provideInput(simulatedInput);
 
 
         assertEquals("Enter the info to add new user\nEnter the first name\nEnter the last name\n" +
@@ -72,8 +73,8 @@ public class SystemUITest {
     //     assertEquals("User found!!\n", outputStream.toString());
     // }
 
-    private void provideInput(String data) {
-        ByteArrayInputStream inputStream = new ByteArrayInputStream(data.getBytes());
-        System.setIn(inputStream);
-    }
+    // private void provideInput(String data) {
+    //     ByteArrayInputStream inputStream = new ByteArrayInputStream(data.getBytes());
+    //     System.setIn(inputStream);
+    // }
 }
