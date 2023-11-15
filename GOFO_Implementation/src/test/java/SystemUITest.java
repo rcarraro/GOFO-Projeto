@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.Rule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -36,9 +35,21 @@ public class SystemUITest {
     //     sistema.register(); 
     // }
     @Test
-    public void testaccountMenuLogin(){
-        systemIn.provideLines("1", "rafael@fei.com.br", "123456");
-        sistema.accountMenu();
+    public void testaccountMenuLoginsemcadastro(){
+        PrintStream originalOut = System.out;
+        try {
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            PrintStream printStream = new PrintStream(outputStream);
+            System.setOut(printStream);
+            systemIn.provideLines("1", "rafael@fei.com.br", "123456");
+            sistema.accountMenu();
+
+            String printedOutput = outputStream.toString();
+            assertEquals("Hello, World!", printedOutput.trim());
+        } finally {
+            System.setOut(originalOut);
+        }
+    }
     }
 
     // @Test
