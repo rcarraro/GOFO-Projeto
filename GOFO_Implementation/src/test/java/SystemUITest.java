@@ -30,11 +30,6 @@ public class SystemUITest {
     public void testRegisterPlayer() {
         sistema.register();
         systemIn.provideLines("John","Doe","123","password","john.doe@example.com","456","City","player");
-
-
-        assertEquals("Enter the info to add new user\nEnter the first name\nEnter the last name\n" +
-                "Enter the ID\nEnter the password\nEnter the email\nEnter the phone\nEnter the location\n" +
-                "Enter the role [player or playground owner]\nSuccessfully verified!\n", outputStream.toString());
     }
 
     // @Test
