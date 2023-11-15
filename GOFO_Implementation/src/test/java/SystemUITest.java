@@ -21,15 +21,18 @@ public class SystemUITest {
 
     private final InputStream originalSystemIn = System.in;
     private final PrintStream originalSystemOut = System.out;
-    SystemUI sistema = new SystemUI();
+    @Before
+    public void setUp(){
+        SystemUI sistema = new SystemUI();
+    }
 
     @Rule
     public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Test
     public void testRegisterPlayer() {
-        sistema.register();
         systemIn.provideLines("John","Doe","123","password","john.doe@example.com","456","City","player");
+        sistema.register(); 
     }
 
     // @Test
