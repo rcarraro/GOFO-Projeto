@@ -50,7 +50,6 @@ public class SystemUITest {
             System.setOut(originalOut);
         }
     }
-    }
 
     // @Test
     // public void testLoginPlayer() {
