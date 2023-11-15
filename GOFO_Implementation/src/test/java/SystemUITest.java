@@ -6,6 +6,7 @@ import codigo.UI.SystemUI;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
