@@ -95,8 +95,7 @@ public class SystemUI {
         System.out.println("1-Log in");
         System.out.println("2-Register");
         System.out.println("3-Exit");
-        String choice = "0";
-        // String choice = input.nextLine();
+        String choice = input.nextLine();
         if (choice.equals("1")) {
             Login();
         } else if (choice.equals("2")) {
@@ -132,11 +131,10 @@ public class SystemUI {
     /**
      * get validation code for the email
      */
-    public static void getValidationCode(String code) {
+    public static void getValidationCode() {
         System.out.println("Enter the validation code that was sent to your email.");
-        if(code.equals("ASD")){
-            System.out.println("Successfully verified!");
-        }
+        String getCode = input.nextLine();
+        System.out.println("Successfully verified!");
         accountMenu();
     }
 
@@ -165,8 +163,30 @@ public class SystemUI {
     /**
      * registering account for a user
      */
-    public static void register(String fName, String lName, int ID, String password, String email,
-                                int Phone, String location, String role) {
+    public static void register() {
+        String fName, lName, password, temp, email, role;
+        int ID, phone;
+        System.out.println("Enter the info to add new user");
+        System.out.println("Enter the first name");
+        fName = input.nextLine();
+        fName = isString(fName);
+        System.out.println("Enter the last name");
+        lName = input.nextLine();
+        lName = isString(lName);
+        System.out.println("Enter the ID");
+        temp = input.nextLine();
+        ID = stringToInt(temp);
+        System.out.println("Enter the password");
+        password = input.nextLine();
+        System.out.println("Enter the email");
+        email = input.nextLine();
+        email = isEmail(email);
+        System.out.println("Enter the phone");
+        temp = input.nextLine();
+        phone = stringToInt(temp);
+        System.out.println("Enter the location");
+        String location;
+        location = input.nextLine();
         System.out.println("Enter the role [player or playground owner]");
         while (true) {
             role = input.nextLine();

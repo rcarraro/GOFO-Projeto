@@ -35,16 +35,10 @@ public class SystemUITest {
 
     @Test
     public void testRegisterPlayer() {
-        String fName = "Rafael";
-        String lName = "Martins";
-        String tempID = "1";
-        String password = "teste123";
-        String email = "testerafael@gmail.com";
-        String tempPhone = "912345678";
-        String location = "SP";
-        String role = "player";
-    
-        sistema.register(fName, lName, tempID, password, email, tempPhone, location, role);
+        sistema.register();
+        String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
+        provideInput(simulatedInput);
+        assertEquals("Successfully verified!\n", Application.readName());
     }
 
     // @Test
