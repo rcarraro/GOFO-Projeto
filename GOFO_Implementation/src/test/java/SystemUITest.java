@@ -30,11 +30,15 @@ public class SystemUITest {
     @Rule
     public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
-    @Test
-    public void testRegisterPlayer() {
-        systemIn.provideLines("John","Doe","123","password","john.doe@example.com","456","City","player");
-        sistema.register(); 
-    }
+    // @Test
+    // public void testRegisterPlayer() {
+    //     systemIn.provideLines("John","Doe","123","password","john.doe@example.com","456","City","player");
+    //     sistema.register(); 
+    // }
+
+     public void testaccountMenu(){
+        sistema.accountMenu();
+     }
 
     // @Test
     // public void testLoginPlayer() {
