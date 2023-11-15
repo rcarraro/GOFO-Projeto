@@ -33,14 +33,14 @@ public class SystemUITest {
         System.setOut(originalSystemOut);
     }
 
-    // @Test
-    // public void testRegisterPlayer() {
-    //     System.out.println("teste");
-    //     String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
-    //     provideInput(simulatedInput);
-    //     sistema.register();
-    //     assertEquals("Successfully verified!\n", outputStream.toString());
-    // }
+    @Test
+    public void testRegisterPlayer() {
+        System.out.println("teste");
+        String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
+        provideInput(simulatedInput);
+        sistema.register();
+        assertEquals("Successfully verified!\n", outputStream.toString());
+    }
 
     // @Test
     // public void testLoginPlayer() {
