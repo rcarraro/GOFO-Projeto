@@ -21,6 +21,9 @@ jobs:
         java-distribution: temurin
         maven-version: 3.8.7
 
+    - name: teste
+      run: mvn -B package --file pom.xml
+
     - name: Compilando...
       run: mvn compile
 
