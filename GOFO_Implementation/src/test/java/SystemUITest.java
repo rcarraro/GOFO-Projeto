@@ -20,25 +20,15 @@ public class SystemUITest {
     private final InputStream originalSystemIn = System.in;
     private final PrintStream originalSystemOut = System.out;
     SystemUI sistema = new SystemUI();
+    
     private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
-    @Before
-    public void setUp() {
-        System.setOut(new PrintStream(outputStream));
-    }
-
-    @After
-    public void restoreSystemInAndOut() {
-        System.setIn(originalSystemIn);
-        System.setOut(originalSystemOut);
-    }
 
     @Test
     public void testRegisterPlayer() {
+        sistema.register();
         String simulatedInput = "John\nDoe\n123\npassword\njohn.doe@example.com\n456\nCity\nplayer\n";
         provideInput(simulatedInput);
 
-        sistema.register();
 
         assertEquals("Enter the info to add new user\nEnter the first name\nEnter the last name\n" +
                 "Enter the ID\nEnter the password\nEnter the email\nEnter the phone\nEnter the location\n" +
