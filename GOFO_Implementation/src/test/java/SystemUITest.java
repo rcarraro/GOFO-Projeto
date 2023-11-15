@@ -37,8 +37,8 @@ public class SystemUITest {
     // }
     @Test
     public void testaccountMenuLogin(){
-        sistema.accountMenu();
         systemIn.provideLines("1");
+        sistema.accountMenu();
     }
 
     // @Test
