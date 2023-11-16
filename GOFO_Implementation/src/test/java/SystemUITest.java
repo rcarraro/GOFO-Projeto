@@ -37,6 +37,7 @@ public class SystemUITest {
     @Test
     public void testaccountMenuLoginsemcadastro(){
         PrintStream originalOut = System.out;
+        systemIn.provideLines("1", "rafael@fei.com.br", "123456");
         System.out.println("teste");
         try {
             System.out.println("teste");
@@ -47,7 +48,6 @@ public class SystemUITest {
             System.out.println(outputStream.toString());
             System.setOut(printStream);
             System.out.println("teste");
-            systemIn.provideLines("1", "rafael@fei.com.br", "123456");
             System.out.println("teste");
             sistema.accountMenu();
             System.out.println("teste");
