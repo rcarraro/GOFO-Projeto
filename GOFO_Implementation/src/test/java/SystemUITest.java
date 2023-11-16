@@ -44,6 +44,7 @@ public class SystemUITest {
             System.out.println("teste");
             PrintStream printStream = new PrintStream(outputStream);
             System.out.println("teste");
+            System.out.println(outputStream.toString());
             System.setOut(printStream);
             System.out.println("teste");
             systemIn.provideLines("1", "rafael@fei.com.br", "123456");
