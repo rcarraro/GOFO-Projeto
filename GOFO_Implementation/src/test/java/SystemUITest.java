@@ -22,9 +22,6 @@ public class SystemUITest {
     @Rule
     public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
-    @Rule
-    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
-
     @Test
     public void testaccountMenuLoginsemcadastro() {
         systemIn.provideLines("1", "rafael@fei.com.br", "123456");
