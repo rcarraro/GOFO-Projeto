@@ -37,6 +37,7 @@ public class SystemUITest {
     @Test
     public void testaccountMenuLoginsemcadastro(){
         PrintStream originalOut = System.out;
+        System.out.println("teste");
         try {
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             PrintStream printStream = new PrintStream(outputStream);
