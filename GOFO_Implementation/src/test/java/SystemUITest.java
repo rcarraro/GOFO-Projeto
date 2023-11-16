@@ -39,15 +39,23 @@ public class SystemUITest {
         PrintStream originalOut = System.out;
         System.out.println("teste");
         try {
+            System.out.println("teste");
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            System.out.println("teste");
             PrintStream printStream = new PrintStream(outputStream);
+            System.out.println("teste");
             System.setOut(printStream);
+            System.out.println("teste");
             systemIn.provideLines("1", "rafael@fei.com.br", "123456");
+            System.out.println("teste");
             sistema.accountMenu();
-
+            System.out.println("teste");
+            
             String printedOutput = outputStream.toString();
+            System.out.println("teste");
             assertEquals("Hello, World!", printedOutput.trim());
         } finally {
+            System.out.println("teste");
             System.setOut(originalOut);
         }
     }
