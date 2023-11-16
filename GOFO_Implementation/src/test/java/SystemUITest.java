@@ -24,7 +24,7 @@ public class SystemUITest {
 
     @Test
     public void testaccountMenuLoginsemcadastro() {
-        systemIn.provideLines("1", "rafael@fei.com.br", "123456","3");
+        systemIn.provideLines("1", "rafael@fei.com.br", "123456","2");
         sistema.accountMenu();
         System.out.println("Actual output: " + systemOutRule.getLog());
         assertEquals("Expected output", "Your custom expected output here\n", systemOutRule.getLog());
