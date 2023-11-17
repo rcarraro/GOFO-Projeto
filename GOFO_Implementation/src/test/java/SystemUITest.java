@@ -28,19 +28,19 @@ public class SystemUITest {
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Test
-    public void testaccountMenuLoginsemcadastro() {
-        sistema = new SystemUI();
-        exit.expectSystemExitWithStatus(0);
-        systemIn.provideLines("1", "rafael@fei.com.br", "123456", "3");
-        sistema.accountMenu();
-    }
-
-    @Test
     public void testaccountMenuRegistro() {
         System.out.println("teste");
         exit.expectSystemExitWithStatus(0);
         systemIn.provideLines("2");
         systemIn.provideLines("2", "Rafael", "Martins", "123", "123456", "rafael@fei.com.br", "12345678", "SP", "player","1234" ,"123", "1", "rafael@fei.com.br", "123456", "12", "3");
+        sistema.accountMenu();
+    }
+    
+    @Test
+    public void testaccountMenuLoginsemcadastro() {
+        sistema = new SystemUI();
+        exit.expectSystemExitWithStatus(0);
+        systemIn.provideLines("1", "rafael@fei.com.br", "123456", "3");
         sistema.accountMenu();
     }
 
