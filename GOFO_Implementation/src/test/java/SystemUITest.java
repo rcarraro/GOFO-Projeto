@@ -16,11 +16,6 @@ public class SystemUITest {
     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
     private SystemUI sistema;
 
-    @Before
-    public void setUp() {
-        sistema = new SystemUI();
-    }
-
     @Rule
     public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
@@ -29,7 +24,8 @@ public class SystemUITest {
 
     @Test
     public void testaccountMenuRegistro() {
-        System.out.println("teste");
+        System.out.println("testaccountMenuRegistro");
+        sistema = new SystemUI();
         exit.expectSystemExitWithStatus(0);
         systemIn.provideLines("2");
         systemIn.provideLines("2", "Rafael", "Martins", "123", "123456", "rafael@fei.com.br", "12345678", "SP", "player","1234" ,"123", "1", "rafael@fei.com.br", "123456", "12", "3");
@@ -38,6 +34,7 @@ public class SystemUITest {
     
     @Test
     public void testaccountMenuLoginsemcadastro() {
+        System.out.println("testaccountMenuLoginsemcadastro");
         sistema = new SystemUI();
         exit.expectSystemExitWithStatus(0);
         systemIn.provideLines("1", "rafael@fei.com.br", "123456", "3");
