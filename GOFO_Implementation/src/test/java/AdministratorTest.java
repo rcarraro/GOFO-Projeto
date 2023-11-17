@@ -20,7 +20,7 @@ public class AdministratorTest {
         Playground playground1 = new Playground();
         Playground playground2 = new Playground();
 
-        administrator.approvePlayground();
+        administrator.displayAllPlaygrounds();
     }
 
     // @Test
