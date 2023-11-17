@@ -7,6 +7,7 @@ import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import java.io.InputStream;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class SystemUITest {
 
