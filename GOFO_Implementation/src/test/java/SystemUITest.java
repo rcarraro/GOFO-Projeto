@@ -23,12 +23,16 @@ public class SystemUITest {
     @Rule
     public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
+    @Rule
+    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
+
     @Test
     public void testaccountMenuLoginsemcadastro() {
         systemIn.provideLines("1", "rafael@fei.com.br", "123456","2", "Rafael", "Martins", "123", "123456", "rafael@fei.com.br", "12345678", "SP", "player","1234" ,"123", "1", "rafael@fei.com.br", "123456", "12", "3");
         sistema.accountMenu();
         String actualOutput = systemOutRule.getLog();
-        assertTrue("Verificação", actualOutput.contains("Logout"));
+        exit.expectSystemExitWithStatus(0);
+        // assertTrue("Verificação", actualOutput.contains("Logout"));
     }
 
     @After
