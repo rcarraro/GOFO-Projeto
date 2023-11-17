@@ -8,6 +8,15 @@ import static org.junit.Assert.assertTrue;
 
 public class AdministratorTest {
 
+    private final InputStream originalSystemIn = System.in;
+    private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+
+    @Rule
+    public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
+
+    @Rule
+    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
+
     private Administrator administrator;
     Playground playground1 = new Playground();
     Playground playground2 = new Playground();
@@ -51,5 +60,8 @@ public class AdministratorTest {
     //     assertTrue(administrator.suspended.contains(playground));
     //     assertTrue(!Administrator.Approved.contains(playground));
     // }
-
+    @After
+    public void restoreSystemInputOutput() {
+        System.setIn(originalSystemIn);
+    }
 }
