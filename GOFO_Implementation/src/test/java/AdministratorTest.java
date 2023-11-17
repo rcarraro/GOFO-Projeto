@@ -9,20 +9,30 @@ import static org.junit.Assert.assertTrue;
 public class AdministratorTest {
 
     private Administrator administrator;
-
+    Playground playground1 = new Playground();
+    Playground playground2 = new Playground();
+   
     @Before
     public void setUp() {
         administrator = new Administrator();
+        playground1 = new Playground();
+        playground2 = new Playground();
     }
 
     @Test
+    public void testplaygroundRequests() {
+        administrator.playgroundRequests(playground1);
+        administrator.playgroundRequests(playground2);
+        assertTrue(administrator.Requested.contains(playground1));
+        assertTrue(administrator.Requested.contains(playground2));
+    }
+    
+    @Test
     public void testapprovePlayground() {
-        Playground playground1 = new Playground();
-        Playground playground2 = new Playground();
-        administrator.Approved.add(playground1);
-        administrator.Approved.add(playground2);
-
-        administrator.displayAllPlaygrounds();
+        systemIn.provideLines("yes","yes");
+        administrator.approvePlayground();
+        assertTrue(administrator.Approved.contains(playground1));
+        assertTrue(administrator.Approved.contains(playground2));
     }
 
 
