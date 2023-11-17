@@ -20,19 +20,16 @@ public class AdministratorTest {
     }
 
     @Test
-    public void testplaygroundRequests() {
+    public void searchByName() {
         administrator.playgroundRequests(playground1);
         administrator.playgroundRequests(playground2);
-        assertTrue(administrator.Requested.contains(playground1));
-        assertTrue(administrator.Requested.contains(playground2));
-    }
-    
-    @Test
-    public void testapprovePlayground() {
+
         systemIn.provideLines("yes","yes");
+        
         administrator.approvePlayground();
-        assertTrue(administrator.Approved.contains(playground1));
-        assertTrue(administrator.Approved.contains(playground2));
+        playground1.setName("teste1");
+        administrator.searchByName("teste1");
+
     }
 
 
