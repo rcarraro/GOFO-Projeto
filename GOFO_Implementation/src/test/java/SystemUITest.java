@@ -27,12 +27,13 @@ public class SystemUITest {
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
-    // @Test
-    // public void testaccountMenuLoginsemcadastro() {
-    //     exit.expectSystemExitWithStatus(0);
-    //     systemIn.provideLines("1", "rafael@fei.com.br", "123456", "3");
-    //     sistema.accountMenu();
-    // }
+    @Test
+    public void testaccountMenuLoginsemcadastro() {
+        sistema = new SystemUI();
+        exit.expectSystemExitWithStatus(0);
+        systemIn.provideLines("1", "rafael@fei.com.br", "123456", "3");
+        sistema.accountMenu();
+    }
 
     @Test
     public void testaccountMenuRegistro() {
