@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.Rule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 import org.junit.contrib.java.lang.system.SystemOutRule;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import java.io.InputStream;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
