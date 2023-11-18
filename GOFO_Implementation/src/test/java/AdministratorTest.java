@@ -88,12 +88,12 @@ public class AdministratorTest {
     //     administrator.displayAllavailablePlaygroundsNames();
     // }
     
-    // @Test
-    // public void testbookBy_wrongLocation_wronguser() {
-    //     systemIn.provideLines("SP", "1", "1", "10");
-    //     administrator.bookByLocation("OS", "testuser", 123);
-    //     //input temp errado
-    // }
+    @Test 
+    public void testbookBy_wrongLocation_wronguser() {
+        systemIn.provideLines("SP", "1", "1", "10");
+        administrator.bookByLocation("OS", "testuser", 123);
+        //input temp errado
+    }
 
 
     // @Test
