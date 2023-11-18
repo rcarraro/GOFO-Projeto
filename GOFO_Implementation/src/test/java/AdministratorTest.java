@@ -105,10 +105,16 @@ public class AdministratorTest {
         //     administrator.suspendPlayground("teste1");
         // }
         
+    // @Test 
+    // public void testsuspendPlayground_wrongname() {
+    //     systemIn.provideLines("teste1");
+    //     administrator.suspendPlayground("teste1321");
+    // }
+
     @Test 
-    public void testsuspendPlayground_wrongname() {
-        systemIn.provideLines("teste1");
-        administrator.suspendPlayground("teste1321");
+    public void testsuspendPlayground2x() {
+        administrator.suspendPlayground("teste1");
+        administrator.suspendPlayground("teste1");
     }
 
     // @Test
