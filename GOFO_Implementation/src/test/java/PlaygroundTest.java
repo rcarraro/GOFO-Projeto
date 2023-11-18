@@ -79,11 +79,11 @@ public class PlaygroundTest {
         playground.bookingTheSlot("testuser", "10", "sunday");
     }
     
-    // @Test
-    // public void testcancelBooking(){
-    //     playground.bookingTheSlot("testuser", "10", "sunday");
-    //     playground.cancelBooking("sunday", "10");
-    // }
+    @Test
+    public void testcancelBooking(){
+        playground.bookingTheSlot("testuser", "10", "sunday");
+        playground.cancelBooking("sunday", "10");
+    }
 
     @After
     public void restoreSystemInputOutput() {
