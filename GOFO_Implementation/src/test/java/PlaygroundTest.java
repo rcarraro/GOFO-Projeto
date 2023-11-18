@@ -56,11 +56,11 @@ public class PlaygroundTest {
         assertThrows(RuntimeException.class, () -> playground.setPrice());
     }
 
-    // @Test
-    // public void testsetPricenotnormal2(){
-    //     systemIn.provideLines("-10");
-    //     playground.setPrice();
-    // }
+    @Test
+    public void testsetPricenotnormal2(){
+        systemIn.provideLines("-10");
+        playground.setPrice();
+    }
 
     // @Test
     // public void testsetLocation(){
