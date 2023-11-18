@@ -24,8 +24,8 @@ public class AdministratorTest {
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     private Administrator administrator;
-    Playground playground1 = new Playground();
-    Playground playground2 = new Playground();
+    Playground playground1;
+    Playground playground2;
    
     @Before
     public void setUp() {
@@ -151,7 +151,7 @@ public class AdministratorTest {
         systemIn.provideLines("no");
         administrator.unSuspendPlayground();
     }
-    
+
     
     @Test
     public void testshowComplaints() {
