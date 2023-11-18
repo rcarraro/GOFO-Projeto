@@ -26,7 +26,6 @@ public class AdministratorTest {
     Playground playground1 = new Playground();
     Playground playground2 = new Playground();
    
-    @Before
     public void setUp() {
         administrator = new Administrator();
         playground1 = new Playground();
@@ -52,9 +51,9 @@ public class AdministratorTest {
         systemIn.provideLines("available");
         playground2.setStatus();
     }
-
     @Test
     public void testsearchByName() {
+        setUp();
         administrator.searchByName("teste1");
     }
     
