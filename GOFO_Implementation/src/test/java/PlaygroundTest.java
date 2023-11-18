@@ -65,7 +65,7 @@ public class PlaygroundTest {
     @Test
     public void testsetLocation(){
         systemIn.provideLines("SP");
-        playground.setPrice();
+        playground.setLocation();
     }
 
     @Test
