@@ -99,10 +99,16 @@ public class AdministratorTest {
     //     systemIn.provideLines("10", "10", "monday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
     //     administrator.bookByName("teste1", "testuser", 123456);
     // }
-
+    
+    // @Test 
+    // public void testsuspendPlayground() {
+        //     administrator.suspendPlayground("teste1");
+        // }
+        
     @Test 
-    public void testsuspendPlayground() {
-        administrator.suspendPlayground("teste1");
+    public void testsuspendPlayground_wrongname() {
+        systemIn.provideLines("teste1");
+        administrator.suspendPlayground("teste1321");
     }
 
     // @Test
