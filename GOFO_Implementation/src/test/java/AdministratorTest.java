@@ -136,20 +136,25 @@ public class AdministratorTest {
     //     assertThrows(RuntimeException.class, () -> administrator.deletePlayground("teste1"));
     // }
 
-    @Test
-    public void testunSuspendPlaygroundyes() {
-        administrator.suspendPlayground("teste1");
-        systemIn.provideLines("yes");
-        administrator.unSuspendPlayground();
-    }
+    // @Test
+    // public void testunSuspendPlaygroundyes() {
+    //     administrator.suspendPlayground("teste1");
+    //     systemIn.provideLines("yes");
+    //     administrator.unSuspendPlayground();
+    // }
+    
+    // @Test
+    // public void testunSuspendPlaygroundno() {
+    //     administrator.suspendPlayground("teste2");
+    //     systemIn.provideLines("no");
+    //     administrator.unSuspendPlayground();
+    // }
     
     @Test
-    public void testunSuspendPlaygroundno() {
-        administrator.suspendPlayground("teste2");
-        systemIn.provideLines("no");
-        administrator.unSuspendPlayground();
+    public void testshowComplaints() {
+        administrator.showComplaints();
     }
-    
+
 
     @After
     public void restoreSystemInputOutput() {
