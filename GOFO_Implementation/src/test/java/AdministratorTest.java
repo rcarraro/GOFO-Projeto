@@ -131,7 +131,7 @@ public class AdministratorTest {
 
     @Test
     public void testDeleteNonexistentPlayground() {
-        systemIn.provideLines("teste1");
+        systemIn.provideLines("teste1"); 
         
         assertThrows(RuntimeException.class, () -> administrator.deletePlayground("teste1"));
     }
