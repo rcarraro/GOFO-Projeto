@@ -85,8 +85,9 @@ public class AdministratorTest {
     
     @Test
     public void testbookBy_wrongLocation_wronguser() {
-        systemIn.provideLines("SP", "2");
+        systemIn.provideLines("SP", "1", "1", "10");
         administrator.bookByLocation("OS", "testuser", 123);
+        //input temp errado
     }
 
 
