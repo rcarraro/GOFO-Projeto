@@ -52,7 +52,7 @@ public class AdministratorTest {
         systemIn.provideLines("available");
         playground2.setStatus();
     }
-
+    
     @Test
     public void testsearchByName() {
         administrator.searchByName("teste1");
@@ -72,7 +72,7 @@ public class AdministratorTest {
     public void testdisplayAllPlaygroundsLocations() {
         administrator.displayAllavailablePlaygroundsLocations();
     }
-   
+    
     @Test
     public void testdisplayAllavailablePlaygroundsNames() {
         administrator.displayAllavailablePlaygroundsNames();
@@ -80,6 +80,7 @@ public class AdministratorTest {
     
     @Test
     public void testbookBy_wrongLocation_wronguser() {
+        systemIn.provideLines("SP");
         administrator.bookByLocation("OS", "testuser", 123);
     }
 
