@@ -130,8 +130,8 @@ public class AdministratorTest {
     // }
 
     @Test
-    public void testDeleteNonexistentPlayground() {
-        systemIn.provideLines("teste1"); 
+    public void testDeleteNonexistentPlayground2x() {
+        administrator.deletePlayground("teste1");
         
         assertThrows(RuntimeException.class, () -> administrator.deletePlayground("teste1"));
     }
