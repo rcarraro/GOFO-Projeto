@@ -79,8 +79,8 @@ public class AdministratorTest {
     }
     
     @Test
-    public void testbookBy_wrongLocation_wronguser_wrongbalancevar() {
-        administrator.bookByLocation("OS", "testuser", "123");
+    public void testbookBy_wrongLocation_wronguser() {
+        administrator.bookByLocation("OS", "testuser", 123);
     }
 
 
