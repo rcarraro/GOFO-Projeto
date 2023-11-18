@@ -132,11 +132,7 @@ public class AdministratorTest {
     public void testDeleteNonexistentPlayground() {
         systemIn.provideLines("teste1");
         
-        System.setOut(systemOutRule.getLog());
-
         administrator.deletePlayground("teste1");
-
-        System.setOut(System.out);
 
         assertTrue(systemOutRule.getLog().contains("the playground isn't found please enter its name correctly"));
     }
