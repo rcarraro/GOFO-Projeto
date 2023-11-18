@@ -44,11 +44,11 @@ public class PlaygroundTest {
     //     playground.setStatus();
     // }
 
-    // @Test
-    // public void testsetPricenormal(){
-    //     systemIn.provideLines("250");
-    //     playground.setPrice();
-    // }
+    @Test
+    public void testsetPricenormal(){
+        systemIn.provideLines("250");
+        playground.setPrice();
+    }
 
     @Test
     public void testsetPricenotnormal(){
@@ -59,7 +59,7 @@ public class PlaygroundTest {
     @Test
     public void testsetPricenotnormal2(){
         systemIn.provideLines("-10");
-        playground.setPrice();
+        assertThrows(RuntimeException.class, () -> playground.setPrice());
     }
 
     // @Test
