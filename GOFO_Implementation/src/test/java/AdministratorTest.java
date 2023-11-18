@@ -128,10 +128,17 @@ public class AdministratorTest {
         administrator.deletePlayground("teste123123");
     }
 
-    @Test 
-    public void testdeletePlayground2x() {
+    @Test
+    public void testDeleteNonexistentPlayground() {
+        systemIn.provideLines("teste1");
+        
+        System.setOut(systemOutRule.getLogPrintStream());
+
         administrator.deletePlayground("teste1");
-        administrator.deletePlayground("teste1");
+
+        System.setOut(systemOut);
+
+        assertTrue(systemOutRule.getLog().contains("the playground isn't found please enter its name correctly"));
     }
 
     // @Test
