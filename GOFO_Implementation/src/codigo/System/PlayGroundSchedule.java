@@ -46,6 +46,7 @@ public void setschedule()
     temp = input.nextLine();
     int getEnd = obj.stringToInt(temp);
     ends=getEnd;
+	System.out.println(getEnd-getBegin);
     for(int i=0; i<(getEnd-getBegin); i++)
     {
     	schedule.add(new ArrayList<String>());
