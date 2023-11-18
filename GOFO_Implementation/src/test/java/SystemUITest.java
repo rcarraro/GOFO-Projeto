@@ -30,7 +30,7 @@ public class SystemUITest {
     @Test
     public void testaccountMenuLoginsemcadastro() {
         // systemIn.provideLines("1", "rafael@fei.com.br", "123456","2", "Rafael", "Martins", "123", "123456", "rafael@fei.com.br", "12345678", "SP", "player","1234" ,"123", "1", "rafael@fei.com.br", "123456", "12", "3");
-        systemIn.provideLines("1");
+        originalSystemIn.provideLines("1");
         sistema.accountMenu();
         exit.expectSystemExitWithStatus(0);
     }
