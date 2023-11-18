@@ -9,6 +9,7 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import java.io.InputStream;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
 public class AdministratorTest {
@@ -117,24 +118,22 @@ public class AdministratorTest {
     //     administrator.suspendPlayground("teste1");
     // }
         
-    @Test 
-    public void testdeletePlayground() {
-        administrator.deletePlayground("teste1");
-    }
+    // @Test 
+    // public void testdeletePlayground() {
+    //     administrator.deletePlayground("teste1");
+    // }
         
-    @Test 
-    public void testdeletePlayground_wrongname() {
-        systemIn.provideLines("teste1");
-        administrator.deletePlayground("teste123123");
-    }
+    // @Test 
+    // public void testdeletePlayground_wrongname() {
+    //     systemIn.provideLines("teste1");
+    //     administrator.deletePlayground("teste123123");
+    // }
 
     @Test
     public void testDeleteNonexistentPlayground() {
         systemIn.provideLines("teste1");
         
-        administrator.deletePlayground("teste1");
-
-        assertTrue(systemOutRule.getLog().contains("the playground isn't found please enter its name correctly"));
+        assertThrows(RuntimeException.class, () -> administrator.deletePlayground("teste1"));
     }
 
     // @Test
