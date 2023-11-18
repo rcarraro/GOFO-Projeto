@@ -119,19 +119,19 @@ public class AdministratorTest {
         
         @Test 
         public void testdeletePlayground() {
-            systemIn.deletePlayground("teste1");
+            administrator.deletePlayground("teste1");
         }
         
     @Test 
     public void testdeletePlayground_wrongname() {
         systemIn.provideLines("teste1");
-        systemIn.deletePlayground("teste123123");
+        administrator.deletePlayground("teste123123");
     }
 
     @Test 
     public void testdeletePlayground2x() {
         systemIn.deletePlayground("teste1");
-        systemIn.deletePlayground("teste1");
+        administrator.deletePlayground("teste1");
     }
 
     // @Test
