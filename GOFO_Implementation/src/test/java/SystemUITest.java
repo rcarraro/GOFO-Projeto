@@ -32,7 +32,7 @@ public class SystemUITest {
         exit.expectSystemExitWithStatus(0);
         // systemIn.provideLines("1", "rafael@fei.com.br", "123456","2", "Rafael", "Martins", "123", "123456", "rafael@fei.com.br", "12345678", "SP", "player","1234" ,"123", "1", "rafael@fei.com.br", "123456", "12", "3");
         systemIn.provideLines("1");
-        sistema.accountMenu(); 
+        sistema.accountMenu();
         String actualOutput = systemOutRule.getLog();
         // assertTrue("Verificação", actualOutput.contains("Logout"));
     }
