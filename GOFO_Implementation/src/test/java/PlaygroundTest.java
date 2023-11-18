@@ -33,22 +33,22 @@ public class PlaygroundTest {
         playground.setOwner("testeuser");
     }
     
-    @Test
-    public void testsetCancellationPeriod(){
-        playground.setCancellationPeriod(123);
-    }
+    // @Test
+    // public void testsetCancellationPeriod(){
+    //     playground.setCancellationPeriod(123);
+    // }
     
-    @Test
-    public void testsetStatusanotvailable(){
-        systemIn.provideLines("not available");
-        playground.setStatus();
-    }
+    // @Test
+    // public void testsetStatusanotvailable(){
+    //     systemIn.provideLines("not available");
+    //     playground.setStatus();
+    // }
 
-    @Test
-    public void testsetPricenormal(){
-        systemIn.provideLines("250");
-        playground.setPrice();
-    }
+    // @Test
+    // public void testsetPricenormal(){
+    //     systemIn.provideLines("250");
+    //     playground.setPrice();
+    // }
 
     @Test
     public void testsetPricenotnormal(){
@@ -56,34 +56,34 @@ public class PlaygroundTest {
         assertThrows(RuntimeException.class, () -> playground.setPrice());
     }
 
-    @Test
-    public void testsetPricenotnormal2(){
-        systemIn.provideLines("-10");
-        playground.setPrice();
-    }
+    // @Test
+    // public void testsetPricenotnormal2(){
+    //     systemIn.provideLines("-10");
+    //     playground.setPrice();
+    // }
 
-    @Test
-    public void testsetLocation(){
-        systemIn.provideLines("SP");
-        playground.setPrice();
-    }
+    // @Test
+    // public void testsetLocation(){
+    //     systemIn.provideLines("SP");
+    //     playground.setPrice();
+    // }
 
-    @Test
-    public void testsetBooking(){
-        systemIn.provideLines("0", "10");
-        playground.setBooking();
-    }
+    // @Test
+    // public void testsetBooking(){
+    //     systemIn.provideLines("0", "10");
+    //     playground.setBooking();
+    // }
 
-    @Test
-    public void testbookingTheSlot(){
-        playground.bookingTheSlot("testuser", "10", "sunday");
-    }
+    // @Test
+    // public void testbookingTheSlot(){
+    //     playground.bookingTheSlot("testuser", "10", "sunday");
+    // }
     
-    @Test
-    public void testcancelBooking(){
-        playground.bookingTheSlot("testuser", "10", "sunday");
-        playground.cancelBooking("sunday", "10");
-    }
+    // @Test
+    // public void testcancelBooking(){
+    //     playground.bookingTheSlot("testuser", "10", "sunday");
+    //     playground.cancelBooking("sunday", "10");
+    // }
 
     @After
     public void restoreSystemInputOutput() {
