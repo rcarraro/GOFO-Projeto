@@ -112,11 +112,11 @@ public class AdministratorTest {
     //     administrator.suspendPlayground("teste1321");
     // }
     
-    // @Test 
-    // public void testsuspendPlayground2x() {
-    //     administrator.suspendPlayground("teste1");
-    //     administrator.suspendPlayground("teste1");
-    // }
+    @Test 
+    public void testsuspendPlayground2x() {
+        administrator.suspendPlayground("teste1");
+        assertThrows(RuntimeException.class, () -> administrator.suspendPlayground("teste1"));
+    }
         
     // @Test 
     // public void testdeletePlayground() {
@@ -130,7 +130,7 @@ public class AdministratorTest {
     // }
 
     @Test
-    public void testDeleteNonexistentPlayground2x() {
+    public void testdeletePlayground2x() {
         administrator.deletePlayground("teste1");
         
         assertThrows(RuntimeException.class, () -> administrator.deletePlayground("teste1"));
