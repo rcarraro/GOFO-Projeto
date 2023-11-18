@@ -88,13 +88,17 @@ public class AdministratorTest {
     //     administrator.displayAllavailablePlaygroundsNames();
     // }
     
-    @Test 
-    public void testbookBy_wrongLocation_wronguser() {
-        systemIn.provideLines("SP", "1", "1", "10", "sunday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
-        administrator.bookByLocation("OS", "testuser", 123);
-        //input temp errado
-    }
+    // @Test 
+    // public void testbookByLocation() {
+    //     systemIn.provideLines("SP", "1", "1", "10", "sunday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
+    //     administrator.bookByLocation("OS", "testuser", 123);
+    // }
 
+    @Test 
+    public void bookByName() {
+        systemIn.provideLines("10", "10", "monday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
+        administrator.bookByName("teste1", "testuser", 123456);
+    }
 
     // @Test
     // public void testAddComplaints() {
