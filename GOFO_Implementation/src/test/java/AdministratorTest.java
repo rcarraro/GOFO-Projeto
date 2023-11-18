@@ -130,7 +130,7 @@ public class AdministratorTest {
 
     @Test 
     public void testdeletePlayground2x() {
-        systemIn.deletePlayground("teste1");
+        administrator.deletePlayground("teste1");
         administrator.deletePlayground("teste1");
     }
 
