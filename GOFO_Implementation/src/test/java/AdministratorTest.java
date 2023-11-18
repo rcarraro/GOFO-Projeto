@@ -136,7 +136,7 @@ public class AdministratorTest {
 
         administrator.deletePlayground("teste1");
 
-        System.setOut(systemOut);
+        System.setOut(System.out);
 
         assertTrue(systemOutRule.getLog().contains("the playground isn't found please enter its name correctly"));
     }
