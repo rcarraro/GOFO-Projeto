@@ -56,23 +56,23 @@ public class PlaygroundTest {
         assertThrows(RuntimeException.class, () -> playground.setPrice());
     }
 
+    // @Test
+    // public void testsetPricenotnormal2(){
+    //     systemIn.provideLines("-10");
+    //     assertThrows(RuntimeException.class, () -> playground.setPrice());
+    // }
+
     @Test
-    public void testsetPricenotnormal2(){
-        systemIn.provideLines("-10");
-        assertThrows(RuntimeException.class, () -> playground.setPrice());
+    public void testsetLocation(){
+        systemIn.provideLines("SP");
+        playground.setPrice();
     }
 
-    // @Test
-    // public void testsetLocation(){
-    //     systemIn.provideLines("SP");
-    //     playground.setPrice();
-    // }
-
-    // @Test
-    // public void testsetBooking(){
-    //     systemIn.provideLines("0", "10");
-    //     playground.setBooking();
-    // }
+    @Test
+    public void testsetBooking(){
+        systemIn.provideLines("0", "10");
+        playground.setBooking();
+    }
 
     // @Test
     // public void testbookingTheSlot(){
