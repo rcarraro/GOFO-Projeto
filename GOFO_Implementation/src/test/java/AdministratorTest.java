@@ -90,7 +90,7 @@ public class AdministratorTest {
     
     @Test 
     public void testbookBy_wrongLocation_wronguser() {
-        systemIn.provideLines("SP", "1", "1", "10", "10");
+        systemIn.provideLines("SP", "1", "1", "10", "sunday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
         administrator.bookByLocation("OS", "testuser", 123);
         //input temp errado
     }
