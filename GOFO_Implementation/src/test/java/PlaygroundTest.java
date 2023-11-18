@@ -31,7 +31,7 @@ public class PlaygroundTest {
     
     @Test
     public void testsetCancellationPeriod(){
-        administrator.setCancellationPeriod(123);
+        playground.setCancellationPeriod(123);
     }
 
 
