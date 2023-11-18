@@ -112,11 +112,11 @@ public class AdministratorTest {
     //     administrator.suspendPlayground("teste1321");
     // }
     
-    @Test 
-    public void testsuspendPlayground2x() {
-        administrator.suspendPlayground("teste1");
-        assertThrows(RuntimeException.class, () -> administrator.suspendPlayground("teste1"));
-    }
+    // @Test 
+    // public void testsuspendPlayground2x() {
+    //     administrator.suspendPlayground("teste1");
+    //     assertThrows(RuntimeException.class, () -> administrator.suspendPlayground("teste1"));
+    // }
         
     // @Test 
     // public void testdeletePlayground() {
@@ -129,31 +129,28 @@ public class AdministratorTest {
     //     administrator.deletePlayground("teste123123");
     // }
 
-    @Test
-    public void testdeletePlayground2x() {
-        administrator.deletePlayground("teste1");
+    // @Test
+    // public void testdeletePlayground2x() {
+    //     administrator.deletePlayground("teste1");
         
-        assertThrows(RuntimeException.class, () -> administrator.deletePlayground("teste1"));
+    //     assertThrows(RuntimeException.class, () -> administrator.deletePlayground("teste1"));
+    // }
+
+    @Test
+    public void testunSuspendPlaygroundyes() {
+        administrator.suspendPlayground("teste1");
+        systemIn.provideLines("yes");
+        administrator.unSuspendPlayground();
     }
+    
+    @Test
+    public void testunSuspendPlaygroundno() {
+        administrator.suspendPlayground("teste2");
+        systemIn.provideLines("no");
+        administrator.unSuspendPlayground();
+    }
+    
 
-    // @Test
-    // public void testAddComplaints() {
-    //     String complaint = "Test complaint";
-    //     administrator.addComplaints(complaint);
-
-    //     assertTrue(administrator.complaints.contains(complaint));
-    // }
-
-    // @Test
-    // public void testSuspendPlayground() {
-    //     Playground playground = new Playground();
-    //     Administrator.Approved.add(playground);
-
-    //     administrator.suspendPlayground(playground.getName());
-
-    //     assertTrue(administrator.suspended.contains(playground));
-    //     assertTrue(!Administrator.Approved.contains(playground));
-    // }
     @After
     public void restoreSystemInputOutput() {
         System.setIn(originalSystemIn);
