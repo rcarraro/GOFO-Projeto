@@ -34,16 +34,21 @@ public class AdministratorTest {
         administrator.playgroundRequests(playground1);
         administrator.playgroundRequests(playground2);
         
+        //locais
         systemIn.provideLines("SP");
         playground1.setLocation();
         systemIn.provideLines("RJ");
         playground2.setLocation();
-
+        //aprovar
         systemIn.provideLines("yes","yes");
         
         administrator.approvePlayground();
+        //Nomes
         playground1.setName("teste1");
         playground2.setName("teste2");
+        //status
+        playground1.setStatus("available");
+        playground2.setStatus("available");
     }
 
     @Test
@@ -54,6 +59,11 @@ public class AdministratorTest {
     @Test
     public void testsearchByLocation() {
         administrator.searchByName("SP");
+    }
+    
+    @Test
+    public void testdisplayAllavailablePlaygroundsLocations() {
+        administrator.displayAllavailablePlaygroundsLocations();
     }
 
     // @Test
