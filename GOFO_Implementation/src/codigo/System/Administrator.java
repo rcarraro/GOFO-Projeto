@@ -213,7 +213,6 @@ public class Administrator {
             }
             System.out.println("teste");
             return Approved.get(getInput - 1).getPrice() * hoursBooked;
-            System.out.println("teste");
         } else {
             System.out.println("You don't have enough money");
             return 0;
