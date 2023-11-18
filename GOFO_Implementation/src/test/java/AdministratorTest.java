@@ -151,6 +151,11 @@ public class AdministratorTest {
     // }
     
     @Test
+    public void testaddComplaints() {
+        administrator.addComplaints("Bla bla bla");
+    }
+
+    @Test
     public void testshowComplaints() {
         administrator.showComplaints();
     }
