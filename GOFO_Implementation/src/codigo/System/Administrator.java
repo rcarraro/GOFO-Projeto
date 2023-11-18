@@ -207,11 +207,11 @@ public class Administrator {
                 return 0;
             }
             hoursBooked = getAns;
-            System.out.println("teste");
+            System.out.println(getInput - 1);
+            System.out.println(Approved.size());
             for (int i = Approved.get(getInput - 1).getSlotsBegin(); i < (Approved.get(getInput - 1).getSlotsBegin() + 1); i++) {
                 Approved.get(getInput - 1).bookingTheSlot(player, Integer.toString(i), getDay);
             }
-            System.out.println("teste");
             return Approved.get(getInput - 1).getPrice() * hoursBooked;
         } else {
             System.out.println("You don't have enough money");
