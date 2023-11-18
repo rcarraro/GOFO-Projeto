@@ -46,6 +46,11 @@ public class AdministratorTest {
         //Nomes
         playground1.setName("teste1");
         playground2.setName("teste2");
+        //Preço
+        systemIn.provideLines("100");
+        playground1.setPrice();
+        systemIn.provideLines("200");
+        playground2.setPrice();
         //status
         systemIn.provideLines("available");
         playground1.setStatus();
