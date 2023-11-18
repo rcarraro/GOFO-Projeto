@@ -74,10 +74,10 @@ public class PlaygroundTest {
         playground.setBooking();
     }
 
-    // @Test
-    // public void testbookingTheSlot(){
-    //     playground.bookingTheSlot("testuser", "10", "sunday");
-    // }
+    @Test
+    public void testbookingTheSlot(){
+        playground.bookingTheSlot("testuser", "10", "sunday");
+    }
     
     // @Test
     // public void testcancelBooking(){
