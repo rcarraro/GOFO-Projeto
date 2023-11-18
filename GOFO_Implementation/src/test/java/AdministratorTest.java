@@ -113,14 +113,14 @@ public class AdministratorTest {
     
     // @Test 
     // public void testsuspendPlayground2x() {
-        //     administrator.suspendPlayground("teste1");
-        //     administrator.suspendPlayground("teste1");
-        // }
+    //     administrator.suspendPlayground("teste1");
+    //     administrator.suspendPlayground("teste1");
+    // }
         
-        @Test 
-        public void testdeletePlayground() {
-            administrator.deletePlayground("teste1");
-        }
+    @Test 
+    public void testdeletePlayground() {
+        administrator.deletePlayground("teste1");
+    }
         
     @Test 
     public void testdeletePlayground_wrongname() {
