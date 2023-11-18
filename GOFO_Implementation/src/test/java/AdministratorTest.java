@@ -132,7 +132,7 @@ public class AdministratorTest {
     public void testDeleteNonexistentPlayground() {
         systemIn.provideLines("teste1");
         
-        System.setOut(systemOutRule.getLogPrintStream());
+        System.setOut(systemOutRule.getLog());
 
         administrator.deletePlayground("teste1");
 
