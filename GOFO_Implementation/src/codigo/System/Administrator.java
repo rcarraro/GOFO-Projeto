@@ -207,6 +207,7 @@ public class Administrator {
                 return 0;
             }
             hoursBooked = getAns;
+            System.out.println("teste");
             for (int i = Approved.get(getInput - 1).getSlotsBegin(); i < (Approved.get(getInput - 1).getSlotsBegin() + 1); i++) {
                 Approved.get(getInput - 1).bookingTheSlot(player, Integer.toString(i), getDay);
             }
