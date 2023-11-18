@@ -31,21 +31,30 @@ public class AdministratorTest {
         administrator = new Administrator();
         playground1 = new Playground();
         playground2 = new Playground();
-    }
-
-    @Test
-    public void searchByName() {
         administrator.playgroundRequests(playground1);
         administrator.playgroundRequests(playground2);
+        
+        systemIn.provideLines("SP");
+        playground1.setLocation();
+        systemIn.provideLines("RJ");
+        playground2.setLocation();
 
         systemIn.provideLines("yes","yes");
         
         administrator.approvePlayground();
         playground1.setName("teste1");
-        administrator.searchByName("teste1");
-
+        playground2.setName("teste2");
     }
 
+    @Test
+    public void testsearchByName() {
+        administrator.searchByName("teste1");
+    }
+    
+    @Test
+    public void testsearchByLocation() {
+        administrator.searchByName("SP");
+    }
 
     // @Test
     // public void testAddComplaints() {
