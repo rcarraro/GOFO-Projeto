@@ -211,7 +211,9 @@ public class Administrator {
             for (int i = Approved.get(getInput - 1).getSlotsBegin(); i < (Approved.get(getInput - 1).getSlotsBegin() + 1); i++) {
                 Approved.get(getInput - 1).bookingTheSlot(player, Integer.toString(i), getDay);
             }
+            System.out.println("teste");
             return Approved.get(getInput - 1).getPrice() * hoursBooked;
+            System.out.println("teste");
         } else {
             System.out.println("You don't have enough money");
             return 0;
