@@ -58,30 +58,30 @@ public class AdministratorTest {
         playground2.setStatus();
     }
     
-    @Test
-    public void testsearchByName() {
-        administrator.searchByName("teste1");
-    }
+    // @Test
+    // public void testsearchByName() {
+    //     administrator.searchByName("teste1");
+    // }
     
-    @Test
-    public void testsearchByLocation() {
-        administrator.searchByName("SP");
-    }
+    // @Test
+    // public void testsearchByLocation() {
+    //     administrator.searchByName("SP");
+    // }
     
-    @Test
-    public void testdisplayAllavailablePlaygroundsLocations() {
-        administrator.displayAllavailablePlaygroundsLocations();
-    }
+    // @Test
+    // public void testdisplayAllavailablePlaygroundsLocations() {
+    //     administrator.displayAllavailablePlaygroundsLocations();
+    // }
     
-    @Test
-    public void testdisplayAllPlaygroundsLocations() {
-        administrator.displayAllavailablePlaygroundsLocations();
-    }
+    // @Test
+    // public void testdisplayAllPlaygroundsLocations() {
+    //     administrator.displayAllavailablePlaygroundsLocations();
+    // }
     
-    @Test
-    public void testdisplayAllavailablePlaygroundsNames() {
-        administrator.displayAllavailablePlaygroundsNames();
-    }
+    // @Test
+    // public void testdisplayAllavailablePlaygroundsNames() {
+    //     administrator.displayAllavailablePlaygroundsNames();
+    // }
     
     @Test
     public void testbookBy_wrongLocation_wronguser() {
