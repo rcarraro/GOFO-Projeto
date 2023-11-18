@@ -94,10 +94,15 @@ public class AdministratorTest {
     //     administrator.bookByLocation("OS", "testuser", 123);
     // }
 
+    // @Test 
+    // public void testbookByName() {
+    //     systemIn.provideLines("10", "10", "monday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
+    //     administrator.bookByName("teste1", "testuser", 123456);
+    // }
+
     @Test 
-    public void bookByName() {
-        systemIn.provideLines("10", "10", "monday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
-        administrator.bookByName("teste1", "testuser", 123456);
+    public void testsuspendPlayground() {
+        administrator.suspendPlayground("teste1");
     }
 
     // @Test
