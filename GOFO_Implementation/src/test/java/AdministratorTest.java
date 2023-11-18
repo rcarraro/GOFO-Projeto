@@ -77,7 +77,11 @@ public class AdministratorTest {
     public void testdisplayAllavailablePlaygroundsNames() {
         administrator.displayAllavailablePlaygroundsNames();
     }
-
+    
+    @Test
+    public void testbookBy_wrongLocation_wronguser_wrongbalancevar() {
+        administrator.bookByLocation("OS", "testuser", "123");
+    }
 
 
     // @Test
