@@ -53,7 +53,7 @@ public class PlaygroundTest {
     @Test
     public void testsetPricenotnormal(){
         systemIn.provideLines("asd");
-        playground.setPrice();
+        assertThrows(RuntimeException.class, () -> administrator.setPrice());
     }
 
     @Test
