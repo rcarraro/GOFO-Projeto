@@ -33,16 +33,16 @@ public class PlaygroundTest {
         playground.setOwner("testeuser");
     }
     
-    // @Test
-    // public void testsetCancellationPeriod(){
-    //     playground.setCancellationPeriod(123);
-    // }
+    @Test
+    public void testsetCancellationPeriod(){
+        playground.setCancellationPeriod(123);
+    }
     
-    // @Test
-    // public void testsetStatusanotvailable(){
-    //     systemIn.provideLines("not available");
-    //     playground.setStatus();
-    // }
+    @Test
+    public void testsetStatusanotvailable(){
+        systemIn.provideLines("not available");
+        playground.setStatus();
+    }
 
     @Test
     public void testsetPricenormal(){
