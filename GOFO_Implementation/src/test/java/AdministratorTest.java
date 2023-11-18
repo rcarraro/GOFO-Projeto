@@ -110,21 +110,22 @@ public class AdministratorTest {
     //     systemIn.provideLines("teste1");
     //     administrator.suspendPlayground("teste1321");
     // }
-
+    
     // @Test 
     // public void testsuspendPlayground2x() {
-    //     administrator.suspendPlayground("teste1");
-    //     administrator.suspendPlayground("teste1");
-    // }
-
-    @Test 
-    public void testdeletePlayground() {
-        systemIn.deletePlayground("teste1");
-    }
-
+        //     administrator.suspendPlayground("teste1");
+        //     administrator.suspendPlayground("teste1");
+        // }
+        
+        @Test 
+        public void testdeletePlayground() {
+            systemIn.deletePlayground("teste1");
+        }
+        
     @Test 
     public void testdeletePlayground_wrongname() {
-        systemIn.deletePlayground("teste1");
+        systemIn.provideLines("teste1");
+        systemIn.deletePlayground("teste123123");
     }
 
     @Test 
