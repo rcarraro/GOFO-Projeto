@@ -56,6 +56,11 @@ public class AdministratorTest {
         playground1.setStatus();
         systemIn.provideLines("available");
         playground2.setStatus();
+        //schedule
+        systemIn.provideLines("0");
+        playground1.setBooking();
+        systemIn.provideLines("30");
+        playground2.setBooking();
     }
     
     // @Test
