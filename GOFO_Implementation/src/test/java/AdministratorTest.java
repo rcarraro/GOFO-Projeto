@@ -47,8 +47,10 @@ public class AdministratorTest {
         playground1.setName("teste1");
         playground2.setName("teste2");
         //status
-        playground1.setStatus("available");
-        playground2.setStatus("available");
+        systemIn.provideLines("available");
+        playground1.setStatus();
+        systemIn.provideLines("available");
+        playground2.setStatus();
     }
 
     @Test
@@ -65,6 +67,18 @@ public class AdministratorTest {
     public void testdisplayAllavailablePlaygroundsLocations() {
         administrator.displayAllavailablePlaygroundsLocations();
     }
+    
+    @Test
+    public void testdisplayAllPlaygroundsLocations() {
+        administrator.displayAllavailablePlaygroundsLocations();
+    }
+   
+    @Test
+    public void testdisplayAllavailablePlaygroundsNames() {
+        administrator.displayAllavailablePlaygroundsNames();
+    }
+
+
 
     // @Test
     // public void testAddComplaints() {
