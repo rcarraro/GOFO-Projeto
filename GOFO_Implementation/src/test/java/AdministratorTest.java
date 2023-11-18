@@ -62,6 +62,8 @@ public class AdministratorTest {
         playground1.setBooking();
         systemIn.provideLines("0","30");
         playground2.setBooking();
+        //complaints
+        administrator.addComplaints("Bla bla bla");
     }
     
     // @Test
@@ -150,11 +152,6 @@ public class AdministratorTest {
     //     administrator.unSuspendPlayground();
     // }
     
-    @Test
-    public void testaddComplaints() {
-        administrator.addComplaints("Bla bla bla");
-    }
-
     @Test
     public void testshowComplaints() {
         administrator.showComplaints();
