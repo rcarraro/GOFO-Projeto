@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
-public class US01Test {
+public class US01_2Test {
 
     private final InputStream originalSystemIn = System.in;
     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -34,13 +34,6 @@ public class US01Test {
     public void testaccountMenu() {
         exit.expectSystemExitWithStatus(0);
         systemIn.provideLines("2","Kleber","Silva","123","123456","teste@fei.edu.br", "123456789", "SP", "player", "123", "3", "3");
-        sistema.accountMenu();
-    }
-    
-    @Test
-    public void testaccountMenuERRO() {
-        exit.expectSystemExitWithStatus(0);
-        systemIn.provideLines("2","123","123","123","#####","testefei.edu.br", "asd", "1d12f1ad2", "player", "123", "3", "3");
         sistema.accountMenu();
     }
     
