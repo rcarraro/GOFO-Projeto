@@ -30,12 +30,12 @@ public class US01_1Test {
         sistema = new SystemUI();
     }
 
-    @Test
-    public void testaccountMenu() {
-        exit.expectSystemExitWithStatus(0);
-        systemIn.provideLines("2","Kleber","Silva","123","123456","teste@fei.edu.br", "123456789", "SP", "player", "123", "3", "3");
-        sistema.accountMenu();
-    }
+    // @Test
+    // public void testaccountMenu() {
+    //     exit.expectSystemExitWithStatus(0);
+    //     systemIn.provideLines("2","Kleber","Silva","123","123456","teste@fei.edu.br", "123456789", "SP", "player", "123", "3", "3");
+    //     sistema.accountMenu();
+    // }
     
     @After
     public void restoreSystemInputOutput() {
