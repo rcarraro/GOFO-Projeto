@@ -40,7 +40,7 @@ public class US01Test {
     @Test
     public void testaccountMenuERRO() {
         exit.expectSystemExitWithStatus(0);
-        systemIn.provideLines("2","123","123","123","#####","testefei.edu.br", "asd", "1d12f1ad2", "player", "123", "3", "3" );
+        systemIn.provideLines("2","123","123","123","#####","testefei.edu.br", "asd", "1d12f1ad2", "player", "123", "3", "3","3");
         sistema.accountMenu();
     }
     
