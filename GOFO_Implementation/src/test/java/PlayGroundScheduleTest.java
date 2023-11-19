@@ -110,8 +110,7 @@ public class PlayGroundScheduleTest {
 
     @Test
     public void testsetschedule(){
-        systemIn.provideLines("0");
-        systemIn.provideLines("2");
+        systemIn.provideLines("0", "2");
         playgrounds.setschedule();
     }
 
