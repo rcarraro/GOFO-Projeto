@@ -32,7 +32,7 @@ public class US01Test {
 
     @Test
     public void testaccountMenuLoginsemcadastro() {
-        systemIn.provideLines("1", "teste@fei.edu.br");
+        systemIn.provideLines("2","Kleber","Silva","123","123456","teste@fei.edu.br", "123456789", "SP", "player", "123", "3");
         sistema.accountMenu();
         exit.expectSystemExitWithStatus(0);
     }
