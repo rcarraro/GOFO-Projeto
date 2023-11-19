@@ -1,4 +1,4 @@
-// import codigo.UI.SystemUI;
+// import codigo.UI.playgroundOwnerUI;
 // import org.junit.After;
 // import org.junit.Before;
 // import org.junit.Test;
@@ -12,7 +12,7 @@
 // import static org.junit.Assert.assertThrows;
 // import static org.junit.Assert.assertTrue;
 
-// public class US01_2Test {
+// public class US02_2Test {
 
 //     private final InputStream originalSystemIn = System.in;
 //     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -31,9 +31,9 @@
 //     }
 
 //     @Test
-//     public void testaccountMenuERRO() {
+//     public void testaccountMenu() {
 //         exit.expectSystemExitWithStatus(0);
-//         systemIn.provideLines("2","123","teste","123","Silva","123","#####","testefei.edu.br","teste@fei.edu.br", "asd","123456789","1d12f1ad2", "player", "123", "3", "3");
+//         systemIn.provideLines("2","Kleber","Silva","123","123456","teste@fei.edu.br", "123456789", "SP", "player", "123", "3", "3");
 //         sistema.accountMenu();
 //     }
     
