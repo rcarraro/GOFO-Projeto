@@ -65,54 +65,54 @@ public class PlayGroundScheduleTest {
     @Test
     public void testsetPrice(){
         systemIn.provideLines("50");
-        playground.setPrice();
+        playgrounds.setPrice();
     }
     @Test
     public void testsetPricewrong(){
         systemIn.provideLines("asd");
-        assertThrows(RuntimeException.class, () -> playground.setPrice());
+        assertThrows(RuntimeException.class, () -> playgrounds.setPrice());
     }
     @Test
     public void testsetPricewrongneg(){
         systemIn.provideLines("-10");
-        assertThrows(RuntimeException.class, () -> playground.setPrice());
+        assertThrows(RuntimeException.class, () -> playgrounds.setPrice());
     }
     
     @Test
     public void testbookSlot(){
-        playground.bookSlot("testuser", "0", "monday");
+        playgrounds.bookSlot("testuser", "0", "monday");
     }
     
     @Test
     public void testbookSlotother(){
-        playground.bookSlot("testuser", "100", "monday");
+        playgrounds.bookSlot("testuser", "100", "monday");
     }
     
     @Test
     public void testbookSlototherday(){
-        playground.bookSlot("testuser", "0", "asd");
+        playgrounds.bookSlot("testuser", "0", "asd");
     }
 
     @Test
     public void testupdateSlot(){
-        playground.updateSlot("testuser", "0", "monday");
+        playgrounds.updateSlot("testuser", "0", "monday");
     }
 
     @Test
     public void testupdateSlotother(){
-        playground.updateSlot("testuser", "100", "monday");
+        playgrounds.updateSlot("testuser", "100", "monday");
     }
     
     @Test
     public void testupdateSlototherday(){
-        playground.updateSlot("testuser", "0", "asd");
+        playgrounds.updateSlot("testuser", "0", "asd");
     }
 
     @Test
     public void testsetschedule(){
         systemIn.provideLines("0");
         systemIn.provideLines("2");
-        playground.setschedule();
+        playgrounds.setschedule();
     }
 
     @After
