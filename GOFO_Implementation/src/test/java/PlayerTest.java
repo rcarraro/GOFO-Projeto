@@ -29,7 +29,8 @@ public class PlayerTest {
    
      @Before
      public void setUp() {
-         player = new Player();
+          player = new Player();
+          player2 = new Player();
      }
 
      @Test
@@ -50,6 +51,11 @@ public class PlayerTest {
          player.setBalance(10);
          player.getMoney(10);
          assertEquals(20, player.getBalance());
+     }
+
+     @Test
+     public void testCreateTeam(){
+         player.createTeam(player2);
      }
 
      @Test
