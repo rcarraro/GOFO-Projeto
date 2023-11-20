@@ -33,7 +33,7 @@ public class PlayerTest {
      @Test
      public void testSetBalance(){
          player.setBalance(10);
-         assertEquals(10, player.getBalance(10));
+         assertEquals(10, player.getBalance());
      }
 
 }
