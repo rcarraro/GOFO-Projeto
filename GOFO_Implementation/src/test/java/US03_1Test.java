@@ -28,14 +28,27 @@ public class US03_1Test {
     private SystemUI sistema;
     private Playground playground;
     private PlaygroundOwner playgroundo;
+    eWallet serve;
    
     @Before
     public void setUp() {
         sistema = new SystemUI();
+        serve = new eWallet();
         playground = new Playground();
         playgroundo = new PlaygroundOwner();
         playground.setName("teste");
         playgroundo.addPlayground(playground);
+        serve.setBalance(10000);
+        playgroundo.setBalance(serve);
+        playgroundo.setFName("Fname");
+        playgroundo.setLName("lName");
+        playgroundo.setPassword("password");
+        playgroundo.setID(123);
+        playgroundo.setRule("playground owner");
+        playgroundo.setPhone(124356789);
+        playgroundo.setEmail("test@fei.edu.br");
+        playgroundo.setLocation("SP");
+        theOwners.add(playgroundo);
     }
 
     @Test
