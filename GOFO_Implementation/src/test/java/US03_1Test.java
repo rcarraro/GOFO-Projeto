@@ -1,5 +1,6 @@
 import codigo.UI.SystemUI;
 import codigo.System.Playground;
+import codigo.System.PlaygroundOwner;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,12 +27,15 @@ public class US03_1Test {
 
     private SystemUI sistema;
     private Playground playground;
+    private PlaygroundOwner playgroundo;
    
     @Before
     public void setUp() {
         sistema = new SystemUI();
         playground = new Playground();
+        playgroundo = new PlaygroundOwner();
         playground.setName("teste");
+        playgroundo.addPlayground(playground);
     }
 
     @Test
