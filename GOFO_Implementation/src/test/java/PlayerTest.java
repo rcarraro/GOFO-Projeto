@@ -39,6 +39,13 @@ public class PlayerTest {
      }
 
      @Test
+     public void testSetBalance2(){
+          player.setBalance();
+          systemIn.provideLines("10");
+          assertEquals(10, player.getBalance());
+     }
+
+     @Test
      public void testGetMoney(){
          player.setBalance(10);
          player.getMoney(10);
