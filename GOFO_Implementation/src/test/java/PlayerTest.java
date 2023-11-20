@@ -62,9 +62,8 @@ public class PlayerTest {
 
      @Test
      public void testEditPlayerInfoName(){
+          systemIn.provideLines("1", "Amanda");
           player.editPlayerinfo();
-          systemIn.provideLines("1");
-          systemIn.provideLines("Amanda");
      }
 
 }
