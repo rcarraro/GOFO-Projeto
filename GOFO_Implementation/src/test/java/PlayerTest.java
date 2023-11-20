@@ -45,13 +45,13 @@ public class PlayerTest {
      @Test
      public void testViewInboxEmpty(){
           player.viewInbox();
-          Assert.assertEquals("Your Inbox is Empty", systemOutRule.getLog().trim());
+          assertEquals("Your Inbox is Empty", systemOutRule.getLog().trim());
      }
 
      @Test
      public void testViewInbox(){
           player.viewInbox();
-          Assert.assertEquals("Your Inbox is Empty", systemOutRule.getLog().trim());
+          assertEquals("Your Inbox is Empty", systemOutRule.getLog().trim());
      }
 
 }
