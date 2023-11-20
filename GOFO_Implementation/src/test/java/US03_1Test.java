@@ -49,7 +49,7 @@ public class US03_1Test {
         playgroundo.setPhone(124356789);
         playgroundo.setEmail("test@fei.edu.br");
         playgroundo.setLocation("SP");
-        theOwners.add(playgroundo);
+        sistema.theOwners.add(playgroundo);
     }
 
     @Test
