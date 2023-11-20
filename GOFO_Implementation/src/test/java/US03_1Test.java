@@ -25,7 +25,7 @@ public class US03_1Test {
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     private SystemUI sistema;
-    private Playerground playerground;
+    private Playground playerground;
    
     @Before
     public void setUp() {
