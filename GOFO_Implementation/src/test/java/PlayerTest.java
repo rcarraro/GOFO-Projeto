@@ -24,11 +24,10 @@ public class PlayerTest {
 
      Player player;
    
-     //@Before
-     //public void setUp() {
-     //    playgrounds = new PlayGroundSchedule();
-     //    assertEquals(5, playgrounds.getDayIndex("thursday"));
-     //}
+     @Before
+     public void setUp() {
+         player = new Player();
+     }
 
      @Test
      public void testSetBalance(){
