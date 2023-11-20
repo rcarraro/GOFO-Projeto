@@ -10,6 +10,10 @@ import java.io.InputStream;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
+private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+private final PrintStream originalOut = System.out;
+private final PrintStream originalErr = System.err;
 
 public class PlayerTest {
 
@@ -44,12 +48,14 @@ public class PlayerTest {
 
      @Test
      public void testViewInboxEmpty(){
-         assertEquals("Your Inbox is Empty", player.viewInbox().outContent.toString());
+          player.viewInbox();
+          assertEquals("Your Inbox is Empty", outContent.toString());
      }
 
      @Test
      public void testViewInbox(){
-          assertEquals("Your Inbox is Empty", player.viewInbox().outContent.toString());
+          player.viewInbox();
+          assertEquals("Your Inbox is Empty", outContent.toString());
      }
 
 }
