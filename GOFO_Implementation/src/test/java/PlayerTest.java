@@ -66,4 +66,40 @@ public class PlayerTest {
           player.editPlayerinfo();
      }
 
+     @Test
+     public void testEditPlayerInfoName(){
+          systemIn.provideLines("2", "Martins");
+          player.editPlayerinfo();
+     }
+
+     @Test
+     public void testEditPlayerInfoName(){
+          systemIn.provideLines("3", "1111111111");
+          player.editPlayerinfo();
+     }
+
+     @Test
+     public void testEditPlayerInfoName(){
+          systemIn.provideLines("4", "teste@email.com");
+          player.editPlayerinfo();
+     }
+
+     @Test
+     public void testEditPlayerInfoName(){
+          systemIn.provideLines("5", "11111111111");
+          player.editPlayerinfo();
+     }
+
+     @Test
+     public void testEditPlayerInfoName(){
+          systemIn.provideLines("6", "São Bernardo do Campo");
+          player.editPlayerinfo();
+     }
+
+     @Test
+     public void testEditPlayerInfoName(){
+          systemIn.provideLines("7", "senhateste");
+          player.editPlayerinfo();
+     }
+
 }
