@@ -60,4 +60,11 @@ public class PlayerTest {
           assertEquals("Message No.1: Oi\n", outContent.toString());
      }
 
+     @Test
+     public void testEditPlayerInfoName(){
+          player.editPlayerinfo();
+          systemIn.provideLines("1");
+          systemIn.provideLines("Amanda");
+     }
+
 }
