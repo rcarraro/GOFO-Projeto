@@ -42,4 +42,14 @@ public class PlayerTest {
          assertEquals(20, player.getBalance());
      }
 
+     @Test
+     public void testViewInboxEmpty(){
+         assertEquals("Your Inbox is Empty", player.viewInbox().outContent.toString());
+     }
+
+     @Test
+     public void testViewInbox(){
+          assertEquals("Your Inbox is Empty", player.viewInbox().outContent.toString());
+     }
+
 }
