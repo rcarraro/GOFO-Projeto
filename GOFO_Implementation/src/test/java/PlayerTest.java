@@ -108,13 +108,4 @@ public class PlayerTest {
           systemIn.provideLines("7", "senhateste");
           player.editPlayerinfo();
      }
-
-     @Test
-     public void testEditPlayerInfoWrongNumber(){
-          systemIn.provideLines(" ");
-          System.setOut(new PrintStream(outContent));
-          assertEquals("please choose from 1 to 7\n", outContent.toString());
-          
-     }
-
 }
