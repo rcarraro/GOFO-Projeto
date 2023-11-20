@@ -49,14 +49,14 @@ public class PlayerTest {
      public void testViewInboxEmpty(){
           System.setOut(new PrintStream(outContent));
           player.viewInbox();
-          assertEquals("Your Inbox is Empty", outContent.toString());
+          assertEquals("Your Inbox is Empty\n", outContent.toString());
      }
 
      @Test
      public void testViewInbox(){
           System.setOut(new PrintStream(outContent));
           player.viewInbox();
-          assertEquals("Your Inbox is Empty", outContent.toString());
+          assertEquals("Your Inbox is Empty\n", outContent.toString());
      }
 
 }
