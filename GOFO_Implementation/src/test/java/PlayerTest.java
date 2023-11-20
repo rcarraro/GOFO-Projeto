@@ -67,37 +67,37 @@ public class PlayerTest {
      }
 
      @Test
-     public void testEditPlayerInfoName(){
+     public void testEditPlayerInfoSurname(){
           systemIn.provideLines("2", "Martins");
           player.editPlayerinfo();
      }
 
      @Test
-     public void testEditPlayerInfoName(){
+     public void testEditPlayerInfoId(){
           systemIn.provideLines("3", "1111111111");
           player.editPlayerinfo();
      }
 
      @Test
-     public void testEditPlayerInfoName(){
+     public void testEditPlayerInfoEmail(){
           systemIn.provideLines("4", "teste@email.com");
           player.editPlayerinfo();
      }
 
      @Test
-     public void testEditPlayerInfoName(){
+     public void testEditPlayerInfoPhone(){
           systemIn.provideLines("5", "11111111111");
           player.editPlayerinfo();
      }
 
      @Test
-     public void testEditPlayerInfoName(){
+     public void testEditPlayerInfoLocal(){
           systemIn.provideLines("6", "São Bernardo do Campo");
           player.editPlayerinfo();
      }
 
      @Test
-     public void testEditPlayerInfoName(){
+     public void testEditPlayerInfoPassword(){
           systemIn.provideLines("7", "senhateste");
           player.editPlayerinfo();
      }
