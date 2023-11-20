@@ -86,7 +86,7 @@ public class PlayerTest {
 
      @Test
      public void testEditPlayerInfoPhone(){
-          systemIn.provideLines("5", "11111111111");
+          systemIn.provideLines("5", "1111111111");
           player.editPlayerinfo();
      }
 
