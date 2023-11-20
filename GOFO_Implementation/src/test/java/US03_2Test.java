@@ -1,5 +1,7 @@
 // import codigo.UI.SystemUI;
 // import codigo.System.Playground;
+// import codigo.System.eWallet;
+// import codigo.System.PlaygroundOwner;
 // import org.junit.After;
 // import org.junit.Before;
 // import org.junit.Test;
@@ -13,7 +15,7 @@
 // import static org.junit.Assert.assertThrows;
 // import static org.junit.Assert.assertTrue;
 
-// public class US03_2Test {
+// public class US03_1Test {
 
 //     private final InputStream originalSystemIn = System.in;
 //     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -26,12 +28,28 @@
 
 //     private SystemUI sistema;
 //     private Playground playground;
+//     private PlaygroundOwner playgroundo;
+//     eWallet serve;
    
 //     @Before
 //     public void setUp() {
 //         sistema = new SystemUI();
+//         serve = new eWallet();
 //         playground = new Playground();
+//         playgroundo = new PlaygroundOwner();
 //         playground.setName("teste");
+//         serve.setBalance(10000);
+//         playgroundo.setBalance(serve);
+//         playgroundo.setFName("Fname");
+//         playgroundo.setLName("lName");
+//         playgroundo.setPassword("password");
+//         playgroundo.setID(123);
+//         playgroundo.setRule("playground owner");
+//         playgroundo.setPhone(124356789);
+//         playgroundo.setEmail("test@fei.edu.br");
+//         playgroundo.setLocation("SP");
+//         playgroundo.addPlayground(playground);
+//         sistema.theOwners.add(playgroundo);
 //     }
 
 //     @Test
