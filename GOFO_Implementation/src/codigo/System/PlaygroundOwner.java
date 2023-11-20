@@ -64,6 +64,7 @@ public class PlaygroundOwner extends userProfile {
      * @return true or false
      */
     public boolean existPlayground(String name) {
+        System.out.println("entrou");
         for (int i = 0; i < listOfPlayground.size(); i++) {
             if (listOfPlayground.get(i).getName().equalsIgnoreCase(name)) {
                 return true;
