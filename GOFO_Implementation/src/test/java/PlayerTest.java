@@ -56,7 +56,8 @@ public class PlayerTest {
      public void testViewInbox(){
           System.setOut(new PrintStream(outContent));
           player.viewInbox();
-          assertEquals("Your Inbox is Empty\n", outContent.toString());
+          player.addInbox("Oi")
+          assertEquals("Message No.1: Oi\n", outContent.toString());
      }
 
 }
