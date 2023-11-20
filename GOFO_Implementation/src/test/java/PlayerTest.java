@@ -102,4 +102,12 @@ public class PlayerTest {
           player.editPlayerinfo();
      }
 
+     @Test
+     public void testEditPlayerInfoWrongNumber(){
+          System.setOut(new PrintStream(outContent));
+          systemIn.provideLines("10");
+          assertEquals("please choose from 1 to 7\n", outContent.toString());
+          
+     }
+
 }
