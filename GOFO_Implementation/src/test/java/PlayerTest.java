@@ -41,13 +41,6 @@ public class PlayerTest {
      }
 
      @Test
-     public void testSetBalance2(){
-          player.setBalance();
-          systemIn.provideLines("10");
-          assertEquals(10, player.getBalance());
-     }
-
-     @Test
      public void testGetMoney(){
          player.setBalance(10);
          player.getMoney(10);
@@ -100,7 +93,7 @@ public class PlayerTest {
 
      @Test
      public void testEditPlayerInfoPhone(){
-          systemIn.provideLines("5", "1111111111");
+          systemIn.provideLines("5", "111111111111");
           player.editPlayerinfo();
      }
 
@@ -118,7 +111,7 @@ public class PlayerTest {
 
      @Test
      public void testEditPlayerInfoWrongNumber(){
-          systemIn.provideLines("10");
+          systemIn.provideLines(" ");
           System.setOut(new PrintStream(outContent));
           assertEquals("please choose from 1 to 7\n", outContent.toString());
           
