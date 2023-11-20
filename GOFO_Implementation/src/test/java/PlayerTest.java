@@ -35,4 +35,11 @@ public class PlayerTest {
          assertEquals(10, player.getBalance());
      }
 
+     @Test
+     public void testGetMoney(){
+         player.setBalance(10);
+         player.getMoney(10);
+         assertEquals(20, player.getBalance());
+     }
+
 }
