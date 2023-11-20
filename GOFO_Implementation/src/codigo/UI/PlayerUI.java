@@ -189,7 +189,7 @@ public class PlayerUI {
         for (int i = 0; i < theOwners.size(); i++) {
             System.out.println("nome");
             System.out.println(playground);
-
+            System.out.println(theOwners.get(i).existPlayground(playground));
             if (theOwners.get(i).existPlayground(playground)) {
                 theOwners.get(i).addRecieveMsg(currentUser);
 
