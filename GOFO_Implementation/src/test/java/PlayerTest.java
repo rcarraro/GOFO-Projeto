@@ -55,8 +55,8 @@ public class PlayerTest {
      @Test
      public void testViewInbox(){
           System.setOut(new PrintStream(outContent));
-          player.viewInbox();
           player.addInbox("Oi");
+          player.viewInbox();
           assertEquals("Message No.1: Oi\n", outContent.toString());
      }
 
