@@ -117,8 +117,8 @@ public class PlayerTest {
 
      @Test
      public void testEditPlayerInfoWrongNumber(){
-          System.setOut(new PrintStream(outContent));
           systemIn.provideLines("10");
+          System.setOut(new PrintStream(outContent));
           assertEquals("please choose from 1 to 7\n", outContent.toString());
           
      }
