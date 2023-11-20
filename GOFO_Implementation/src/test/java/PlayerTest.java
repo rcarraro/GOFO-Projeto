@@ -81,7 +81,7 @@ public class PlayerTest {
 
      @Test
      public void testEditPlayerInfoId(){
-          systemIn.provideLines("3", "1111111111");
+          systemIn.provideLines("3", 1111111111);
           player.editPlayerinfo();
      }
 
@@ -93,7 +93,7 @@ public class PlayerTest {
 
      @Test
      public void testEditPlayerInfoPhone(){
-          systemIn.provideLines("5", "111111111111");
+          systemIn.provideLines("5", 111111111111);
           player.editPlayerinfo();
      }
 
