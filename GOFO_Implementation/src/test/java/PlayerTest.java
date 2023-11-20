@@ -10,13 +10,13 @@ import java.io.InputStream;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
-private final PrintStream originalOut = System.out;
-private final PrintStream originalErr = System.err;
 
 public class PlayerTest {
 
+     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+     private final PrintStream originalOut = System.out;
+     private final PrintStream originalErr = System.err;
      private final InputStream originalSystemIn = System.in;
      private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
