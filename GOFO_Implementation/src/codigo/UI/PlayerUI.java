@@ -187,10 +187,8 @@ public class PlayerUI {
         temp = input.nextLine();
         hours = stringToInt(temp);
         for (int i = 0; i < theOwners.size(); i++) {
-            System.out.println("nome");
-            System.out.println(playground);
-            System.out.println(theOwners.get(i).existPlayground(playground));
             if (theOwners.get(i).existPlayground(playground)) {
+                System.out.println("entrou");
                 theOwners.get(i).addRecieveMsg(currentUser);
 
                 DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
