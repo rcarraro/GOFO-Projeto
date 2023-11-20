@@ -1,4 +1,5 @@
 // import codigo.UI.SystemUI;
+// import codigo.System.Playground;
 // import org.junit.After;
 // import org.junit.Before;
 // import org.junit.Test;
@@ -12,7 +13,7 @@
 // import static org.junit.Assert.assertThrows;
 // import static org.junit.Assert.assertTrue;
 
-// public class US02_2Test {
+// public class US03_2Test {
 
 //     private final InputStream originalSystemIn = System.in;
 //     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -24,10 +25,13 @@
 //     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
 //     private SystemUI sistema;
+//     private Playground playground;
    
 //     @Before
 //     public void setUp() {
 //         sistema = new SystemUI();
+//         playground = new Playground();
+//         playground.setName("teste");
 //     }
 
 //     @Test

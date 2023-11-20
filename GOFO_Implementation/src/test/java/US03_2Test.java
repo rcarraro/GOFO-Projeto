@@ -1,4 +1,5 @@
 import codigo.UI.SystemUI;
+import codigo.System.Playground;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,10 +25,13 @@ public class US03_2Test {
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     private SystemUI sistema;
+    private Playground playground;
    
     @Before
     public void setUp() {
         sistema = new SystemUI();
+        playground = new Playground();
+        playground.setName("teste");
     }
 
     @Test
