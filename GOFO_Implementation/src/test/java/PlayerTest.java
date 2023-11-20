@@ -26,6 +26,7 @@ public class PlayerTest {
      public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
      Player player;
+     Player player2;
    
      @Before
      public void setUp() {
