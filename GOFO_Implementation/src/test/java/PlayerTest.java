@@ -15,6 +15,7 @@ public class PlayerTest {
 
      private final InputStream originalSystemIn = System.in;
      private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+     final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
      @Rule
      public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
@@ -45,13 +46,13 @@ public class PlayerTest {
      @Test
      public void testViewInboxEmpty(){
           player.viewInbox();
-          assertEquals("Your Inbox is Empty", systemOutRule.getLog().trim());
+          assertEquals("Your Inbox is Empty", outContent.toString());
      }
 
      @Test
      public void testViewInbox(){
           player.viewInbox();
-          assertEquals("Your Inbox is Empty", systemOutRule.getLog().trim());
+          assertEquals("Your Inbox is Empty", outContent.toString());
      }
 
 }
