@@ -186,9 +186,10 @@ public class PlayerUI {
         System.out.println("Enter how many hours did you book");
         temp = input.nextLine();
         hours = stringToInt(temp);
-        System.out.println("tamanho");
-        System.out.println(theOwners.size());
         for (int i = 0; i < theOwners.size(); i++) {
+            System.out.println("nome");
+            System.out.println(playground);
+
             if (theOwners.get(i).existPlayground(playground)) {
                 theOwners.get(i).addRecieveMsg(currentUser);
 

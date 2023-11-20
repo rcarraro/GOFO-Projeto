@@ -38,7 +38,6 @@ public class US03_1Test {
         playground = new Playground();
         playgroundo = new PlaygroundOwner();
         playground.setName("teste");
-        playgroundo.addPlayground(playground);
         serve.setBalance(10000);
         playgroundo.setBalance(serve);
         playgroundo.setFName("Fname");
@@ -50,6 +49,7 @@ public class US03_1Test {
         playgroundo.setEmail("test@fei.edu.br");
         playgroundo.setLocation("SP");
         sistema.theOwners.add(playgroundo);
+        playgroundo.addPlayground(playground);
     }
 
     @Test
