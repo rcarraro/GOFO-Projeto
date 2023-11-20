@@ -40,7 +40,7 @@ public class US03_1Test {
 
     @Test
     public void testaccountMenu() {
-        exit.expectSystemExitWithStatus(0);
+        exit.expectSystemExitWithStatus(0); 
         systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "5", "teste", "5", "0", "monday", "5", "12", "3");
         sistema.accountMenu();
     }
