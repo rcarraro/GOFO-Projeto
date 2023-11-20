@@ -1,4 +1,4 @@
-import codigo.System.PlayGroundSchedule;
+import codigo.System.Player;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
