@@ -13,10 +13,6 @@ import static org.junit.Assert.assertTrue;
 
 public class PlayerTest {
 
-     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
-     private final PrintStream originalOut = System.out;
-     private final PrintStream originalErr = System.err;
      private final InputStream originalSystemIn = System.in;
      private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
@@ -49,13 +45,13 @@ public class PlayerTest {
      @Test
      public void testViewInboxEmpty(){
           player.viewInbox();
-          assertEquals("Your Inbox is Empty", outContent.toString());
+          assertEquals("Your Inbox is Empty", systemOutRule.getLog());
      }
 
      @Test
      public void testViewInbox(){
           player.viewInbox();
-          assertEquals("Your Inbox is Empty", outContent.toString());
+          assertEquals("Your Inbox is Empty", systemOutRule.getLog());
      }
 
 }
