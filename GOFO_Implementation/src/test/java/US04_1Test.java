@@ -34,6 +34,7 @@ public class US04_1Test {
    
     @Before
     public void setUp() {
+        sistema = new SystemUI();
         administrator = new Administrator();
         playground1 = new Playground();
         playground2 = new Playground();
