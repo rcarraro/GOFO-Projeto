@@ -45,5 +45,24 @@ public class PlaygroundOwnerTest {
         playgroundowner.updatePlaygroundName("Campo do Gepeto");
     }
 
+    @Test
+    public void testupdatePlaygroundStatus(){
+        playgroundowner.updatePlaygroundStatus("Campo do Gepeto", "22", "12" );
+    }
+
+    @Test
+    public void testaddRecieveMsg(){
+        playgroundowner.addRecieveMsg("mensagem");
+    }
+
+    @Test
+    public void testpayMoney(){
+        assertEquals(amount, playgroundowner.payMoney("Campo", 12));
+    }
+
+    @Test
+    public void displayRecieveMsg(){
+        playgroundowner.displayRecieveMsg();
+    }
 
 }
