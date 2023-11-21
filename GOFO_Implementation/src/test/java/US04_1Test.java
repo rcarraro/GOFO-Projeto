@@ -62,14 +62,14 @@ public class US04_1Test {
         //status
         systemIn.provideLines("available");
         playground1.setStatus();
-        systemIn.provideLines("available");
+        systemIn.provideLines("not available");
         playground2.setStatus();
     }
     
     @Test
     public void testaccountMenu() {
         exit.expectSystemExitWithStatus(0);
-        systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "teste1");
+        systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "teste1","3","12", "3");
         sistema.accountMenu();
     }
     
