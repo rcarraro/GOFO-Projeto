@@ -1,5 +1,7 @@
 import codigo.UI.SystemUI;
 import codigo.System.Playground;
+import codigo.System.Administrator;
+import codigo.System.Player;
 import codigo.System.eWallet;
 import codigo.System.PlaygroundOwner;
 import org.junit.After;
