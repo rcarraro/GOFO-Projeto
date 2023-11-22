@@ -12,14 +12,13 @@
 // import org.omg.PortableInterceptor.PolicyFactoryOperations;
 // import org.junit.contrib.java.lang.system.SystemOutRule;
 // import org.junit.contrib.java.lang.system.ExpectedSystemExit;
-// import java.util.NoSuchElementException;
 // import java.io.InputStream;
 
 // import static org.junit.Assert.assertEquals;
 // import static org.junit.Assert.assertThrows;
 // import static org.junit.Assert.assertTrue;
 
-// public class US05_3Test {
+// public class US05_2Test {
 
 //     private final InputStream originalSystemIn = System.in;
 //     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -66,19 +65,16 @@
 //         sistema.theOwners.add(playown);
 //     }
     
-//     int valor;
 //     @Test
 //     public void testaccountMenu() {
-//         valor = playown.getMyBalance();
-//         systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "400", "123", "1", "test@fei.br", "123456","123", "1", "test@fei.br","123",  "10", "ateste", "3", "2", "ateste", "3", "5", "monday", "12", "1", "testepla@fei.br", "123456", "3", "8"); 
-//         assertThrows(NoSuchElementException.class, () -> {
-//             sistema.accountMenu();
-//         });
+//         int valor = playown.getMyBalance();
+//         exit.expectSystemExitWithStatus(0);
+//         systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456","123", "1", "test@fei.br","123",  "10", "ateste", "3", "2", "ateste", "3", "5", "monday", "12", "1", "testepla@fei.br", "123456", "3", "8", "3"); 
+//         sistema.accountMenu();
 //     }
     
 //     @After
 //     public void restoreSystemInputOutput() {
-//         assertEquals(valor+500,sistema.theOwners.get(0).getMyBalance());
 //         System.setIn(originalSystemIn);
 //     }
 // }
