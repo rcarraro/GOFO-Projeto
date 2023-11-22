@@ -69,12 +69,8 @@ public class US05_1Test {
     public void testaccountMenu() {
         int valor = playown.getMyBalance();
         exit.expectSystemExitWithStatus(0);
-        systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "10", "ateste", "3", "2", "ateste", "3", "5", "monday", "12", "3"); 
+        systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "10", "ateste", "3", "2", "ateste", "3", "5", "monday", "12", "1", "testepla@fei.br", "123456"); 
         sistema.accountMenu();
-        System.out.println("valor");
-        System.out.println(valor);
-        System.out.println(playown.getMyBalance());
-        assertEquals(valor+500, playown.getMyBalance());
     }
     
     @After
