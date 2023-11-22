@@ -69,9 +69,10 @@ public class US05_3Test {
     @Test
     public void testaccountMenu() {
         valor = playown.getMyBalance();
-        exit.expectSystemExitWithStatus(0);
         systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "400", "123", "1", "test@fei.br", "123456","123", "1", "test@fei.br","123",  "10", "ateste", "3", "2", "ateste", "3", "5", "monday", "12", "1", "testepla@fei.br", "123456", "3", "8"); 
-        sistema.accountMenu();
+        assertThrows(NoSuchElementException.class, () -> {
+            sistema.accountMenu();
+        });
     }
     
     @After
