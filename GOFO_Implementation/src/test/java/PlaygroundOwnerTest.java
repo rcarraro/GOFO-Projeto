@@ -28,6 +28,7 @@ public class PlaygroundOwnerTest {
         playground = new Playground();
         playgroundowner = new PlaygroundOwner();
         playground.setName("CampoGrande");
+        playgroundowner.addPlayground(playground);
     }
 
     @Test
