@@ -83,7 +83,6 @@ public class PlaygroundOwner extends userProfile {
         String temp;
         int choice = 0, playgroundIndex = 0;
         for (int i = 0; i < listOfPlayground.size(); i++) {
-            System.out.print(i);
             if (listOfPlayground.get(i).getName().equalsIgnoreCase(playgroundName)) {
                 playgroundIndex = i;
                 found = true;
