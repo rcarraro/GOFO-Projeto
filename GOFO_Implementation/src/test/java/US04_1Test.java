@@ -31,6 +31,7 @@ public class US04_1Test {
     private SystemUI sistema;
     private Playground playground1;
     private Playground playground2;
+    private Playground playground3;
     private Administrator administrator;
     Player player;
    
@@ -40,30 +41,39 @@ public class US04_1Test {
         administrator = new Administrator();
         playground1 = new Playground();
         playground2 = new Playground();
+        playground3 = new Playground();
         administrator.playgroundRequests(playground1);
         administrator.playgroundRequests(playground2);
+        administrator.playgroundRequests(playground3);
         
         //locais
         systemIn.provideLines("SP");
         playground1.setLocation();
         systemIn.provideLines("RJ");
         playground2.setLocation();
+        systemIn.provideLines("MT");
+        playground2.setLocation();
         //aprovar
-        systemIn.provideLines("yes","yes");
+        systemIn.provideLines("yes","yes", "yes");
         administrator.approvePlayground();
         //Nomes
         playground1.setName("ateste");
         playground2.setName("bteste");
+        playground3.setName("cteste");
         //Preço
         systemIn.provideLines("100");
         playground1.setPrice();
         systemIn.provideLines("200");
         playground2.setPrice();
+        systemIn.provideLines("250");
+        playground3.setPrice();
         //status
         systemIn.provideLines("available");
         playground1.setStatus();
         systemIn.provideLines("not available");
         playground2.setStatus();
+        systemIn.provideLines("available");
+        playground3.setStatus();
     }
     
     @Test
