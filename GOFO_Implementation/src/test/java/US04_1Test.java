@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.Rule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
+import org.omg.PortableInterceptor.PolicyFactoryOperations;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import java.io.InputStream;
@@ -42,6 +43,7 @@ public class US04_1Test {
         playground1 = new Playground();
         playground2 = new Playground();
         playground3 = new Playground();
+        player = new Player();
         administrator.playgroundRequests(playground1);
         administrator.playgroundRequests(playground2);
         administrator.playgroundRequests(playground3);
@@ -80,8 +82,11 @@ public class US04_1Test {
     
     @Test
     public void testaccountMenu() {
+        
         exit.expectSystemExitWithStatus(0);
-        systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "ateste", "3", "2", "ateste", "3", "5", "monday"); 
+        sistema.thePlayers[0].addInbox("Você foi convidado para o playground ateste");
+        systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "ateste", "3", "2", "ateste", "3", "5", "monday", "8", "12", "3"); 
+        player.addInbox("Você foi convidado para o playground ateste");
         // systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "ateste","3","2", "ateste", "0", "0", "asd", "sunday"); 
         sistema.accountMenu();
     }
