@@ -27,7 +27,7 @@ public class PlaygroundOwnerTest {
     public void setUp() {
         playground = new Playground();
         playgroundowner = new PlaygroundOwner();
-        playground.setName("Campo do Gepeto");
+        playground.setName("CampoGrande");
     }
 
     @Test
@@ -44,7 +44,7 @@ public class PlaygroundOwnerTest {
     public void testupdatePlaygroundName(){
         systemIn.provideLines("choice");
         systemIn.provideLines("Campo");
-        playgroundowner.updatePlaygroundName("Campo do Gepeto");
+        playgroundowner.updatePlaygroundName("CampoGrande");
     }
 
     @Test
