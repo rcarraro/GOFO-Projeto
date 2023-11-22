@@ -76,7 +76,7 @@ public class US05_3Test {
     
     @After
     public void restoreSystemInputOutput() {
-        assertEquals(valor+500,systema.theOwners.get(0).getMyBalance());
+        assertEquals(valor+500,sistema.theOwners.get(0).getMyBalance());
         System.setIn(originalSystemIn);
     }
 }
