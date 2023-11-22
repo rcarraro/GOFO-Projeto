@@ -70,6 +70,7 @@ public class US04_1Test {
         //status
         systemIn.provideLines("available");
         playground1.setStatus();
+        playground1.setBooking();
         systemIn.provideLines("not available");
         playground2.setStatus();
         systemIn.provideLines("available");
