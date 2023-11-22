@@ -70,8 +70,6 @@ public class US04_1Test {
         //status
         systemIn.provideLines("available");
         playground1.setStatus();
-        systemIn.provideLines("10", "20");
-        playground1.setBooking();
         systemIn.provideLines("not available");
         playground2.setStatus();
         systemIn.provideLines("available");
@@ -83,7 +81,7 @@ public class US04_1Test {
     @Test
     public void testaccountMenu() {
         exit.expectSystemExitWithStatus(0);
-        systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "ateste", "3", "2", "ateste", "9", "5", "monday"); 
+        systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "ateste", "3", "2", "ateste", "3", "5", "monday"); 
         // systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "ateste","3","2", "ateste", "0", "0", "asd", "sunday"); 
         sistema.accountMenu();
     }
