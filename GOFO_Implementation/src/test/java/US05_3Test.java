@@ -12,6 +12,7 @@ import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 import org.omg.PortableInterceptor.PolicyFactoryOperations;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
+import java.util.NoSuchElementException;
 import java.io.InputStream;
 
 import static org.junit.Assert.assertEquals;
