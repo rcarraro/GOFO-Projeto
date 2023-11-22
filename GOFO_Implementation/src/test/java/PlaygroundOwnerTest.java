@@ -27,6 +27,7 @@ public class PlaygroundOwnerTest {
     public void setUp() {
         playground = new Playground();
         playgroundowner = new PlaygroundOwner();
+        playground.setName("Campo do Gepeto");
     }
 
     @Test
