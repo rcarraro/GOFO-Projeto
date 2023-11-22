@@ -78,6 +78,8 @@ public class US04_2Test {
         playground3.setStatus();
         systemIn.provideLines("0","10");
         playground1.setBooking();
+        systemIn.provideLines("0","10");
+        playground2.setBooking();
     }
     
     @Test
