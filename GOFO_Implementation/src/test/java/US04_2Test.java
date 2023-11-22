@@ -86,8 +86,7 @@ public class US04_2Test {
     public void testaccountMenu() {
         
         exit.expectSystemExitWithStatus(0);
-        systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "3", "2", "bteste", "3", "4", "12", "3"); 
-        player.addInbox("Você foi convidado para o playground ateste");
+        systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "3", "2", "bteste", "3", "4", "12", "12", "3"); 
         sistema.accountMenu();
     }
     
