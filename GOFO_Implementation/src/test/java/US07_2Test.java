@@ -18,7 +18,7 @@
 // import static org.junit.Assert.assertThrows;
 // import static org.junit.Assert.assertTrue;
 
-// public class US07_2Test {
+// public class US07_1Test {
 
 //     private final InputStream originalSystemIn = System.in;
 //     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -68,7 +68,7 @@
 //     @Test
 //     public void testaccountMenu() {
 //         exit.expectSystemExitWithStatus(0);
-//         systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground", "12","1",); 
+//         systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "2", "ateste", "3", "ateste","6","3"); 
 //         sistema.accountMenu();
 //     }
     
