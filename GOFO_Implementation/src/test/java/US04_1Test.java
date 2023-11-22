@@ -84,11 +84,10 @@ public class US04_1Test {
     public void testaccountMenu() {
         
         exit.expectSystemExitWithStatus(0);
-        sistema.thePlayers.get(0).addInbox("Você foi convidado para o playground ateste");
         systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "ateste", "3", "2", "ateste", "3", "5", "monday", "8", "12", "3"); 
         player.addInbox("Você foi convidado para o playground ateste");
-        // systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "ateste","3","2", "ateste", "0", "0", "asd", "sunday"); 
         sistema.accountMenu();
+        // systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "ateste","3","2", "ateste", "0", "0", "asd", "sunday"); 
     }
     
     @After
