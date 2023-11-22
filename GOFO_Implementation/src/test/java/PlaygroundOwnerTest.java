@@ -42,8 +42,7 @@ public class PlaygroundOwnerTest {
 
     @Test
     public void testupdatePlaygroundName(){
-        systemIn.provideLines("1");
-        systemIn.provideLines("CampoPequeno");
+        systemIn.provideLines("1", "CampoPequeno");
         playgroundowner.updatePlaygroundName("CampoGrande");
     }
 
