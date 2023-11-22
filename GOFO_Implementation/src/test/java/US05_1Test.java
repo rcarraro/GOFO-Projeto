@@ -30,12 +30,13 @@ public class US05_1Test {
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     private SystemUI sistema;
-    private Plyground playground1;
+    private Playground playground1;
     private Administrator administrator;
     PlaygroundOwner playown;
    
     @Before
     public void setUp() {
+
         sistema = new SystemUI();
         administrator = new Administrator();
         playground1 = new Playground();
@@ -66,7 +67,7 @@ public class US05_1Test {
     @Test
     public void testaccountMenu() {
         exit.expectSystemExitWithStatus(0);
-        int valor = playown.getMyBalance;
+        int valor = playown.getMyBalance();
         systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "10", "ateste", "3", "2", "ateste", "3", "5", "monday"); 
         sistema.accountMenu();
         assertEquals(valor+500, playown.getMyBalance());
