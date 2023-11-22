@@ -18,7 +18,7 @@
 // import static org.junit.Assert.assertThrows;
 // import static org.junit.Assert.assertTrue;
 
-// public class US04_3Test {
+// public class US04_2Test {
 
 //     private final InputStream originalSystemIn = System.in;
 //     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -78,17 +78,15 @@
 //         playground3.setStatus();
 //         systemIn.provideLines("0","10");
 //         playground1.setBooking();
-//         player.setEmail("test123@fei.br");
-//         player.setPassword("123456");
-//         sistema.thePlayers.add(player);
-
+//         systemIn.provideLines("0","10");
+//         playground2.setBooking();
 //     }
     
 //     @Test
 //     public void testaccountMenu() {
         
 //         exit.expectSystemExitWithStatus(0);
-//         systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "10", "ateste", "3", "2", "ateste", "3", "5", "monday", "8", "4", "1", "test12@fei.br", "test123@fei.br", "12", "3"); 
+//         systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123456", "3", "2", "bteste", "3", "4", "12", "12", "3"); 
 //         sistema.accountMenu();
 //     }
     
