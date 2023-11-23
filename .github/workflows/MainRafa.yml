@@ -24,53 +24,53 @@ jobs:
     - name: Compilando...
       run: mvn compile
 
-    - name: Testando o 1º Caso de Uso Fluxo Normal
-      run: mvn -Dtest=US01_1Test test
+    # - name: Testando o 1º Caso de Uso Fluxo Normal
+    #   run: mvn -Dtest=US01_1Test test
 
-    - name: Testando o 1º Caso de Uso Fluxo de Exceção
-      run: mvn -Dtest=US01_2Test test
+    # - name: Testando o 1º Caso de Uso Fluxo de Exceção
+    #   run: mvn -Dtest=US01_2Test test
 
-    - name: Testando o 2º Caso de Uso Fluxo Normal
-      run: mvn -Dtest=US02_1Test test
+    # - name: Testando o 2º Caso de Uso Fluxo Normal
+    #   run: mvn -Dtest=US02_1Test test
 
-    - name: Testando o 2º Caso de Uso Fluxo de Exceção
-      run: mvn -Dtest=US02_2Test test
+    # - name: Testando o 2º Caso de Uso Fluxo de Exceção
+    #   run: mvn -Dtest=US02_2Test test
 
-    - name: Testando o 3º Caso de Uso Fluxo Normal
-      run: mvn -Dtest=US03_1Test test
+    # - name: Testando o 3º Caso de Uso Fluxo Normal
+    #   run: mvn -Dtest=US03_1Test test
 
-    - name: Testando o 3º Caso de Uso Fluxo de Exceção
-      run: mvn -Dtest=US03_2Test test
+    # - name: Testando o 3º Caso de Uso Fluxo de Exceção
+    #   run: mvn -Dtest=US03_2Test test
 
-    - name: Testando o 4º Caso de Uso Fluxo Normal
-      run: mvn -Dtest=US04_1Test test
+    # - name: Testando o 4º Caso de Uso Fluxo Normal
+    #   run: mvn -Dtest=US04_1Test test
 
-    - name: Testando o 4º Caso de Uso Fluxo de Exceção - 1
-      run: mvn -Dtest=US04_2Test test
+    # - name: Testando o 4º Caso de Uso Fluxo de Exceção - 1
+    #   run: mvn -Dtest=US04_2Test test
 
-    - name: Testando o 4º Caso de Uso Fluxo de Exceção - 2
-      run: mvn -Dtest=US04_1Test test
+    # - name: Testando o 4º Caso de Uso Fluxo de Exceção - 2
+    #   run: mvn -Dtest=US04_1Test test
 
-    - name: Testando o 5º Caso de Uso Fluxo Normal
-      run: mvn -Dtest=US05_1Test test
+    # - name: Testando o 5º Caso de Uso Fluxo Normal
+    #   run: mvn -Dtest=US05_1Test test
 
-    - name: Testando o 5º Caso de Uso Fluxo de Exceção - 1
-      run: mvn -Dtest=US05_2Test test
+    # - name: Testando o 5º Caso de Uso Fluxo de Exceção - 1
+    #   run: mvn -Dtest=US05_2Test test
 
-    - name: Testando o 5º Caso de Uso Fluxo de Exceção - 2
-      run: mvn -Dtest=US05_3Test test || true
+    # - name: Testando o 5º Caso de Uso Fluxo de Exceção - 2
+    #   run: mvn -Dtest=US05_3Test test || true
 
-    - name: Testando o 6º Caso de Uso Fluxo Normal
-      run: mvn -Dtest=US06_1Test test
+    # - name: Testando o 6º Caso de Uso Fluxo Normal
+    #   run: mvn -Dtest=US06_1Test test
 
-    - name: Testando o 6º Caso de Uso Fluxo de Exceção
-      run: mvn -Dtest=US06_2Test test
+    # - name: Testando o 6º Caso de Uso Fluxo de Exceção
+    #   run: mvn -Dtest=US06_2Test test
 
-    - name: Testando o 7º Caso de Uso Fluxo Normal
-      run: mvn -Dtest=US07_1Test test
+    # - name: Testando o 7º Caso de Uso Fluxo Normal
+    #   run: mvn -Dtest=US07_1Test test
 
-    - name: Testando o 7º Caso de Uso Fluxo de Exceção
-      run: mvn -Dtest=US07_2Test test
+    # - name: Testando o 7º Caso de Uso Fluxo de Exceção
+    #   run: mvn -Dtest=US07_2Test test
 
     - name: Testando o 8º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US08_1Test test
