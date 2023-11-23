@@ -59,7 +59,7 @@ public class PlaygroundOwnerTest {
 
     @Test
     public void testpayMoney(){
-        assertEquals("amount", playgroundowner.payMoney("CampoGrande", 12));
+        assertEquals(0, playgroundowner.payMoney("CampoGrande", 12));
     }
 
     @Test
