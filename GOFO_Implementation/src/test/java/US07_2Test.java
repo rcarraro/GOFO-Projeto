@@ -56,10 +56,10 @@ public class US07_2Test {
         systemIn.provideLines("100");
         playground1.setPrice();
         //status
-        systemIn.provideLines("available");
-        playground1.setStatus();
         systemIn.provideLines("0","10");
         playground1.setBooking();
+        systemIn.provideLines("available");
+        playground1.setStatus();
         playown.setEmail("testepla@fei.br");
         playown.setPassword("123456");
         playown.addPlayground(playground1);
