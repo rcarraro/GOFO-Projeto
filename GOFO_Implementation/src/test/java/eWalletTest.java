@@ -24,11 +24,6 @@ public class eWalletTest {
     @Before
     public void setUp() {
         ewallet = new eWallet();
-        ewallet.setBalance();
-    }
-
-     @Test
-    public void testsetBalance(){
         systemIn.provideLines('10');
         ewallet.setBalance();
     }
