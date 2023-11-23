@@ -19,11 +19,11 @@ public class eWalletTest {
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
-    EWallet ewallet;
+    eWallet ewallet;
   
     @Before
     public void setUp() {
-        ewallet = new EWallet();
+        ewallet = new eWallet();
         systemIn.provideLines(10);
         ewallet.setBalance();
     }
