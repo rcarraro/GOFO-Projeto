@@ -25,15 +25,15 @@ public class US07_2Test {
     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Rule
-    public final TextFromStandardInputStream systemIn072 = TextFromStandardInputStream.emptyStandardInputStream();
+    private final TextFromStandardInputStream systemIn072 = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Rule
-    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
+    private final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     private SystemUI sistema;
     private Playground playground1;
     private Administrator administrator;
-    PlaygroundOwner playown;
+    private PlaygroundOwner playown;
    
     @Before
     public void setUp() {
