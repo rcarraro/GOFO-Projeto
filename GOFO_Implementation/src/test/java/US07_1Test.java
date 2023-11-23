@@ -25,7 +25,7 @@ public class US07_1Test {
     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Rule
-    public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
+    public final TextFromStandardInputStream systemIn;
 
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
@@ -37,7 +37,7 @@ public class US07_1Test {
    
     @Before
     public void setUp() {
-
+        systemIn = TextFromStandardInputStream.emptyStandardInputStream();
         sistema = new SystemUI();
         administrator = new Administrator();
         playground1 = new Playground();
