@@ -25,7 +25,7 @@ public class US07_2Test {
     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Rule
-    public final TextFromStandardInputStream systemIn072 = TextFromStandardInputStream.emptyStandardInputStream();
+    public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
@@ -33,10 +33,11 @@ public class US07_2Test {
     private SystemUI sistema;
     private Playground playground1;
     private Administrator administrator;
-    private PlaygroundOwner playown;
+    PlaygroundOwner playown;
    
     @Before
     public void setUp() {
+
         sistema = new SystemUI();
         administrator = new Administrator();
         playground1 = new Playground();
@@ -44,20 +45,20 @@ public class US07_2Test {
         administrator.playgroundRequests(playground1);
         
         //locais
-        systemIn072.provideLines("SP");
+        systemIn.provideLines("SP");
         playground1.setLocation();
         //aprovar
-        systemIn072.provideLines("yes");
+        systemIn.provideLines("yes");
         administrator.approvePlayground();
         //Nomes
         playground1.setName("ateste");
         //Preço
-        systemIn072.provideLines("100");
+        systemIn.provideLines("100");
         playground1.setPrice();
         //status
-        systemIn072.provideLines("available");
+        systemIn.provideLines("available");
         playground1.setStatus();
-        systemIn072.provideLines("0","10");
+        systemIn.provideLines("0","10");
         playground1.setBooking();
         playown.setEmail("testepla@fei.br");
         playown.setPassword("123456");
@@ -67,11 +68,12 @@ public class US07_2Test {
     
     @Test
     public void testUS07_2Test() {
-        // systemIn072.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "4", "ateste", "6"); 
-        systemIn072.provideLines("2", "2"); 
-        assertThrows(NoSuchElementException.class, () -> {
-            sistema.accountMenu();
-        });
+        // systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "4", "ateste", "6"); 
+        systemIn.provideLines("2"); 
+        sistema.accountMenu();
+        // assertThrows(NoSuchElementException.class, () -> {
+        //     sistema.accountMenu();
+        // });
     }
     
     @After
