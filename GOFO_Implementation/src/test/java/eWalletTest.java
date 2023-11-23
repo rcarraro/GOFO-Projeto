@@ -29,7 +29,7 @@ public class eWalletTest {
 
      @Test
     public void testsetBalance(){
-        systemIn.provideLines(10);
+        systemIn.provideLines('10');
         ewallet.setBalance();
     }
     
