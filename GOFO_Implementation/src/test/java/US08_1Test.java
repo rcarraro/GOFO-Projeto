@@ -18,7 +18,7 @@
 // import static org.junit.Assert.assertThrows;
 // import static org.junit.Assert.assertTrue;
 
-// public class US07_1Test {
+// public class US08_1Test {
 
 //     private final InputStream originalSystemIn = System.in;
 //     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
