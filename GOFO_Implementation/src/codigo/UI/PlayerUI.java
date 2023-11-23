@@ -189,7 +189,7 @@ public class PlayerUI {
         for (int i = 0; i < theOwners.size(); i++) {
             if (theOwners.get(i).existPlayground(playground)) {
                 theOwners.get(i).addRecieveMsg(currentUser);
-
+                
                 DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
                 LocalDateTime now = LocalDateTime.now();
                 String msg = "I want to cancel my booking at playground name: " + playground + " At time " + time + " At Day " + day + " , I have booked " + hours + " hours" + " This Msg was sent at " + dateFormat.format(now);

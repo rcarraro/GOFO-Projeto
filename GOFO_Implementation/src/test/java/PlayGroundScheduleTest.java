@@ -27,7 +27,6 @@
 //     @Before
 //     public void setUp() {
 //         playgrounds = new PlayGroundSchedule();
-//         assertEquals(5, playgrounds.getDayIndex("thursday"));
 //     }
     
 //     @Test
