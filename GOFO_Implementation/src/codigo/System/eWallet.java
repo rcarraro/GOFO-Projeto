@@ -41,7 +41,6 @@ public class eWallet {
      */
     public void deposit(int value) {
         balance += value;
-        System.out.println("DDDDDDDDDD");
     }
 
     /**
@@ -51,7 +50,6 @@ public class eWallet {
      */
     public void withdraw(int value) {
         balance -= value;
-        System.out.println("VVVVVVVVVV");
     }
 
     /**
@@ -60,7 +58,6 @@ public class eWallet {
      * @return balance 
      */
     public int getBalance() {
-        System.out.println("GGGGGGGGGGBBBBBB");
         return balance;
     }
 
