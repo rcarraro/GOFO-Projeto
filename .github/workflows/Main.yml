@@ -29,38 +29,13 @@ jobs:
 
     - name: Testes de Unidade
       run: |
-        EXIT_CODE=0
-
-        mvn test -Dtest=AdministratorTest test || EXIT_CODE=$?
-        if [ $EXIT_CODE -ne 0 ]; then
-          echo "AdministratorTest failed with exit code $EXIT_CODE"
-        fi
-
-        mvn test -Dtest=eWalletTest test || EXIT_CODE=$?
-        if [ $EXIT_CODE -ne 0 ]; then
-          echo "eWalletTest failed with exit code $EXIT_CODE"
-        fi
-
-        mvn test -Dtest=PlayerTest test || EXIT_CODE=$?
-        if [ $EXIT_CODE -ne 0 ]; then
-          echo "PlayerTest failed with exit code $EXIT_CODE"
-        fi
-
-        mvn test -Dtest=PlaygroundOwnerTest test || EXIT_CODE=$?
-        if [ $EXIT_CODE -ne 0 ]; then
-          echo "PlaygroundOwnerTest failed with exit code $EXIT_CODE"
-        fi
-
-        mvn test -Dtest=PlayGroundScheduleTest test || EXIT_CODE=$?
-        if [ $EXIT_CODE -ne 0 ]; then
-          echo "PlayGroundScheduleTest failed with exit code $EXIT_CODE"
-        fi
-
-        mvn test -Dtest=PlaygroundTest test || EXIT_CODE=$?
-        if [ $EXIT_CODE -ne 0 ]; then
-          echo "PlaygroundTest failed with exit code $EXIT_CODE"
-        fi
-
+        mvn test -Dtest=AdministratorTest test;
+        mvn test -Dtest=eWalletTest test;
+        mvn test -Dtest=PlayerTest test;
+        mvn test -Dtest=PlaygroundOwnerTest test;
+        mvn test -Dtest=PlayGroundScheduleTest test;
+        mvn test -Dtest=PlaygroundTest test;
+        EXIT_CODE=$?
       if: always()
 
     - name: Testando o 1º Caso de Uso Fluxo Normal
