@@ -78,6 +78,6 @@ public class US07_1Test {
     @After
     public void restoreSystemInputOutput() {
         System.setIn(originalSystemIn);
-        systemIn71.provideLines("");
+        systemIn71.provideLines("2");
     }    
 }
