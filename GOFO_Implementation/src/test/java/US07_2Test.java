@@ -30,7 +30,7 @@ public class US07_2Test {
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
-    private SystemUI sistema72;
+    private SystemUI sistema;
     private Playground playground1;
     private Administrator administrator;
     PlaygroundOwner playown;
@@ -38,7 +38,7 @@ public class US07_2Test {
     @Before
     public void setUp() {
 
-        sistema72 = new SystemUI();
+        sistema = new SystemUI();
         administrator = new Administrator();
         playground1 = new Playground();
         playown = new PlaygroundOwner();
@@ -56,27 +56,22 @@ public class US07_2Test {
         systemIn72.provideLines("100");
         playground1.setPrice();
         //status
-        systemIn72.provideLines("0","10");
-        playground1.setBooking();
-        systemIn72.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "4", "ateste", "6"); 
-        sistema72.accountMenu();
         systemIn72.provideLines("available");
         playground1.setStatus();
-        // playown.setEmail("testepla@fei.br");
-        // playown.setPassword("123456");
-        // playown.addPlayground(playground1);
-        // sistema.theOwners.add(playown);
+        systemIn72.provideLines("0","10");
+        playground1.setBooking();
+        playown.setEmail("testepla@fei.br");
+        playown.setPassword("123456");
+        playown.addPlayground(playground1);
+        sistema.theOwners.add(playown);
     }
     
     @Test
     public void testUS07_2Test() {
-        // sistema.accountMenu();
-        // assertThrows(NoSuchElementException.class, () -> {
-        // });
+        systemIn72.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "4", "ateste", "6");
+        assertThrows(NoSuchElementException.class, () -> {
+            sistema.accountMenu();
+        });
     }
     
-    @After
-    public void restoreSystemInputOutput() {
-        System.setIn(originalSystemIn);
-    }
 }
