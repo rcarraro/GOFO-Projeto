@@ -27,6 +27,8 @@ jobs:
     - name: Compilando...
       run: mvn compile
 
+    - name: Testando o 7 Caso de Uso Fluxo Normal
+      run: mvn -Dtest=US07_1Test test
     - name: Testando...
       run: mvn test -Djunit.jupiter.execution.parallel.enabled=false
 
