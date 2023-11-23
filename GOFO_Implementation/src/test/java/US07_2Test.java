@@ -69,8 +69,13 @@ public class US07_2Test {
     @Test
     public void testUS07_2Test() {
         // systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "4", "ateste", "6"); 
-        systemIn.provideLines("2"); 
+        systemIn.provideLines("2");
         System.out.println("Before sistema.accountMenu()");
+        try {
+            Thread.sleep(500); // Increase the delay
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         sistema.accountMenu();
         System.out.println("After sistema.accountMenu()");
         // assertThrows(NoSuchElementException.class, () -> {
