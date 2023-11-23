@@ -43,6 +43,7 @@ jobs:
 
     - name: Testando o 1º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US01_1Test test
+      if: always()
 
     - name: Testando o 1º Caso de Uso Fluxo de Exceção
       run: mvn -Dtest=US01_2Test test
