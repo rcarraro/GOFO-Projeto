@@ -60,8 +60,8 @@ public class eWallet {
      * @return balance 
      */
     public int getBalance() {
-        return balance;
         System.out.println("GGGGGGGGGGBBBBBB");
+        return balance;
     }
 
 }
