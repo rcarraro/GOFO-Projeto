@@ -27,14 +27,19 @@ jobs:
     - name: Compilando...
       run: mvn compile
 
-    - name: Testes de Unidade Admin
+    - name: Testes de Unidade
       run: |
-        mvn test -Dtest=AdministratorTest test || true ;
-        mvn test -Dtest=eWalletTest test || true ;
-        mvn test -Dtest=PlayerTest test || true ;
-        mvn test -Dtest=PlaygroundOwnerTest test || true ;
-        mvn test -Dtest=PlayGroundScheduleTest test || true ;
-        mvn test -Dtest=PlaygroundTest test || true
+        mvn test -Dtest=AdministratorTest test
+        mvn test -Dtest=eWalletTest test
+        mvn test -Dtest=PlayerTest test
+        mvn test -Dtest=PlaygroundOwnerTest test
+        mvn test -Dtest=PlayGroundScheduleTest test
+        mvn test -Dtest=PlaygroundTest test
+        EXIT_CODE=$?
+        if [ $EXIT_CODE -ne 0 ]; then
+          echo "Testes de Unidade failed with exit code $EXIT_CODE"
+          exit $EXIT_CODE
+        fi
 
     - name: Testando o 1º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US01_1Test test
