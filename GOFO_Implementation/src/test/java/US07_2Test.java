@@ -30,7 +30,7 @@ public class US07_2Test {
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
-    private SystemUI sistema;
+    private SystemUI sistema72;
     private Playground playground1;
     private Administrator administrator;
     PlaygroundOwner playown;
@@ -38,7 +38,7 @@ public class US07_2Test {
     @Before
     public void setUp() {
 
-        sistema = new SystemUI();
+        sistema72 = new SystemUI();
         administrator = new Administrator();
         playground1 = new Playground();
         playown = new PlaygroundOwner();
@@ -63,16 +63,15 @@ public class US07_2Test {
         playown.setEmail("testepla@fei.br");
         playown.setPassword("123456");
         playown.addPlayground(playground1);
-        sistema.theOwners.add(playown);
+        sistema72.theOwners.add(playown);
         systemIn72.provideLines("");
     }
     
     @Test
     public void testUS07_2Test() {
-        systemIn72.provideLines("");
         systemIn72.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "4", "ateste", "6");
         assertThrows(NoSuchElementException.class, () -> {
-            sistema.accountMenu();
+            sistema72.accountMenu();
         });
     }
     @After
