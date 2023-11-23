@@ -28,7 +28,7 @@ jobs:
       run: mvn compile
 
     - name: Testes de Unidade
-      run: mvn test -Dtest="unidade/**/*Test.java"
+      run: mvn test -Dtest="unidade/*Test.java"
 
     - name: Testando o 1º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US01_1Test test
