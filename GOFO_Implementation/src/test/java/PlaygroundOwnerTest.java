@@ -43,13 +43,13 @@ public class PlaygroundOwnerTest {
 
     @Test
     public void testupdatePlaygroundName(){
-        //systemIn.provideLines("1", "CampoPequeno");
+        systemIn.provideLines("1", "CampoPequeno");
         playgroundowner.updatePlaygroundName("CampoGrande");
     }
 
     @Test
     public void testupdatePlaygroundStatus(){
-        playgroundowner.updatePlaygroundStatus("Campo do Gepeto", "22", "12" );
+        playgroundowner.updatePlaygroundStatus("CampoGrande", "22", "12" );
     }
 
     @Test
