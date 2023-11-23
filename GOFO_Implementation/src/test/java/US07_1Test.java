@@ -25,7 +25,7 @@ public class US07_1Test {
     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Rule
-    public final TextFromStandardInputStream systemIn;
+    public TextFromStandardInputStream systemIn;
 
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
