@@ -72,8 +72,4 @@ public class US07_1Test {
         sistema.accountMenu();
     }
     
-    @After
-    public void restoreSystemInputOutput() {
-        System.setIn(originalSystemIn);
-    }
 }
