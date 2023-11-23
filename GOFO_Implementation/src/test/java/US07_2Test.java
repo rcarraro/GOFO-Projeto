@@ -60,10 +60,10 @@ public class US07_2Test {
         playground1.setBooking();
         systemIn72.provideLines("available");
         playground1.setStatus();
-        playown.setEmail("testepla@fei.br");
-        playown.setPassword("123456");
-        playown.addPlayground(playground1);
-        sistema.theOwners.add(playown);
+        // playown.setEmail("testepla@fei.br");
+        // playown.setPassword("123456");
+        // playown.addPlayground(playground1);
+        // sistema.theOwners.add(playown);
     }
     
     @Test
