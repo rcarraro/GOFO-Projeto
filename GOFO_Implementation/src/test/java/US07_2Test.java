@@ -64,7 +64,7 @@ public class US07_2Test {
         playown.setPassword("123456");
         playown.addPlayground(playground1);
         sistema.theOwners.add(playown);
-        systemIn72.clear();
+        systemIn72.provideLines("");
     }
     
     @Test
@@ -77,7 +77,7 @@ public class US07_2Test {
     @After
     public void restoreSystemInputOutput() {
         System.setIn(originalSystemIn);
-        systemIn72.clear();
+        systemIn72.provideLines("");
     }   
     
 }
