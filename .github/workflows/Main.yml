@@ -47,54 +47,71 @@ jobs:
 
     - name: Testando o 1º Caso de Uso Fluxo de Exceção
       run: mvn -Dtest=US01_2Test test
+      if: always()
 
     - name: Testando o 2º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US02_1Test test
+      if: always()
 
     - name: Testando o 2º Caso de Uso Fluxo de Exceção
       run: mvn -Dtest=US02_2Test test
+      if: always()
 
     - name: Testando o 3º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US03_1Test test
+      if: always()
 
     - name: Testando o 3º Caso de Uso Fluxo de Exceção
       run: mvn -Dtest=US03_2Test test
+      if: always()
 
     - name: Testando o 4º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US04_1Test test
+      if: always()
 
     - name: Testando o 4º Caso de Uso Fluxo de Exceção - 1
       run: mvn -Dtest=US04_2Test test
+      if: always()
 
     - name: Testando o 4º Caso de Uso Fluxo de Exceção - 2
       run: mvn -Dtest=US04_1Test test
+      if: always()
 
     - name: Testando o 5º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US05_1Test test
+      if: always()
 
     - name: Testando o 5º Caso de Uso Fluxo de Exceção - 1
       run: mvn -Dtest=US05_2Test test
+      if: always()
 
     - name: Testando o 5º Caso de Uso Fluxo de Exceção - 2
-      run: mvn -Dtest=US05_3Test test || true
+      run: mvn -Dtest=US05_3Test test 
+      if: always()
 
     - name: Testando o 6º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US06_1Test test
+      if: always()
 
     - name: Testando o 6º Caso de Uso Fluxo de Exceção
       run: mvn -Dtest=US06_2Test test
+      if: always()
 
     - name: Testando o 7º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US07_1Test test
+      if: always()
 
     - name: Testando o 7º Caso de Uso Fluxo de Exceção
       run: mvn -Dtest=US07_2Test test
+      if: always()
 
     - name: Testando o 8º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US08_1Test test
+      if: always()
 
     - name: Testando o 8º Caso de Uso Fluxo de Exceção
       run: mvn -Dtest=US08_2Test test
+      if: always()
 
 
     # # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
