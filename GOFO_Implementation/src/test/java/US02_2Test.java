@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
-public class US03_2Test {
+public class US02_2Test {
 
     private final InputStream originalSystemIn = System.in;
     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
