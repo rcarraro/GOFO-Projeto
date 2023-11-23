@@ -70,7 +70,12 @@ public class US07_2Test {
     public void testUS07_2Test() {
         // systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "4", "ateste", "6"); 
         systemIn.provideLines("2"); 
-        Thread.sleep(100);
+        try {
+            Thread.sleep(100); // Add a short delay
+        } catch (InterruptedException e) {
+            // Handle the exception or print a message
+            e.printStackTrace();
+        }
         sistema.accountMenu();
         // assertThrows(NoSuchElementException.class, () -> {
         //     sistema.accountMenu();
