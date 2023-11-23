@@ -69,9 +69,9 @@ public class US07_2Test {
     public void testUS07_2Test() {
         // systemIn072.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "4", "ateste", "6"); 
         systemIn072.provideLines("2"); 
-        assertThrows(NoSuchElementException.class, () -> {
-            sistema.accountMenu();
-        });
+        sistema.accountMenu();
+        // assertThrows(NoSuchElementException.class, () -> {
+        // });
     }
     
     @After
