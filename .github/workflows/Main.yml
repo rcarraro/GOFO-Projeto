@@ -27,8 +27,14 @@ jobs:
     - name: Compilando...
       run: mvn compile
 
-    - name: Testes de Unidade 
-      run: mvn test -Dtest=./unidade/* test
+    - name: Testes de Unidade Admin
+      run: |
+        mvn test -Dtest=AdministratorTest test ;
+        mvn test -Dtest=eWalletTest test ;
+        mvn test -Dtest=PlayerTest test ;
+        mvn test -Dtest=PlaygroundOwnerTest test ;
+        mvn test -Dtest=PlayGroundScheduleTest test ;
+        mvn test -Dtest=PlaygroundTest test
 
     - name: Testando o 1º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US01_1Test test
