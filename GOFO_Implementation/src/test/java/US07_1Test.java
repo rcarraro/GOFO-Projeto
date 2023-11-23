@@ -13,6 +13,7 @@ import org.omg.PortableInterceptor.PolicyFactoryOperations;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import java.io.InputStream;
+import java.util.NoSuchElementException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
