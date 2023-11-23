@@ -121,6 +121,7 @@ public class PlaygroundOwner extends userProfile {
 
         } else {
             System.out.println("playground name doesn't exist please enter it again");
+            System.out.println("Testen");
             playgroundName = input.nextLine();
             playgroundName = SystemUI.isString(playgroundName);
             updatePlaygroundName(playgroundName);
