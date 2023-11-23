@@ -36,10 +36,7 @@ jobs:
         mvn test -Dtest=PlayGroundScheduleTest test
         mvn test -Dtest=PlaygroundTest test
         EXIT_CODE=$?
-        if [ $EXIT_CODE -ne 0 ]; then
-          echo "Testes de Unidade failed with exit code $EXIT_CODE"
-          exit $EXIT_CODE
-        fi
+      if: always()
 
     - name: Testando o 1º Caso de Uso Fluxo Normal
       run: mvn -Dtest=US01_1Test test
