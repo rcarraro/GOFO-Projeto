@@ -25,7 +25,7 @@ public class US07_1Test {
     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Rule
-    public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
+    public final TextFromStandardInputStream systemIn71 = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
@@ -45,20 +45,20 @@ public class US07_1Test {
         administrator.playgroundRequests(playground1);
         
         //locais
-        systemIn.provideLines("SP");
+        systemIn71.provideLines("SP");
         playground1.setLocation();
         //aprovar
-        systemIn.provideLines("yes");
+        systemIn71.provideLines("yes");
         administrator.approvePlayground();
         //Nomes
         playground1.setName("ateste");
         //Preço
-        systemIn.provideLines("100");
+        systemIn71.provideLines("100");
         playground1.setPrice();
         //status
-        systemIn.provideLines("available");
+        systemIn71.provideLines("available");
         playground1.setStatus();
-        systemIn.provideLines("0","10");
+        systemIn71.provideLines("0","10");
         playground1.setBooking();
         playown.setEmail("testepla@fei.br");
         playown.setPassword("123456");
@@ -68,7 +68,7 @@ public class US07_1Test {
     
     @Test
     public void testUS07_1Test() {
-        systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "2", "ateste", "3", "ateste","yes","6"); 
+        systemIn71.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "2", "ateste", "3", "ateste","yes","6"); 
         assertThrows(NoSuchElementException.class, () -> {
             sistema.accountMenu();
         });
