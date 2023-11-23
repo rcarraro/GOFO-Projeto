@@ -76,9 +76,8 @@ public class US07_1Test {
         sistema.accountMenu();
     }
     
-    // @After
-    // public void restoreSystemInputOutput() {
-    //     System.setIn(originalSystemIn);
-    //     systemIn71.provideLines("2");
-    // }    
+    @After
+    public void restoreSystemInputOutput() {
+        System.setIn(originalSystemIn);
+    }    
 }
