@@ -31,10 +31,10 @@ public class PlaygroundOwnerTest {
         playgroundowner.addPlayground(playground);
     }
 
-    //@Test
-    //public void testaddPlayground(){
-        //playgroundowner.addPlayground(playground);
-    //}
+    @Test
+    public void testaddPlayground(){
+        playgroundowner.addPlayground(playground);
+    }
 
     @Test
     public void testexistPlayground(){
