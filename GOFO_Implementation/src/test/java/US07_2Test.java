@@ -25,10 +25,10 @@ public class US07_2Test {
     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Rule
-    private final TextFromStandardInputStream systemIn072 = TextFromStandardInputStream.emptyStandardInputStream();
+    public final TextFromStandardInputStream systemIn072 = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Rule
-    private final ExpectedSystemExit exit = ExpectedSystemExit.none();
+    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     private SystemUI sistema;
     private Playground playground1;
