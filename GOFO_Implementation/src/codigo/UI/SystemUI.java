@@ -96,8 +96,6 @@ public class SystemUI {
         System.out.println("2-Register");
         System.out.println("3-Exit");
         String choice = input.nextLine();
-        System.out.println("aqui");
-        System.out.println(choice);
         if (choice.equals("1")) {
             Login();
         } else if (choice.equals("2")) {
