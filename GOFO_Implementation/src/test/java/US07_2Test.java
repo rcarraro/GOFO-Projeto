@@ -14,11 +14,14 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import java.io.InputStream;
 import java.util.NoSuchElementException;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
+@Execution(ExecutionMode.SAME_THREAD)
 public class US07_2Test {
 
     private final InputStream originalSystemIn = System.in;
