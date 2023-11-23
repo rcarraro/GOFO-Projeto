@@ -40,7 +40,7 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <argLine>-Deditable.java.test.console=true</argLine>
+                    <argLine>-Deditable.java.test.console=false</argLine>
                 </configuration>
             </plugin>
             <plugin>
