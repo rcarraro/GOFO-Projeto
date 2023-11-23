@@ -25,7 +25,7 @@ public class US07_2Test {
     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Rule
-    public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
+    public final TextFromStandardInputStream systemIn72 = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Rule
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
@@ -45,20 +45,20 @@ public class US07_2Test {
         administrator.playgroundRequests(playground1);
         
         //locais
-        systemIn.provideLines("SP");
+        systemIn72.provideLines("SP");
         playground1.setLocation();
         //aprovar
-        systemIn.provideLines("yes");
+        systemIn72.provideLines("yes");
         administrator.approvePlayground();
         //Nomes
         playground1.setName("ateste");
         //Preço
-        systemIn.provideLines("100");
+        systemIn72.provideLines("100");
         playground1.setPrice();
         //status
-        systemIn.provideLines("0","10");
+        systemIn72.provideLines("0","10");
         playground1.setBooking();
-        systemIn.provideLines("available");
+        systemIn72.provideLines("available");
         playground1.setStatus();
         playown.setEmail("testepla@fei.br");
         playown.setPassword("123456");
@@ -68,9 +68,9 @@ public class US07_2Test {
     
     @Test
     public void testUS07_2Test() {
-        // systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "4", "ateste", "6"); 
+        // systemIn72.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "7", "playground owner", "testepla@fei.br", "tem um problema com o playground ateste", "12","1", "admin@gmail.com", "123", "5", "4", "ateste", "6"); 
         sistema.accountMenu();
-        systemIn.provideLines("2");
+        systemIn72.provideLines("2");
         // assertThrows(NoSuchElementException.class, () -> {
         //     sistema.accountMenu();
         // });
