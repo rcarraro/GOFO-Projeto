@@ -80,21 +80,16 @@ public class AdministratorTest {
     //     assertEquals("", outContent.toString());
     // }
     
-    @Test
-    public void testdisplayAllavailablePlaygroundsLocations() {
-        administrator.displayAllavailablePlaygroundsLocations();
-        assertEquals("Playground Number:2Location :RJ", outContent.toString());
-    }
-    
     // @Test
-    // public void testdisplayAllPlaygroundsLocations() {
+    // public void testdisplayAllavailablePlaygroundsLocations() {
     //     administrator.displayAllavailablePlaygroundsLocations();
+    //     assertEquals("Playground Number:2Location :RJ", outContent.toString());
     // }
     
-    // @Test
-    // public void testdisplayAllavailablePlaygroundsNames() {
-    //     administrator.displayAllavailablePlaygroundsNames();
-    // }
+    @Test
+    public void testdisplayAllavailablePlaygroundsNames() {
+        administrator.displayAllavailablePlaygroundsNames();
+    }
     
     // @Test 
     // public void testbookByLocation() {
