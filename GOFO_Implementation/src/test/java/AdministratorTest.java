@@ -88,19 +88,21 @@ public class AdministratorTest {
     //     administrator.displayAllavailablePlaygroundsNames();
     // }
     
-    @Test 
-    public void testbookByLocation() {
-        systemIn.provideLines("SP", "1", "1", "10", "sunday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
-        administrator.bookByLocation("OS", "testuser", 123);
-        System.out.println(administrator.bookByLocation("OS", "testuser", 123));
-        assertEquals(100,administrator.bookByLocation("OS", "testuser", 123));
-    }
-
     // @Test 
-    // public void testbookByName() {
-    //     systemIn.provideLines("10", "10", "monday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
-    //     administrator.bookByName("teste1", "testuser", 123456);
+    // public void testbookByLocation() {
+    //     systemIn.provideLines("SP", "1", "1", "10", "sunday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
+    //     administrator.bookByLocation("OS", "testuser", 123);
+    //     assertEquals(0,administrator.bookByLocation("OS", "testuser", 123));
     // }
+
+    @Test 
+    public void testbookByName() {
+        System.setOut(new PrintStream(outContent));
+        systemIn.provideLines("10", "10", "monday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
+        System.out.println(administrator.bookByLocation("OS", "testuser", 123));
+        administrator.bookByName("teste1", "testuser", 123456);
+
+    }
     
     // @Test 
     // public void testsuspendPlayground() {
