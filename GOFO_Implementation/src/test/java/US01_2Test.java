@@ -25,13 +25,10 @@ public class US01_2Test {
 
     private SystemUI sistema;
    
-    @Before
-    public void setUp() {
-        sistema = new SystemUI();
-    }
-
+    
     @Test
     public void testUS01_2Test() {
+        sistema = new SystemUI();
         exit.expectSystemExitWithStatus(0);
         systemIn.provideLines("2","123","teste","123","Silva","123","#####","testefei.edu.br","teste@fei.edu.br", "asd","123456789","1d12f1ad2", "player", "123", "3", "3");
         sistema.accountMenu();
@@ -40,7 +37,7 @@ public class US01_2Test {
     @Test
     public void US01_2Test_resultados(){
         assertEquals("teste@fei.edu.br", sistema.thePlayers.get(0).getEmail());
-        assertEquals("123456789", sistema.thePlayers.get(0).getPhone());
+        assertEquals(123456789, sistema.thePlayers.get(0).getPhone());
         assertEquals("#####", sistema.thePlayers.get(0).getPassword());
     }
 
