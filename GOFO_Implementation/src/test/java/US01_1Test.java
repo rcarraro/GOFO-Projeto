@@ -26,7 +26,7 @@ public class US01_1Test {
     private SystemUI sistema;
    
     @Test
-    public void testaccountMenu() {
+    public void testUS01_1Test() {
         sistema = new SystemUI();
         exit.expectSystemExitWithStatus(0);
         systemIn.provideLines("2","Kleber","Silva","123","123456","teste@fei.edu.br", "123456789", "SP", "player", "123", "3", "3");
@@ -34,7 +34,8 @@ public class US01_1Test {
     }
     
     @Test
-    public void resultados(){
+    public void US01_1Test_resultados(){
+        System.out.println("entrou");
         assertEquals("teste@fei.edu.br", sistema.thePlayers.get(0).getEmail());
         assertEquals("123456789", sistema.thePlayers.get(0).getPhone());
         assertEquals("123456", sistema.thePlayers.get(0).getPassword());
