@@ -72,7 +72,7 @@ public class AdministratorTest {
     public void testsearchByName() {
         System.setOut(new PrintStream(outContent));
         administrator.searchByName("teste1");
-        System.out.println(outContent.toString());
+        System.out.println(outContent.toString()); 
         assertEquals(true, systemOutRule.getLog().contains("Allowed cancellation time till 0 Before the booked time"));
     }
     
