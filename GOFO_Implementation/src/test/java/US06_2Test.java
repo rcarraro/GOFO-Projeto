@@ -66,7 +66,7 @@ public class US06_2Test {
     }
     
     @Test
-    public void testaccountMenu() {
+    public void testUS06_2Test() {
         exit.expectSystemExitWithStatus(0);
         systemIn.provideLines("2", "test", "Silva","123", "123", "test@fei.br", "123456789", "SP", "player", "10000", "123", "1", "test@fei.br", "123", "11", "RJ", "11", "SP", "12", "3"); 
         sistema.accountMenu();

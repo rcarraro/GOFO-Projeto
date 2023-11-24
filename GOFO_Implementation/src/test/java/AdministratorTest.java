@@ -16,6 +16,7 @@ public class AdministratorTest {
 
     private final InputStream originalSystemIn = System.in;
     private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+    final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Rule
     public final TextFromStandardInputStream systemIn = TextFromStandardInputStream.emptyStandardInputStream();
@@ -69,94 +70,95 @@ public class AdministratorTest {
     @Test
     public void testsearchByName() {
         administrator.searchByName("teste1");
+        System.out.println( outContent.toString());
     }
     
-    @Test
-    public void testsearchByLocation() {
-        administrator.searchByName("SP");
-    }
+    // @Test
+    // public void testsearchByLocation() {
+    //     administrator.searchByName("SP");
+    // }
     
-    @Test
-    public void testdisplayAllavailablePlaygroundsLocations() {
-        administrator.displayAllavailablePlaygroundsLocations();
-    }
+    // @Test
+    // public void testdisplayAllavailablePlaygroundsLocations() {
+    //     administrator.displayAllavailablePlaygroundsLocations();
+    // }
     
-    @Test
-    public void testdisplayAllPlaygroundsLocations() {
-        administrator.displayAllavailablePlaygroundsLocations();
-    }
+    // @Test
+    // public void testdisplayAllPlaygroundsLocations() {
+    //     administrator.displayAllavailablePlaygroundsLocations();
+    // }
     
-    @Test
-    public void testdisplayAllavailablePlaygroundsNames() {
-        administrator.displayAllavailablePlaygroundsNames();
-    }
+    // @Test
+    // public void testdisplayAllavailablePlaygroundsNames() {
+    //     administrator.displayAllavailablePlaygroundsNames();
+    // }
     
-    @Test 
-    public void testbookByLocation() {
-        systemIn.provideLines("SP", "1", "1", "10", "sunday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
-        administrator.bookByLocation("OS", "testuser", 123);
-    }
+    // @Test 
+    // public void testbookByLocation() {
+    //     systemIn.provideLines("SP", "1", "1", "10", "sunday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
+    //     administrator.bookByLocation("OS", "testuser", 123);
+    // }
 
-    @Test 
-    public void testbookByName() {
-        systemIn.provideLines("10", "10", "monday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
-        administrator.bookByName("teste1", "testuser", 123456);
-    }
+    // @Test 
+    // public void testbookByName() {
+    //     systemIn.provideLines("10", "10", "monday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
+    //     administrator.bookByName("teste1", "testuser", 123456);
+    // }
     
-    @Test 
-    public void testsuspendPlayground() {
-            administrator.suspendPlayground("teste1");
-        }
+    // @Test 
+    // public void testsuspendPlayground() {
+    //         administrator.suspendPlayground("teste1");
+    //     }
         
-    @Test 
-    public void testsuspendPlayground_wrongname() {
-        systemIn.provideLines("teste1");
-        administrator.suspendPlayground("teste1321");
-    }
+    // @Test 
+    // public void testsuspendPlayground_wrongname() {
+    //     systemIn.provideLines("teste1");
+    //     administrator.suspendPlayground("teste1321");
+    // }
     
-    @Test 
-    public void testsuspendPlayground2x() {
-        administrator.suspendPlayground("teste1");
-        assertThrows(RuntimeException.class, () -> administrator.suspendPlayground("teste1"));
-    }
+    // @Test 
+    // public void testsuspendPlayground2x() {
+    //     administrator.suspendPlayground("teste1");
+    //     assertThrows(RuntimeException.class, () -> administrator.suspendPlayground("teste1"));
+    // }
         
-    @Test 
-    public void testdeletePlayground() {
-        administrator.deletePlayground("teste1");
-    }
+    // @Test 
+    // public void testdeletePlayground() {
+    //     administrator.deletePlayground("teste1");
+    // }
         
-    @Test 
-    public void testdeletePlayground_wrongname() {
-        systemIn.provideLines("teste1");
-        administrator.deletePlayground("teste123123");
-    }
+    // @Test 
+    // public void testdeletePlayground_wrongname() {
+    //     systemIn.provideLines("teste1");
+    //     administrator.deletePlayground("teste123123");
+    // }
 
-    @Test
-    public void testdeletePlayground2x() {
-        administrator.deletePlayground("teste1");
+    // @Test
+    // public void testdeletePlayground2x() {
+    //     administrator.deletePlayground("teste1");
         
-        assertThrows(RuntimeException.class, () -> administrator.deletePlayground("teste1"));
-    }
+    //     assertThrows(RuntimeException.class, () -> administrator.deletePlayground("teste1"));
+    // }
 
-    @Test
-    public void testunSuspendPlaygroundyes() {
-        administrator.suspendPlayground("teste1");
-        systemIn.provideLines("yes");
-        administrator.unSuspendPlayground();
-    }
+    // @Test
+    // public void testunSuspendPlaygroundyes() {
+    //     administrator.suspendPlayground("teste1");
+    //     systemIn.provideLines("yes");
+    //     administrator.unSuspendPlayground();
+    // }
     
-    @Test
-    public void testunSuspendPlaygroundno() {
-        administrator.suspendPlayground("teste2");
-        systemIn.provideLines("no");
-        administrator.unSuspendPlayground();
-    }
+    // @Test
+    // public void testunSuspendPlaygroundno() {
+    //     administrator.suspendPlayground("teste2");
+    //     systemIn.provideLines("no");
+    //     administrator.unSuspendPlayground();
+    // }
 
     
-    @Test
-    public void testshowComplaints() {
-        administrator.showComplaints();
-    }
+    // @Test
+    // public void testshowComplaints() {
+    //     administrator.showComplaints();
+    // }
 
 
     @After

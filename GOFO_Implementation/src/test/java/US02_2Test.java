@@ -35,7 +35,7 @@ public class US02_2Test {
     }
 
     @Test
-    public void testaccountMenu() {
+    public void testUS02_2Test() {
         exit.expectSystemExitWithStatus(0);
         systemIn.provideLines("2", "test", "Silva","123", "123456", "test@fei.br", "123456789", "SP", "playground owner", "10000", "123", "1", "test@fei.br", "123456", "1", "", "", "", "100", "", "available", "", "0", "", "7", "", "10", "8", "3");
         sistema.accountMenu();

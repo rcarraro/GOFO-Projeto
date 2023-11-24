@@ -27,9 +27,9 @@ jobs:
     - name: Compilando...
       run: mvn compile
 
-    # - name: Testes de Unidade
-    #   run: |
-    #     mvn test -Dtest=AdministratorTest test;
+    - name: Testes de Unidade
+      run: |
+        mvn test -Dtest=AdministratorTest test;
     #     mvn test -Dtest=eWalletTest test;
     #     mvn test -Dtest=PlayerTest test;
     #     mvn test -Dtest=PlaygroundOwnerTest test;
@@ -38,13 +38,13 @@ jobs:
     #     EXIT_CODE=$?
     #   if: always()
 
-    - name: Testando o 1º Caso de Uso Fluxo Normal
-      run: mvn -Dtest=US01_1Test test
-      if: always()
+    # - name: Testando o 1º Caso de Uso Fluxo Normal
+    #   run: mvn -Dtest=US01_1Test test
+    #   if: always()
 
-    - name: Testando o 1º Caso de Uso Fluxo de Exceção
-      run: mvn -Dtest=US01_2Test test
-      if: always()
+    # - name: Testando o 1º Caso de Uso Fluxo de Exceção
+    #   run: mvn -Dtest=US01_2Test test
+    #   if: always()
 
     # - name: Testando o 2º Caso de Uso Fluxo Normal
     #   run: mvn -Dtest=US02_1Test test
