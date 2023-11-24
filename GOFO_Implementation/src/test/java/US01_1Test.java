@@ -40,8 +40,8 @@ public class US01_1Test {
     @After
     public void restoreSystemInputOutput() {
         System.setIn(originalSystemIn);
-        System.out.println("teste");
-        assertEquals("testeasd@fei.edu.br", sistema.thePlayers.get(0).getEmail());
-        System.out.println("teste");
+        assertEquals("teste@fei.edu.br", sistema.thePlayers.get(0).getEmail());
+        assertEquals("123456789", sistema.thePlayers.get(0).getPhone());
+        assertEquals("123456", sistema.thePlayers.get(0).getPassword());
     }
 }
