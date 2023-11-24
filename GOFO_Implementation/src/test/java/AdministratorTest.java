@@ -83,6 +83,7 @@ public class AdministratorTest {
     @Test
     public void testdisplayAllavailablePlaygroundsLocations() {
         administrator.displayAllavailablePlaygroundsLocations();
+        assertEquals("Playground Number:2Location :RJ", outContent.toString());
     }
     
     // @Test
