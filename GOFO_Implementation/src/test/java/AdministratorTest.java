@@ -72,7 +72,7 @@ public class AdministratorTest {
     public void testsearchByName() {
         administrator.searchByName("teste1");
         System.out.println("aqui");
-        assertEquals("\n", outContent.toString());
+        assertEquals("", outContent.toString());
     }
     
     // @Test
