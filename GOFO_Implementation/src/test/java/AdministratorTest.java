@@ -74,16 +74,16 @@ public class AdministratorTest {
     //     assertEquals("", outContent.toString());
     // }
     
-    @Test
-    public void testsearchByLocation() {
-        administrator.searchByName("SP");
-        assertEquals("", outContent.toString());
-    }
-    
     // @Test
-    // public void testdisplayAllavailablePlaygroundsLocations() {
-    //     administrator.displayAllavailablePlaygroundsLocations();
+    // public void testsearchByLocation() {
+    //     administrator.searchByName("SP");
+    //     assertEquals("", outContent.toString());
     // }
+    
+    @Test
+    public void testdisplayAllavailablePlaygroundsLocations() {
+        administrator.displayAllavailablePlaygroundsLocations();
+    }
     
     // @Test
     // public void testdisplayAllPlaygroundsLocations() {
