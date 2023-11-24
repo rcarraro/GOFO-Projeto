@@ -93,7 +93,7 @@ public class AdministratorTest {
         systemIn.provideLines("SP", "1", "1", "10", "sunday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
         administrator.bookByLocation("OS", "testuser", 123);
         System.out.println(administrator.bookByLocation("OS", "testuser", 123));
-        assertEquals();
+        assertEquals(100,administrator.bookByLocation("OS", "testuser", 123));
     }
 
     // @Test 
