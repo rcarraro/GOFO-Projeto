@@ -68,17 +68,17 @@ public class AdministratorTest {
         administrator.addComplaints("Bla bla bla");
     }
     
+    // @Test
+    // public void testsearchByName() {
+    //     administrator.searchByName("teste1");
+    //     assertEquals("", outContent.toString());
+    // }
+    
     @Test
-    public void testsearchByName() {
-        administrator.searchByName("teste1");
-        System.out.println("aqui");
+    public void testsearchByLocation() {
+        administrator.searchByName("SP");
         assertEquals("", outContent.toString());
     }
-    
-    // @Test
-    // public void testsearchByLocation() {
-    //     administrator.searchByName("SP");
-    // }
     
     // @Test
     // public void testdisplayAllavailablePlaygroundsLocations() {
