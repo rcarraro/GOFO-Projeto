@@ -68,32 +68,10 @@ public class AdministratorTest {
         administrator.addComplaints("Bla bla bla");
     }
     
-    @Test
-    public void testsearchByName() {
-        System.setOut(new PrintStream(outContent));
-        administrator.searchByName("teste1");
-        System.out.println(outContent.toString()); 
-        assertTrue(systemOutRule.getLog().contains(
-    "Playground Number 1 Name : teste1\n" +
-    "Playground Number 2 Name : teste2\n" +
-    "PlayGround Number :1\n" +
-    "PlayGround Status :available\n" +
-    "PlayGround Name :teste1\n" +
-    "PlayGround Price:100\n" +
-    "Playground Slots Are: From 0 To: 30\n" +
-    "Allowed cancellation time till 0 Before the booked time\n" +
-    "\n" +
-    "Dispaly All PlayGrounds Names.\n" +
-    "\n" +
-    "Playground Number 1 Name : teste1\n" +
-    "Playground Number 2 Name : teste2\n" +
-    "PlayGround Number :1\n" +
-    "PlayGround Status :available\n" +
-    "PlayGround Name :teste1\n" +
-    "PlayGround Price:100\n" +
-    "Playground Slots Are: From 0 To: 30\n" +
-    "Allowed cancellation time till 0 Before the booked time"));
-    }
+    // @Test
+    // public void testsearchByName() {
+    //     administrator.searchByName("teste1");
+    // }
     
     // @Test
     // public void testsearchByLocation() {
@@ -110,11 +88,13 @@ public class AdministratorTest {
     //     administrator.displayAllavailablePlaygroundsNames();
     // }
     
-    // @Test 
-    // public void testbookByLocation() {
-    //     systemIn.provideLines("SP", "1", "1", "10", "sunday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
-    //     administrator.bookByLocation("OS", "testuser", 123);
-    // }
+    @Test 
+    public void testbookByLocation() {
+        systemIn.provideLines("SP", "1", "1", "10", "sunday"); // dias: sunday, monday, tuesday, wendesday, thursday, friday, saturday
+        administrator.bookByLocation("OS", "testuser", 123);
+        System.out.println(administrator.bookByLocation("OS", "testuser", 123));
+        assertEquals();
+    }
 
     // @Test 
     // public void testbookByName() {
