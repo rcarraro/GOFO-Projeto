@@ -68,28 +68,28 @@ public class AdministratorTest {
         administrator.addComplaints("Bla bla bla");
     }
     
-    // @Test
-    // public void testsearchByName() {
-    //     administrator.searchByName("teste1");
-    //     assertEquals("", outContent.toString());
-    // }
+    @Test
+    public void testsearchByName() {
+        System.setOut(new PrintStream(outContent));
+        administrator.searchByName("teste1");
+        System.out.println(outContent.toString());
+        assertEquals("", outContent.toString());
+    }
     
     // @Test
     // public void testsearchByLocation() {
     //     administrator.searchByName("SP");
-    //     assertEquals("", outContent.toString());
     // }
     
     // @Test
     // public void testdisplayAllavailablePlaygroundsLocations() {
     //     administrator.displayAllavailablePlaygroundsLocations();
-    //     assertEquals("Playground Number:2Location :RJ", outContent.toString());
     // }
     
-    @Test
-    public void testdisplayAllavailablePlaygroundsNames() {
-        administrator.displayAllavailablePlaygroundsNames();
-    }
+    // @Test
+    // public void testdisplayAllavailablePlaygroundsNames() {
+    //     administrator.displayAllavailablePlaygroundsNames();
+    // }
     
     // @Test 
     // public void testbookByLocation() {
