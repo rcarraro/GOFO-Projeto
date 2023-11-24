@@ -35,7 +35,7 @@ public class US01_1Test {
     
     @Test
     public void US01_1Test_resultados(){
-        System.out.println("entrou");
+        System.out.println(sistema.thePlayers.get(0).getEmail());
         assertEquals("teste@fei.edu.br", sistema.thePlayers.get(0).getEmail());
         assertEquals("123456789", sistema.thePlayers.get(0).getPhone());
         assertEquals("123456", sistema.thePlayers.get(0).getPassword());
