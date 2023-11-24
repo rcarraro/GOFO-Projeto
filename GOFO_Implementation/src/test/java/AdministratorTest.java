@@ -72,6 +72,7 @@ public class AdministratorTest {
     public void testsearchByName() {
         administrator.searchByName("teste1");
         System.out.println("aqui");
+        System.out.println(outContent.toString());
         assertEquals("PlayGround Number :1\n", outContent.toString());
     }
     
