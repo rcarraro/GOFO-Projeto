@@ -24,6 +24,7 @@ public class userProfile {
      */
     public void setPayment(eWallet val) {
         service = val;
+        
     }
     /**
      * set FirstName Function
